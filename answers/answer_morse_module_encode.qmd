@@ -1,0 +1,49 @@
+---
+jupyter: python3
+---
+
+```{python}
+#| tags: [nbval-ignore-output]
+%%writefile morse.py
+
+letter_to_morse = {
+    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
+    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
+    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
+    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
+    '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
+    '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
+}
+
+
+def encode(message):
+    morse = []
+
+    for letter in message:
+        letter = letter.lower()
+        morse_letter = letter_to_morse[letter]
+        morse.append(morse_letter)
+
+    morse_message = " ".join(morse)
+    
+    return morse_message
+```
+
+```{python}
+#| tags: [nbval-ignore-output]
+%%writefile encode.py
+
+import morse
+
+message = "SOS We have hit an iceberg and need help quickly"
+
+encoded_message = morse.encode(message)
+
+print(f"Incoming message: {message}")
+print(f"   Morse encoded: {encoded_message}")
+```
+
+```{python}
+%run encode.py
+```
+

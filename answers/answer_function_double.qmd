@@ -1,0 +1,17 @@
+---
+jupyter: python3
+---
+
+```{python}
+%%writefile doubler.py
+
+def double(num):
+    return num * 2
+
+my_num = 10
+
+doubled = double(my_num)
+
+print(doubled)
+```
+

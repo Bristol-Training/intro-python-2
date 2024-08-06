@@ -1,0 +1,47 @@
+---
+jupyter: python3
+---
+
+Starting from the initial code:
+
+```{python}
+%%writefile bignums.py
+
+my_list = [5, 7, 34, 5, 3, 545]
+
+big_numbers = []
+for num in my_list:
+    if num > 10:
+        big_numbers.append(num)
+
+print(big_numbers)
+```
+
+```{python}
+%run bignums.py
+```
+
+We pull out the middle four lines, indent them, put `def big(numbers):` in front and add `return big_numbers` to the end, paying careful attention to the indentation of the `return` statement. Finally, we update the variable name used in the function to match the argument name `numbers`:
+
+```{python}
+%%writefile bignums.py
+
+def big(numbers):
+    big_numbers = []
+    for num in numbers:
+        if num > 10:
+            big_numbers.append(num)
+    return big_numbers
+
+
+my_list = [5, 7, 34, 5, 3, 545]
+
+large_numbers = big(my_list)
+
+print(large_numbers)
+```
+
+```{python}
+%run bignums.py
+```
+

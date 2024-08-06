@@ -1,0 +1,40 @@
+---
+jupyter: python3
+---
+
+The function [`str.lower`](https://docs.python.org/3/library/stdtypes.html#str.lower) gives you back a copy of the string, but all made into lower case.
+
+In our situation, the first letter is "S" and so `letter.lower()` will give us `"s"`.
+
+```{python}
+#| tags: [nbval-ignore-output]
+%%writefile encode.py
+
+letter_to_morse = {
+    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
+    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
+    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
+    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
+    '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
+    '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
+}
+
+message = "SOS We have hit an iceberg and need help quickly"
+
+morse = []
+
+for letter in message:
+    letter = letter.lower()  #  ← We have added this line of code
+    morse_letter = letter_to_morse[letter]
+    morse.append(morse_letter)
+
+morse_message = " ".join(morse)
+
+print(f"Incoming message: {message}")
+print(f"   Morse encoded: {morse_message}")
+```
+
+```{python}
+%run encode.py
+```
+

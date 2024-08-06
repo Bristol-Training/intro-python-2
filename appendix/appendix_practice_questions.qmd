@@ -1,0 +1,128 @@
+---
+title: Practice questions
+jupyter: python3
+---
+
+
+This page contains a number of questions and exercises to give you a chance to practise what you have learned this session.
+
+You should create a new `.py` Python file for each exercise.
+
+
+### Exercise 1
+
+The first exercise is to practise searching the documentation. From the list of modules in the standard library, find one that contains a function to give the current date and time.
+
+Fill in the `...` in the snippet below.
+
+```python
+import ...
+
+time_now = ...
+
+print(time_now.isoformat())
+```
+
+The output should be something like the following, but with today's date and time:
+
+```
+2025-04-01T10:53:15.062603
+```
+
+### Exercise 2
+
+Write a function which can accept a string as an argument and return the first word in that string. To start you off, here's skeleton of what the function should look like.
+
+```python
+def first_word(l):
+    ...
+    return ...
+```
+
+you should be able to use it like:
+
+```python
+sentence = "This is a collection of words"
+word = first_word(sentence)
+print(word)
+```
+
+giving the output:
+
+```
+This
+```
+
+### Exercise 3
+
+Write a function called `count_word_match` which accepts three agruments:
+
+1. a string which contains multiple words separated by spaces,
+2. a string which gives the word that you want to count the occurrences of and
+3. a boolean (`True` or `False`) which specifies whether the match should be case-sensitive.
+
+```python
+def count_word_match(words, match, case_sensitive):
+    ...
+    return ...
+```
+
+you should be able to use it like:
+
+```python
+count1 = count_word_match("To be or not to be", "to", True)
+print(count1)
+
+count2 = count_word_match("To be or not to be", "to", False)
+print(count2)
+```
+
+giving the output:
+
+```
+1
+2
+``` 
+
+### Exercise 4
+
+For this exercise, you should write a function which can find references, like `[4]`, in some text.
+
+If the function is passed a string like:
+
+```python
+"I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
+```
+
+it should return a list of integers like:
+
+```python
+[1, 3, 10, 7]
+```
+
+The function should be called `find_references`.
+
+### Exercise 5
+
+Take the fnction that you wrote in the last exercise and move it into a module called `refs`. You should then write a test file called `test_refs.py` containing:
+
+```python
+import refs
+
+text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
+
+numbers = refs.find_references(text)
+
+expected = [1, 3, 10, 7]
+if numbers == expected:
+    print("Test passed")
+else:
+    print("Test failed:", numbers, "is not the same as", expected)
+```
+
+You should make sure that the test passes when the test script is run with:
+
+```
+python test_references.py
+```
+

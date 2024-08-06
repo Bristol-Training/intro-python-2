@@ -1,0 +1,127 @@
+---
+jupyter: python3
+---
+
+```{python}
+#| tags: [remove_cell]
+!rm -f morse.py
+```
+
+`morse.py` is the same as in the previous exercise. We have our test in `Message.__init__` to check for `!`:
+
+```{python}
+#| tags: [nbval-ignore-output]
+%%writefile morse.py
+
+letter_to_morse = {
+    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
+    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
+    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
+    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
+    '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
+    '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
+}
+
+
+def encode(message):
+    if "!" in message:                                            # ← new code
+        raise ValueError(f"'!' is not valid in English strings")  # ←
+    
+    morse = []
+
+    for letter in message:
+        letter = letter.lower()
+        morse_letter = letter_to_morse[letter]
+        morse.append(morse_letter)
+
+    morse_message = " ".join(morse)
+    
+    return morse_message
+
+
+# We need to invert the dictionary. This will create a dictionary
+# that can go from the morse back to the letter
+morse_to_letter = {}
+for letter in letter_to_morse:
+    morse = letter_to_morse[letter]
+    morse_to_letter[morse] = letter
+
+
+def decode(message):
+    english = []
+
+    morse_letters = message.split(" ")
+
+    for letter in morse_letters:
+        english_letter = morse_to_letter[letter]
+        english.append(english_letter)
+
+    english_message = "".join(english)
+    
+    return english_message
+```
+
+If we add some `!` to our `message_string` in `encode.py` then we see our `ValueError` exception raised:
+
+```{python}
+%%writefile encode.py
+
+import morse
+
+message = "SOS We have hit an iceberg and need help quickly!!!!!"  # ← Added ! to end of string
+
+encoded_message = morse.encode(message)
+
+print(f"Incoming message: {message}")
+print(f"   Morse encoded: {encoded_message}")
+```
+
+```{python}
+#| tags: [raises-exception]
+%run encode.py
+```
+
+Moving all that code into a `try`/`except ValueError` block we can catch the error and print something
+
+```{python}
+%%writefile encode.py
+
+import morse
+
+message = "SOS We have hit an iceberg and need help quickly!!!!!"
+
+try:
+    encoded_message = morse.encode(message)
+
+    print(f"Incoming message: {message}")
+    print(f"   Morse encoded: {encoded_message}")
+except ValueError as e:
+    print(f"Could not encode message: {e}")
+```
+
+```{python}
+%run encode.py
+```
+
+Passing in a valid string (removing the `!`) results in the code running correctly:
+
+```{python}
+%%writefile encode.py
+
+import morse
+
+message = "SOS We have hit an iceberg and need help quickly"  # Removed ! from end of string
+
+try:
+    encoded_message = morse.encode(message)
+
+    print(f"Incoming message: {message}")
+    print(f"   Morse encoded: {encoded_message}")
+except ValueError as e:
+    print(f"Could not encode message: {e}")
+```
+
+```{python}
+%run encode.py
+```
+

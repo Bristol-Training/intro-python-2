@@ -1,0 +1,73 @@
+---
+title: Data classes
+jupyter: python3
+---
+
+
+
+The code for our `Dog` looked like this using traditional classes:
+
+```{python}
+class Dog:
+    def __init__(self, name, colour):
+        self.name = name
+        self.colour = colour
+        self.energy = 1
+    
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+    
+    def exercise(self):
+        print(f"You take {self.name} for a walk")
+        self.energy -= 1
+            
+    def feed(self):
+        print(f"{self.name} eats the food")
+        self.energy += 1
+```
+
+Python 3.7 (release June 2018) introduced a new feature called [*data classes*](https://docs.python.org/3/library/dataclasses.html) since it was recognised that while classes can be used for very complicated things, most classes exist to hold simple data with a few functions to extract or update those data. Writing `__init__` functions is boring with a lot of repetition and so data classes were created to automate some of the standard tasks when writing classes.
+
+To turn our `Dog` class into a data class we first import the feature from the `dataclasses` module, we then apply it to our class using a decoration, `@dataclass`. We can then remove our `__init__` function and replace it with a listing of attribute names, each tagged with the type of data that they should hold:
+
+```{python}
+from dataclasses import dataclass
+
+@dataclass
+class Dog:
+    name: str
+    colour: str
+    energy: int = 1
+    
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+    
+    def exercise(self):
+        print(f"You take {self.name} for a walk")
+        self.energy -= 1
+            
+    def feed(self):
+        print(f"{self.name} eats the food")
+        self.energy += 1
+```
+
+All the other functions in the class remain as they were.
+
+Using the class works in exactly the same way:
+
+```{python}
+our_dog = Dog("Spot", "brown")
+```
+
+```{python}
+print(our_dog.describe())
+```
+
+```{python}
+print(our_dog.energy)
+```
+
+```{python}
+our_dog.exercise()
+```
+

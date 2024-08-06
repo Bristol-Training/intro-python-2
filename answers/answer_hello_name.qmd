@@ -1,0 +1,29 @@
+---
+jupyter: python3
+---
+
+To get input from the person running your script, you can use the [`input()`](https://docs.python.org/3/library/functions.html#input) function.
+
+If you pass a string argument to it, it will use that as the "prompt" when asking for input.
+
+```{python}
+#| tags: [remove_cell]
+%load_ext interactive_system_magic
+```
+
+```{python}
+%%writefile hello.py
+
+my_name = input("Please tell me your name: ")
+
+name_length = len(my_name)
+
+print(f"Hello {my_name}! Your name is {name_length} characters long")
+```
+
+```{python}
+#| tags: []
+%%run_python_script -i hello.py
+Matt
+```
+

@@ -1,0 +1,398 @@
+---
+title: Classes and objects
+jupyter: python3
+---
+
+
+You're perhaps starting to see a theme in this workshop so far. By introducing functions and then modules we're creating reusable units which have defined interfaces (import *this* module, call *this* function with *these* arguments) which make it easier for people to use our code.
+
+We've used functions to package up code which *does* things but as you saw when moving the code into the `morse` module, there's also code in there which doesn't exist to be called by a user but is rather just creating data which is used by the functions. The two are logically linked (the function won't work without the data and the data isn't useful without the functions).
+
+Python has a feature which allows us to combine code and data together into a single object which contains everything it needs to do anything we ask of it, these are *classes*. Classes are a way of creating a "template" which is then used to create *objects* which you can interact with.
+
+With functions we were giving names to actions (or verbs) but with classes we can give names to *concepts*.
+
+Image that we want to write some code to represent our pet dog, Spot. The dog has a name and a colour. Based on the tools we know so far, we might represent this as a dictionary:
+
+
+```{python}
+our_dog = {"name": "Spot", "colour": "brown"}
+```
+
+The problem with a dictionary, however, is that if you're passing it to a function you have to be very careful to ensure that it has all the keys correctly set that the function expects. For example, if there were a function `describe` which looks like:
+
+```{python}
+def describe(dog):
+    return f"{dog['name']} is {dog['colour']}"
+
+print(describe(our_dog))
+```
+
+then you would need to ensure that any data that was passed to it had the keys `"name"` and `"colour"`. If they were missing you would get an error when you ran the code.
+
+We can use classes to create a new type of data which represent all dogs and we can ensure that all data of this type always have the `name` and `colour` attributes.
+
+## Starting our class
+
+We would represent this as a class with:
+
+```{python}
+class Dog:
+    def __init__(self, name, colour):
+        self.name = name
+        self.colour = colour
+```
+
+This has created a new data type called `Dog` which we can create instances of with:
+
+```{python}
+our_dog = Dog("Spot", "brown")
+```
+
+We can ask for information from that instance using the dot syntax:
+
+```{python}
+print(our_dog.name)
+```
+
+`Dog` and `our_dog` are different kind of thing. `Dog` is called a *class* and can be seen as a template for creating dog *objects*. `our_dog` is one such object.
+
+You can make multiple objects from a class, for example we can make a second dog, Fido with:
+
+```{python}
+other_dog = Dog("Fido", "grey")
+```
+
+and get information about *that* dog with the same attribute names on the new object:
+
+```{python}
+print(other_dog.colour)
+```
+
+This means that we can tweak our `describe` function to accept a `Dog` object and we can trust that it will always work. no matter which `Dog` we pass to it:
+
+```{python}
+def describe(dog):
+    return f"{dog.name} is {dog.colour}"
+
+print(describe(our_dog))
+```
+
+## What is `__init__`?
+
+`__init__` is a function. It is a special function and is sometimes called the *constructor* or *initialiser*. It must be present in all classes, and constructors are used in all object orientated programming languages.
+
+The job of the constructor is to set up the initial state of an object. In this case, you can see that the constructor creates two variables:
+
+- `name` which will hold the name of the dog
+- and `colour` which will hold a string describing the colour of the dog.
+
+Note that the variables are defined as attached to `self`, via the full stop, e.g. `self.name`. `self` is a special variable that is only available within the functions of the class and provides access to the current *object* that we are talking about. There is a full explanation of how `self` works below.
+
+`__init__` is called automatically when an object of that class is created. In our case, when we call `Dog(...)` it will call `__init__` for us.
+
+The first time we called `our_dog = Dog("Spot", "brown")`, `self` was referring at the object we were putting at `our_dog` so `self.name` is referring to the same thing as `our_dog.name`. The second time we called it it was referring to the object at `other_dog`.
+
+Note that while `self` is written in the function definition as if it were a parameter of `__init__`, we don’t need to pass it ourselves. `self` is passed implicitly by Python when we construct an object of the class.
+
+## Class functions
+
+At the moment, `Dog` isn't giving us any real benefit above using a dictionary. It's still just a container for data. One of the benefits of classes is being able to combine data and functionality in one place.
+
+Making `Dog` as a class means that we can trust that if we pass a `Dog` to `describe` that it will definitely work but this has left us in a position where our data and functions are separate and we have to remember that `describe` takes a `Dog` object as its argument.
+
+We can solve this by enforcing that the `describe` function can only ever be called on a `Dog` object by moving the function inside the class.
+
+To move this function so that it is a part of the class we do two things:
+
+1. move the lines of code into the class, indenting it appropriately
+2. replace `dog` with `self`
+
+this give us:
+
+```{python}
+class Dog:
+    def __init__(self, name, colour):
+        self.name = name
+        self.colour = colour
+    
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+```
+
+Since we have changed the code defining what a `Dog` is, we need to recreate our objects so that they know about the changes:
+
+```{python}
+our_dog = Dog("Spot", "brown")
+other_dog = Dog("Fido", "grey")
+```
+
+We can now call the describe function on each `Dog` object using the dot syntax:
+
+```{python}
+print(our_dog.describe())
+```
+
+```{python}
+print(other_dog.describe())
+```
+
+When a function has been moved inside a class like this, it is sometimes referred to as a *method* but I use both terms.
+
+There is now no way to call this function (or method) on any object which is not a `Dog`.
+
+## Adding variable state
+
+Having the bare facts about the dog is useful but we want to be able to make it a living, breathing thing. Let's introduce the concept of "energy" for the dog. It will be a number which increases when we feed it and decreases when we exercise it.
+
+Previously we added all object attributes as arguments to `__init__` and then assigned them to `self` with `self.name = `. It is perfectly possible to set object attributes statically, without having them depend on the arguments that were passed in.
+
+For example, we want our dog to have `energy` as an attribute. Let's decide that by default, all `Dog`s have an energy of `1` when they are first created. We can assign the variable `self.energy` in `__init__`:
+
+```{python}
+class Dog:
+    def __init__(self, name, colour):
+        self.name = name
+        self.colour = colour
+        self.energy = 1  # This is the only new line
+    
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+```
+
+Now that we have `energy` as an attribute we can go ahead and write a function which uses it. We want our dog to be able to take our dog for a walk which will use up energy. We add another method to the class called `exercise`:
+
+```{python}
+class Dog:
+    def __init__(self, name, colour):
+        self.name = name
+        self.colour = colour
+        self.energy = 1
+
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+    
+    def exercise(self):
+        print(f"You take {self.name} for a walk")
+        self.energy -= 1
+```
+
+See that in the `exercise` function we are accessing the energy with `self.energy`.
+
+We can test that this is working by recreating our dog instance and seeing how calling `exercise` affects the dog's energy:
+
+```{python}
+our_dog = Dog("Spot", "brown")
+other_dog = Dog("Fido", "grey")
+```
+
+```{python}
+print(our_dog.energy)
+```
+
+```{python}
+our_dog.exercise()
+```
+
+```{python}
+print(our_dog.energy)
+```
+
+After calling the `exercise` function, we can see that Spot's energy has reduced by one.
+
+But note that Fido's energy has not been affected:
+
+```{python}
+print(other_dog.energy)
+```
+
+Let's complete the story by also implementing a function which we can use to feed our dog to give it energy:
+
+```{python}
+class Dog:
+    def __init__(self, name, colour):
+        self.name = name
+        self.colour = colour
+        self.energy = 1
+    
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+    
+    def exercise(self):
+        print(f"You take {self.name} for a walk")
+        self.energy -= 1
+            
+    def feed(self):
+        print(f"{self.name} eats the food")
+        self.energy += 1
+```
+
+## About `self`
+
+The existence and purpose of the `self` parameter in Python classes is often the most confusing thing when learning about them. To get to the point of seeing why it works the way it does, there's a few things to clarify.
+
+The code that we write that defines our class can be thought of as a template which will be used to create by every instance (object) of that class. This means that any code we write in there has to work and make sense for *all* objects that were made from the template. The functions we define in there therefore also need to be generic and work on all objects made from the class. The code we write must work as well for Spot as it does for Fido as well as for any other `Dog`s that may be created in the future.
+
+If a function is generic, how can it know that at one point in your program it's being called on object A and and some later time being called on object B? We do this by accepting to the function, as an parameter, the object that we're calling it on. It is *this* that `self` is referring to.
+
+To show this in action, let's walk through an example:
+
+We can construct as many instances (objects) of a class as we want, and each will have its own `self` and its own set of attributes:
+
+```{python}
+our_dog = Dog("Spot", "brown")
+other_dog = Dog("Fido", "grey")
+```
+
+If we describe `our_dog` we get:
+
+```{python}
+our_dog.describe()
+```
+
+but calling the same function on the other dog gives us a different result:
+
+```{python}
+other_dog.describe()
+```
+
+Let's go thorough that more slowly and see what `self` is doing along the way.
+
+First we called the `Dog` class like a function, passing it two arguments and assigned it to the variable `our_dog`:
+
+```python
+our_dog = Dog("Spot", "brown")
+```
+
+When you call a class like this, it makes a new object from the template and automtically calls the `__init__` function behind the scenes. As we saw before, our `__init__` has three parameters, `self`, `name` and `colour`. Python, when calling `__init__` will automatically pass in our object (`our_dog` in this case) as the first argument and so inside the function, `self` is referring to `our_dog`, our newly created object.
+
+Therefore, we can imagine that our function which looks like:
+
+```python
+def __init__(self, name, colour):
+    self.name = name
+    self.colour = colour
+    self.energy = 1
+```
+
+is being treated like:
+
+```python
+self = our_dog
+name = "Spot"
+colour = "brown"
+
+self.name = name
+self.colour = colour
+self.energy = 1
+```
+
+and so here, `self.name = name` is effectively doing `our_dog.name = "Spot"`.
+
+The same thing happens when we create `other_dog` with:
+
+```python
+other_dog = Dog("Fido", "grey")
+```
+
+We now know that due to the `__init__` function operating on `self`, we now have two dogs where `our_dog.name` is `"Spot"` and `other_dog.name` is `"Fido"`.
+
+Now that both of our objects have been fully created, we're ready to start interacting with them by calling some functions.
+
+When we call the `describe` function,  a similar process occurs:
+
+```python
+our_dog.describe()
+```
+
+Since the `our_dog` object was made from the `Dog` class, `our_dog.describe` is referring to the `describe` function inside that class:
+
+```python
+class Dog:
+    ...
+    def describe(self):
+        return f"{self.name} is {self.colour}"
+```
+
+and so
+
+```python
+our_dog.describe()
+```
+
+it is effectively doing
+
+```python
+Dog.describe(our_dog)
+```
+
+and passing whatever object the `describe` function was called on as the first argument. Again, inside the function this is called `self` so when we do
+
+```python
+f"{self.name} is {self.colour}"
+```
+
+it is essentially doing
+
+```python
+f"{our_dog.name} is {our_dog.colour}"
+```
+
+To summarise, the `self` parameter in class functions points at the object that the function was called on. The programmer calling the function does not pass the argument explicitly, it is done automatically by Python. This allows you to store data in one function (e.g. in `__init__` doing `self.name = name`) and use it in another (e.g. in `describe` doing `f"{self.name} is {self.colour}"`).
+
+## Data classes
+
+Python 3.7 (release June 2018) introduced a new feature called *data classes* which aim to simplify the common tasks of creating classes. If you can rely on having this version or newer of Python available then consider [looking into using data classes](aside_dataclasses.ipynb).
+
+### Exercise
+
+In the `morse` module, write a class called `Message` which we will use to hold a message in either English or Morse code.
+To start you off, here is the skeleton of some of the structure with `...` where you will need to write some more code:
+
+```python
+class Message:
+    def __init__(...):
+        ...
+    
+    def as_morse(self):
+        if self.is_morse:
+            ...
+        ...
+    
+    def ...
+```
+
+1. The `__init__` should take one argument, `message`, which should be saved onto `self` like we did with `colour` in the `Dog` example.
+2. Add an `if`/`else` statement in `__init__` to check whether the passed message is a Morse message using `"." in message or "-" in message`. Use this to save a attribute onto `self` called `is_morse` which should be `True` if the message is in Morse code and `False` if it is in English.
+3. Add two class functions: `as_morse` and `as_english`. `as_morse` should return the saved message directly if it was passed in to `__init__` in Morse code or use the `decode` function to decode it otherwise. `as_english` should do the converse.
+
+When you have finished, test that the Morse code produced by your class is correctly translated back to English. Edit `test_morse.py` to read:
+```python
+from morse import Message
+
+# Convert English to Morse
+my_message = Message("hello world")
+morse_string = my_message.as_morse()
+
+# Convert it back again
+incoming_message = Message(morse_string)
+decoded_string = incoming_message.as_english()
+
+print(decoded_string == "hello world")
+```
+When run, it should print `True`, showing that your `Message` class can encode and decode the message.
+
+Feel free to look at [the answer](answer_morse_class.ipynb) to guide you.
+
+## Naming
+
+You may have noticed a few different styles of naming used for things so far. We've been calling our data variables things like `letter_to_morse` while our class was called `Message`. The first style with all lower case letter and underscores to separate words is known as *snake case* and the style with upper case letters at the start of words but no spaces between them is known as *camel case*.
+
+Python has a document called [PEP-8](https://www.python.org/dev/peps/pep-0008/) which contains suggestions on how to format and name your code and it suggests:
+- variables: snake case like `letter_to_morse` or `message`
+- functions: snake case like `encode` or `add_arrays`
+- modules: snake case like `morse` or `arrays`
+- classes: camel case like `Message` or `Dog`
+
+These are just suggestions and while they are followed by the majority of Python projects, if you are contributing to an existing Python project then you should follow their internal code style.
+

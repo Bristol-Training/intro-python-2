@@ -1,0 +1,33 @@
+---
+title: Split a string
+jupyter: python3
+---
+
+
+You can split any string using the [`str.split`](https://docs.python.org/3/library/stdtypes.html#str.split) function. By default it splits on spaces:
+
+
+```{python}
+s = "what is your name"
+s.split()
+```
+
+## Join a list
+
+You can join a list together by using the [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join) function. Note that in front of the dot you put the string that you want to join *with*, and you pass the list you want to join *together* as an argument.
+
+```{python}
+l = ["a", "b", "c"]
+"-".join(l)
+```
+
+```{python}
+l = ["a", "b", "c"]
+":".join(l)
+```
+
+```{python}
+l = ["a", "b", "c"]
+" ".join(l)
+```
+
