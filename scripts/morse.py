@@ -1,9 +1,3 @@
----
-jupyter: python3
----
-
-```{python}
-#|filename: morse.py
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -37,38 +31,3 @@ def decode(message):
     english_message = "".join(english)
     
     return english_message
-```
-
-```{python}
-#|filename: morse.py
-#|eval: false
-import morse
-
-message = "SOS We have hit an iceberg and need help quickly"
-
-encoded_message = morse.encode(message)
-
-print(f"Incoming message: {message}")
-print(f"   Morse encoded: {encoded_message}")
-```
-
-```{.bash filename="Terminal/Command Prompt"}
-python morse.py
-```
-
-```{python}
-#| echo: false
-import sys
-sys.path.append('../scripts')
-
-import morse
-
-message = "SOS We have hit an iceberg and need help quickly"
-
-encoded_message = morse.encode(message)
-
-print(f"Incoming message: {message}")
-print(f"   Morse encoded: {encoded_message}")
-```
-
-[Return to course](../pages/06%20List%20comprehensions.qmd#exercise-1)

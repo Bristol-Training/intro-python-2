@@ -31,3 +31,4 @@ l = ["a", "b", "c"]
 " ".join(l)
 ```
 
+[Return to course](../pages/02%20Using%20functions.qmd#exercise-2)

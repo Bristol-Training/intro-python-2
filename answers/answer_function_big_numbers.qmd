@@ -1,12 +1,8 @@
----
-jupyter: python3
----
-
 Starting from the initial code:
 
 ```{python}
-%%writefile bignums.py
-
+#| filename: bignums.py
+#| output: false
 my_list = [5, 7, 34, 5, 3, 545]
 
 big_numbers = []
@@ -17,15 +13,27 @@ for num in my_list:
 print(big_numbers)
 ```
 
+```{.bash}
+python bignums.py
+```
+
 ```{python}
-%run bignums.py
+#| echo: false
+my_list = [5, 7, 34, 5, 3, 545]
+
+big_numbers = []
+for num in my_list:
+    if num > 10:
+        big_numbers.append(num)
+
+print(big_numbers)
 ```
 
 We pull out the middle four lines, indent them, put `def big(numbers):` in front and add `return big_numbers` to the end, paying careful attention to the indentation of the `return` statement. Finally, we update the variable name used in the function to match the argument name `numbers`:
 
 ```{python}
-%%writefile bignums.py
-
+#| filename: bignums.py
+#| output: false
 def big(numbers):
     big_numbers = []
     for num in numbers:
@@ -41,7 +49,25 @@ large_numbers = big(my_list)
 print(large_numbers)
 ```
 
-```{python}
-%run bignums.py
+```{.bash filename="Terminal/Command Prompt"}
+python bignums.py
 ```
 
+```{python}
+#| echo: false
+def big(numbers):
+    big_numbers = []
+    for num in numbers:
+        if num > 10:
+            big_numbers.append(num)
+    return big_numbers
+
+
+my_list = [5, 7, 34, 5, 3, 545]
+
+large_numbers = big(my_list)
+
+print(large_numbers)
+```
+
+[Return to course](../pages/03%20Functions.qmd#exercise-bonus)

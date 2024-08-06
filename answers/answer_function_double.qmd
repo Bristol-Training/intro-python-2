@@ -1,10 +1,7 @@
----
-jupyter: python3
----
 
 ```{python}
-%%writefile doubler.py
-
+#| filename: doubler.py
+#| output: false
 def double(num):
     return num * 2
 
@@ -15,3 +12,20 @@ doubled = double(my_num)
 print(doubled)
 ```
 
+```{.bash filename="Terminal/Command Prompt"}
+python doubler.py
+```
+
+```{python}
+#| echo: false
+def double(num):
+    return num * 2
+
+my_num = 10
+
+doubled = double(my_num)
+
+print(doubled)
+```
+
+[Return to course](../pages/03%20Functions.qmd#exercise-1)

@@ -1,6 +1,5 @@
 ---
 title: List comprehensions
-jupyter: python3
 ---
 
 
@@ -8,7 +7,7 @@ The last thing we will cover in this workshop is a little different to the other
 
 There's a common pattern that you will see come up a lot in programming in general and and Python in particular and that is "loop-append". We've done it already in the morse code exercises. Let's look at a section of `encode` first:
 
-```python
+```{python}
 morse = []
 
 for letter in message:
@@ -64,7 +63,8 @@ The last part is where it differs. Rather than the body of the loop going on a n
 
 List comprehensions are powerful because they allow you to do a lot in a single line but that can be an issue of you try to do too much and it becomes very noisy. I would suggest that you try to keep your list comprehensions not much more complicated than the example we saw above.
 
-### Exercise
 
-- Adapt `encode` and `decode` in the `morse` module to use list comprehensions for doing the conversion. [<small>answer</small>](answer_morse_comprehension.ipynb)
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+
+- Adapt `encode` and `decode` in the `morse` module to use list comprehensions for doing the conversion. [<small>answer</small>](../answers/answer_morse_comprehension.qmd)
 

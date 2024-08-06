@@ -3,9 +3,8 @@ jupyter: python3
 ---
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile morse.py
-
+#| filename: morse.py
+#| eval: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -30,9 +29,8 @@ def encode(message):
 ```
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile encode.py
-
+#| filename: encode.py
+#| eval: false
 import morse
 
 message = "SOS We have hit an iceberg and need help quickly"
@@ -43,7 +41,22 @@ print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
 ```
 
-```{python}
-%run encode.py
+```{.bash filename="Terminal/Command Prompt"}
+python encode.py
 ```
 
+```{python}
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import morse
+
+message = "SOS We have hit an iceberg and need help quickly"
+
+encoded_message = morse.encode(message)
+
+print(f"Incoming message: {message}")
+print(f"   Morse encoded: {encoded_message}")
+```
+
+[Return to course](../pages/04%20Modules.qmd#exercise-1)

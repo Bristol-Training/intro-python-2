@@ -21,7 +21,7 @@ but you will also have written things like the following in your code:
 
 So far you have probably learned these topics by following tutorials or attending workshops like this one. However, there is a central, official place where all the details of how these things work is written down so let's have an explore.
 
-Go to https://docs.python.org
+Go to <https://docs.python.org>
 
 There are a lot of different sections linked from that page, but the two most important links for us are:
 1. The "Language Reference" (https://docs.python.org/3/reference/) which details all the in-built features of the language. It's quite technical and not the place you'd normally go to learn as a beginner. This covers our "literals" and "syntax" from above.
@@ -37,7 +37,7 @@ Here we find the documentation for many of the functions we've already been usin
 
 It is worth, over time, becoming familiar with the various functions that are available here. Some are quite useful for everyday work and some are more niche.
 
-### Exercise 1
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 
 Copy the following code into a new file called `hello.py`:
 
@@ -72,7 +72,10 @@ Please tell me your name: Matt
 Hello Matt! Your name is 4 characters long
 ```
 
-[<small>answer</small>](answer_hello_name.ipynb)
+[<small>answer</small>](../answers/answer_hello_name.qmd)
+
+:::
+
 
 ## Built-in types
 
@@ -82,7 +85,7 @@ These types being built-in means that you don't need to explicitly enable their 
 
 For example, the code
 
-```python
+```{python}
 animal = "horse"
 ```
 
@@ -98,8 +101,7 @@ it is looking at the data type of the variable `animal`, seeing that it is a `st
 
 The documentation for all the built-in types is all on that page so it's the place to go to check what you can do with a `str`, an `int`, a `list` or a `dict`. There's also a few other built-in types you might want to look into in the future such as `complex`, `set` and `tuple`.
 
-### Exercise 2
-
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 Have a look at the documentation page for the [functions that you can call on strings](https://docs.python.org/3/library/stdtypes.html#string-methods).
 
 Experiment with one or two and see if you can understand the documentation. Start by trying to answer the following:
@@ -107,7 +109,9 @@ Experiment with one or two and see if you can understand the documentation. Star
 1. Given a string like `s = "what is your name"`, find a function which can split `s` into a list like `["what", "is", "your", "name"]`
 2. Given a list like `["a", "b", "c"]`, find a function which can join it together into a string like `"a-b-c"`
 
-[<small>answer</small>](answer_string_methods.ipynb)
+[<small>answer</small>](../answers/answer_string_methods.qmd)
+:::
+
 
 ## Importing functions from modules
 
@@ -127,23 +131,32 @@ This module provides a bunch of mathematical tools such as averages, trigonometr
 
 You can get access to the module by *importing* it by name:
 
-```python
+```{python}
 import math
 ```
 
 Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the [square root function](https://docs.python.org/3/library/math.html#math.sqrt) you would do:
 
-```{python}
-%%writefile imports.py
 
+```{python}
+#| filename: imports.py
+#| output: false
 import math
 
 print(math.sqrt(25))
 ```
 
-```{python}
-%run imports.py
+```{.bash filename="Terminal/Command Prompt"}
+python imports.py
 ```
+
+```{python}
+#| echo: false
+import math
+
+print(math.sqrt(25))
+```
+
 
 You can think of this as saying "from the `math` module that I've just imported, get the `sqrt` function inside it and call it".
 
@@ -168,8 +181,7 @@ We've seen two examples of places where dot `.` is used when calling functions i
 
 In both these cases the dot is doing a very similar job. It's saying "look inside the thing on the left of the dot for a thing called ...". In some cases, it's looking inside a data type, and in other it's looking inside a module.
 
-### Exercise 3
-
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
 Change the message in `encode.py` to use both upper and lower case letters:
 
 ```python
@@ -180,5 +192,5 @@ When you now run the script with `python encode.py` you will find that it gives 
 
 Read through the documentation for the [string methods](https://docs.python.org/3/library/stdtypes.html#string-methods) to find one that might help convert the letter you have into one that matches the keys in the dictionary. You should be able to add a single line of code in the loop straight after `for letter in message:`.
 
-[<small>answer</small>](answer_morse_case.ipynb)
-
+[<small>answer</small>](../answers/answer_morse_case.qmd)
+:::

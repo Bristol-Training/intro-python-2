@@ -1,11 +1,6 @@
----
-jupyter: python3
----
+
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile morse.py
-
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -55,9 +50,8 @@ def decode(message):
 ```
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile decode.py
-
+#| filename: decode.py
+#| eval: false
 import morse
 
 message = "... . -.-. .-. . - / -- . ... ... .- --. ."
@@ -67,7 +61,21 @@ decoded_message = morse.decode(message)
 print(decoded_message)
 ```
 
-```{python}
-%run decode.py
+```{.bash filename="Terminal/Command Prompt"}
+python decode.py
 ```
 
+```{python}
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import morse
+
+message = "... . -.-. .-. . - / -- . ... ... .- --. ."
+
+decoded_message = morse.decode(message)
+
+print(decoded_message)
+```
+
+[Return to course](../pages/04%20Modules.qmd#exercise-2)

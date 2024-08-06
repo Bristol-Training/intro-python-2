@@ -13,16 +13,10 @@ Continuing with the example of the `ounces_to_grams` function from the last chap
 To demonstrate this, let's look at the code in our `convert.py` file and think about the different role that parts of it are playing.
 
 
-```{python}
-#| tags: [remove_cell]
-%load_ext interactive_system_magic
-```
 
 ```{python}
-#| raw_mimetype: text/x-python
-#| tags: [nbval-ignore-output]
-%%writefile convert.py
-
+#| filename: convert.py
+#| output: false
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
     return new_weight
@@ -40,33 +34,45 @@ There are two main categories of code in this file:
 Let's continue this though and make it explicit by moving the code for today's problem into its own file, `recipe.py` and delete that same code from `convert.py`:
 
 ```{python}
-%%writefile convert.py
-
+#| filename: convert.py
+#| eval: false
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
     return new_weight
 ```
 
 ```{python}
-%%writefile recipe.py
-
+#| filename: recipes.py
+#| eval: false
 weight_in_grams = ounces_to_grams(12)
 
 print(f"{weight_in_grams} g")
 ```
 
+
+
 If we run this new script now, you'll get an error that it doesn't know what `ounces_to_grams` is:
 
-```{python}
-#| tags: [raises-exception, nbval-ignore-output]
-%run_python_script recipe.py
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
 ```
+
+```{python}
+#| echo: false
+#| error: true
+del ounces_to_grams
+weight_in_grams = ounces_to_grams(12)
+
+print(f"{weight_in_grams} g")
+```
+
 
 This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the `import` statement:
 
-```{python}
-%%writefile recipe.py
 
+```{python}
+#| filename: recipe.py
+#| eval: false
 import convert
 
 weight_in_grams = convert.ounces_to_grams(12)
@@ -74,9 +80,19 @@ weight_in_grams = convert.ounces_to_grams(12)
 print(f"{weight_in_grams} g")
 ```
 
+```{.bash filename="Terminal/Command Prompt"}
+python recipe.py
+```
+
 ```{python}
-#| tags: [raises-exception]
-%run_python_script recipe.py
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import convert
+
+weight_in_grams = convert.ounces_to_grams(12)
+
+print(f"{weight_in_grams} g")
 ```
 
 Here we have done a few things. First, on the first line we have *imported* our module. This is Python's way of getting access to code which is inside other modules. You write the keyword `import` followed by a space and then the name of the module you want to import. You'll notice that the way we do this is identical to when we were importing `math` etc. earlier.
@@ -87,14 +103,15 @@ A module in Python is just a text file with Python code in it. All scripts *can*
 
 Secondly, when calling the fucntion, we need to explicily state that we're using the `ounces_to_grams` function from the `convert` module using `convert.ounces_to_grams`.
 
-### Exercise
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 
 - Make a module, `morse` (so the file name must be `morse.py`), and move the `encode` function from `encode.py` from the previous chapter  into it. Delete it from the original file.
 - Also move the definition of the dictionary `letter_to_morse` into `morse.py`.
 - Edit `encode.py` so that it imports the new module and calls the function from the new module.
-- [<small>answer</small>](answer_morse_module_encode.ipynb)
+- [<small>answer</small>](../answers/answer_morse_module_encode.qmd)
+:::
 
-### Exercise
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 
 Add into `morse.py` a function to convert Morse code to English. The code to do so is written below:
 
@@ -126,7 +143,9 @@ def decode(message):
 
 Then write a new script `decode.py` which imports `morse`, calls the `decode` function and decodes the message `"... . -.-. .-. . - / -- . ... ... .- --. ."`.
 
-[<small>answer</small>](answer_morse_module_decode.ipynb)
+[<small>answer</small>](../answers/answer_morse_module_decode.qmd)
+
+:::
 
 ## Testing
 
@@ -137,9 +156,8 @@ There are more formal methods for software testing but we'll start with a common
 Make a new file called `test_morse.py`:
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile test_morse.py
-
+#| filename: test_morse.py
+#| eval: false
 import morse
 
 message = "sos we have hit an iceberg"
@@ -150,11 +168,25 @@ decode = morse.decode(code)
 print(message == decode)
 ```
 
+
+
 When you run it, you should see `True` printed to the console terminal tells us that the round-trip was successful.
 
+```{.bash filename="Terminal/Command Prompt"}
+python test_morse.py
+```
 ```{python}
-#| tags: [nbval-skip]
-%run test_morse.py
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import morse
+
+message = "sos we have hit an iceberg"
+
+code = morse.encode(message)
+decode = morse.decode(code)
+
+print(message == decode)
 ```
 
 We'll cover move on how to write tests for your Python modules in the [Best Practices in Sofware Engineering](https://milliams.com/courses/software_engineering_best_practices/) course but for now, this round-trip will suffice.

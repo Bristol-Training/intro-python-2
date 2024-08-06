@@ -10,6 +10,9 @@ letter_to_morse = {
 
 
 def encode(message):
+    if "!" in message:                                            # ← new code
+        raise ValueError(f"'!' is not valid in English strings")  # ←
+    
     morse = []
 
     for letter in message:
@@ -33,15 +36,12 @@ for letter in letter_to_morse:
 def decode(message):
     english = []
 
-    # Now we cannot read by letter. We know that morse letters are
-    # separated by a space, so we split the morse string by spaces
     morse_letters = message.split(" ")
 
     for letter in morse_letters:
         english_letter = morse_to_letter[letter]
         english.append(english_letter)
 
-    # Rejoin, but now we don't need to add any spaces
     english_message = "".join(english)
     
     return english_message

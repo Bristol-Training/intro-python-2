@@ -16,7 +16,7 @@ That's all we have for this workshop. By now you should have a better understand
 
 ## Worksheet
 
-To give you something to take away with you to practise with, there is a [worksheet with questions](appendix_practice_questions.ipynb). If you get to this point in the session then feel free to start now, otherwise work on them between this session and the next.
+To give you something to take away with you to practise with, there is a [worksheet with questions](../appendix/appendix_practice_questions.qmd). If you get to this point in the session then feel free to start now, otherwise work on them between this session and the next.
 
 ## What's next
 
