@@ -9,8 +9,7 @@ This page contains a number of questions and exercises to give you a chance to p
 You should create a new `.py` Python file for each exercise.
 
 
-### Exercise 1
-
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 The first exercise is to practise searching the documentation. From the list of modules in the standard library, find one that contains a function to give the current date and time.
 
 Fill in the `...` in the snippet below.
@@ -28,9 +27,10 @@ The output should be something like the following, but with today's date and tim
 ```
 2025-04-01T10:53:15.062603
 ```
+:::
 
-### Exercise 2
 
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 Write a function which can accept a string as an argument and return the first word in that string. To start you off, here's skeleton of what the function should look like.
 
 ```python
@@ -52,8 +52,10 @@ giving the output:
 ```
 This
 ```
+:::
 
-### Exercise 3
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
+
 
 Write a function called `count_word_match` which accepts three agruments:
 
@@ -83,9 +85,10 @@ giving the output:
 1
 2
 ``` 
+:::
 
-### Exercise 4
 
+::: {#exercise-4 .callout-tip title="Exercise 4" icon=false} 
 For this exercise, you should write a function which can find references, like `[4]`, in some text.
 
 If the function is passed a string like:
@@ -101,8 +104,11 @@ it should return a list of integers like:
 ```
 
 The function should be called `find_references`.
+:::
 
-### Exercise 5
+
+
+::: {#exercise-5 .callout-tip title="Exercise 5" icon=false} 
 
 Take the fnction that you wrote in the last exercise and move it into a module called `refs`. You should then write a test file called `test_refs.py` containing:
 
@@ -122,7 +128,9 @@ else:
 
 You should make sure that the test passes when the test script is run with:
 
-```
+```{.bash filename="Terminal/Command Prompt"}
 python test_references.py
 ```
+:::
 
+[Return to summary](../pages/98%20Summary.qmd)

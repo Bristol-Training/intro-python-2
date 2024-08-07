@@ -201,6 +201,6 @@ if ... message ...:
 
 You'll also need to choose an appropriate exception type to raise. Take a look at the [documentation](https://docs.python.org/3/library/exceptions.html) and find the exception which makes sense if an incorrect value is passed in.
 
-[<small>answer</small>](answer_morse_raise.ipynb)
+[<small>answer</small>](../answers/answer_morse_raise.qmd)
 
 :::

@@ -305,17 +305,11 @@ print(f"{weight_in_grams} g")
 python convert.py
 ```
 
-```{python}
-#| echo: false
-#| error: true
-def ounces_to_grams(weight):
-    new_weight = weight * 28.3495
-    return new_weight
-
-weight_in_grams = ounces_to_grams()  # We've removed the arguments to this function
-
-print(f"{weight_in_grams} g")
-```
+    Traceback (most recent call last):
+    File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in <module>
+        weight_in_grams = ounces_to_grams()  # We've removed the arguments to this function
+                        ^^^^^^^^^^^^^^^^^
+    TypeError: ounces_to_grams() missing 1 required positional argument: 'weight'
 
 so as you can see, it tells you that you've given it the wrong number of arguments. It expects 1 (`weight`). Likewise, if you give too many arguments you get a similar error:
 
@@ -336,17 +330,11 @@ print(f"{weight_in_grams} g")
 python convert.py
 ```
 
-```{python}
-#| echo: false
-#| error: true
-def ounces_to_grams(weight):
-    new_weight = weight * 28.3495
-    return new_weight
-
-weight_in_grams = ounces_to_grams(12, 10)  # We've passed too many arguments now
-
-print(f"{weight_in_grams} g")
-```
+    Traceback (most recent call last):
+    File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in <module>
+        weight_in_grams = ounces_to_grams(12, 10)  # We've passed too many arguments now
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+    TypeError: ounces_to_grams() takes 1 positional argument but 2 were given
 
 It is possible to define functions that take no arguments:
 

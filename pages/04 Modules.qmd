@@ -56,15 +56,10 @@ If we run this new script now, you'll get an error that it doesn't know what `ou
 ```{.bash filename="Terminal/Command Prompt"}
 python convert.py
 ```
-
-```{python}
-#| echo: false
-#| error: true
-del ounces_to_grams
-weight_in_grams = ounces_to_grams(12)
-
-print(f"{weight_in_grams} g")
-```
+    Traceback (most recent call last):
+    File "/home/matt/courses/intermediate_python/recipe.py", line 2, in <module>
+        weight_in_grams = ounces_to_grams(12)
+    NameError: name 'ounces_to_grams' is not defined
 
 
 This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the `import` statement:

@@ -163,15 +163,22 @@ You can think of this as saying "from the `math` module that I've just imported,
 If you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:
 
 ```{python}
-%%writefile imports.py
-
+#| filename: imports.py
+#| output: false
 from math import sqrt
 
 print(sqrt(25))
 ```
 
+```{.bash filename="Terminal/Command Prompt"}
+python imports.py
+```
+
 ```{python}
-%run imports.py
+#| echo: false
+from math import sqrt
+
+print(sqrt(25))
 ```
 
 We've seen two examples of places where dot `.` is used when calling functions in Python:

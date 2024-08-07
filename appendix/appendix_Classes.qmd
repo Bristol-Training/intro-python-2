@@ -342,7 +342,7 @@ To summarise, the `self` parameter in class functions points at the object that 
 
 ## Data classes
 
-Python 3.7 (release June 2018) introduced a new feature called *data classes* which aim to simplify the common tasks of creating classes. If you can rely on having this version or newer of Python available then consider [looking into using data classes](aside_dataclasses.ipynb).
+Python 3.7 (release June 2018) introduced a new feature called *data classes* which aim to simplify the common tasks of creating classes. If you can rely on having this version or newer of Python available then consider [looking into using data classes](../appendix/aside_dataclasses.qmd).
 
 ### Exercise
 
@@ -382,7 +382,7 @@ print(decoded_string == "hello world")
 ```
 When run, it should print `True`, showing that your `Message` class can encode and decode the message.
 
-Feel free to look at [the answer](answer_morse_class.ipynb) to guide you.
+Feel free to look at [the answer](../answers/answer_morse_class.qmd) to guide you.
 
 ## Naming
 
