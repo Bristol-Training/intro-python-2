@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.43">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intermediate Python – Writing functions</title>
+<title>Writing functions – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -238,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the exercise at the end of the last chapter, you edited a script that could encode messages to Morse code. The script is good, but is not very easy to use or reusable. For someone to make use of the script, they will have to edit it and copy and paste your code every time they want to encode a different message.</p>
 <p>Functions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in the last chapter, e.g.&nbsp;<code>print()</code> wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest. Likewise with <code>math.sqrt()</code>, you don’t need to understand the algorithm it uses, simply what it needs you to pass it, and what it returns back to you.</p>
 <p>You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Open a new text file, name it <code>convert.py</code> and type the following:</p>
-<div id="58f2f3ac" class="cell" data-execution_count="1">
+<div id="d8e45bbb" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -256,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9c2da103" class="cell" data-execution_count="2">
+<div id="a73669b3" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>170.09699999999998 g</code></pre>
 </div>
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="defining-functions" class="level3">
 <h3 class="anchored" data-anchor-id="defining-functions">Defining functions</h3>
 <p>We can turn this into a function that can add any two arrays together by using <code>def</code>. To do this, type:</p>
-<div id="5f35169a" class="cell" data-execution_count="3">
+<div id="efb08a98" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -323,7 +323,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <section id="calling-functions" class="level3">
 <h3 class="anchored" data-anchor-id="calling-functions">Calling functions</h3>
 <p>You can now call the function using:</p>
-<div id="0c666b08" class="cell" data-execution_count="4">
+<div id="0cda5a6c" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -345,7 +345,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="27dc90bb" class="cell" data-execution_count="5">
+<div id="62a4e7cf" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>170.09699999999998 g</code></pre>
 </div>
@@ -354,7 +354,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <p>In the fuction, <code>weight_in_ounces</code> is copied to its internal variable, <code>weight</code>. The function <code>ounces_to_grams</code> then acts on <code>weight</code>, creating the new varaible <code>new_weight</code>.</p>
 <p>It then returns <code>new_weight</code>, which is assigned to <code>weight_in_grams</code>.</p>
 <p>You can use your new <code>ounces_to_grams</code> function to convert any numbers. Try typing:</p>
-<div id="5938122e" class="cell" data-execution_count="6">
+<div id="858adf66" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -376,13 +376,13 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb9" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="956b6c16" class="cell" data-execution_count="7">
+<div id="26e2fd03" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>28321.1505 g</code></pre>
 </div>
 </div>
 <p>Note that we can pass the values to the function directly, e.g.&nbsp;type:</p>
-<div id="9bdcac44" class="cell" data-execution_count="8">
+<div id="882704b3" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -402,7 +402,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb12" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="36cca8a1" class="cell" data-execution_count="9">
+<div id="051ff678" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>340.19399999999996 g</code></pre>
 </div>
@@ -465,7 +465,7 @@ Exercise (Bonus)
 <section id="how-many-arguments" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-arguments">How many arguments?</h3>
 <p>Note that you must pass in the right number of arguments to a function. <code>ounces_to_grams</code> expects one arguments, so if you pass more or less, then that is an error. Try this now:</p>
-<div id="edb5d372" class="cell" data-execution_count="10">
+<div id="b2f6705f" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -491,7 +491,7 @@ File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in &l
                     ^^^^^^^^^^^^^^^^^
 TypeError: ounces_to_grams() missing 1 required positional argument: 'weight'</code></pre>
 <p>so as you can see, it tells you that you’ve given it the wrong number of arguments. It expects 1 (<code>weight</code>). Likewise, if you give too many arguments you get a similar error:</p>
-<div id="fb7cb4cc" class="cell" data-execution_count="11">
+<div id="f632181c" class="cell" data-execution_count="11">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -517,21 +517,21 @@ File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in &l
                     ^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: ounces_to_grams() takes 1 positional argument but 2 were given</code></pre>
 <p>It is possible to define functions that take no arguments:</p>
-<div id="63f189c8" class="cell" data-execution_count="12">
+<div id="9815dc5e" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pi():</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">3.14159</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> pi()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>single arguments:</p>
-<div id="bb1e4d5f" class="cell" data-execution_count="13">
+<div id="790f9883" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double(x):</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> double(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>or lots of arguments:</p>
-<div id="eaa00acc" class="cell" data-execution_count="14">
+<div id="06f71546" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lots_of_args(a, b, c, d, e):</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"a"</span>: a, <span class="st">"b"</span>: b, <span class="st">"c"</span>: c, <span class="st">"d"</span>: d, <span class="st">"e"</span>: e}</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -713,7 +713,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/uob-training\.github\.io\/intermediate-python\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

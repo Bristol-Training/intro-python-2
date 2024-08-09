@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.43">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intermediate Python – Modules</title>
+<title>Modules – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -266,7 +266,7 @@ window.Quarto = {
 <p>Functions are a step in the right direction but they still have the problem that to use functions from one script in another you’ll have to copy and paste them over. The answer to this is to move the functions to a common location which both scripts can access. The Python solution for this is <em>modules</em>. Just like we used modules from the Python standard library earlier, we can create our own modules too.</p>
 <p>Continuing with the example of the <code>ounces_to_grams</code> function from the last chapter, let’s see how we can use the function in other code, outside of that one script.</p>
 <p>To demonstrate this, let’s look at the code in our <code>convert.py</code> file and think about the different role that parts of it are playing.</p>
-<div id="bf7e5092" class="cell" data-execution_count="1">
+<div id="ed3725d3" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -286,7 +286,7 @@ window.Quarto = {
 <li>the code below which <em>uses</em> the function. This is specific code which has been written to solve <em>today’s</em> problem of converting this specific value. This is just one context in which you might use the <code>ounces_to_grams</code> function.</li>
 </ol>
 <p>Let’s continue this though and make it explicit by moving the code for today’s problem into its own file, <code>recipe.py</code> and delete that same code from <code>convert.py</code>:</p>
-<div id="fab1bd77" class="cell" data-execution_count="2">
+<div id="b3628313" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -296,7 +296,7 @@ window.Quarto = {
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="7a907a28" class="cell" data-execution_count="3">
+<div id="e6a93658" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipes.py</strong></pre>
@@ -318,7 +318,7 @@ File "/home/matt/courses/intermediate_python/recipe.py", line 2, in &lt;module&g
     weight_in_grams = ounces_to_grams(12)
 NameError: name 'ounces_to_grams' is not defined</code></pre>
 <p>This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the <code>import</code> statement:</p>
-<div id="3b0de6e4" class="cell" data-execution_count="4">
+<div id="4935bd34" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -336,7 +336,7 @@ NameError: name 'ounces_to_grams' is not defined</code></pre>
 </div>
 <div class="sourceCode" id="cb7" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6ee230f6" class="cell" data-execution_count="5">
+<div id="01fb7049" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>340.19399999999996 g</code></pre>
 </div>
@@ -406,7 +406,7 @@ Exercise 2
 <p>So far we’ve been writing code and running it, but have you actually checked that the code is doing the right thing? Testing code is a very important part of the software development process because if you want other people to trust your work, you need to show that you’ve checked that your code does what you claim.</p>
 <p>There are more formal methods for software testing but we’ll start with a common technique used with encoders/decoders and that is the <em>round-trip</em>. If we take a message, convert it to morse code and then convert it back, we should end up with the message we started with.</p>
 <p>Make a new file called <code>test_morse.py</code>:</p>
-<div id="70bb52f3" class="cell" data-execution_count="6">
+<div id="cc813cb6" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>test_morse.py</strong></pre>
@@ -428,7 +428,7 @@ Exercise 2
 </div>
 <div class="sourceCode" id="cb11" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test_morse.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ee8013f4" class="cell" data-execution_count="7">
+<div id="5781631f" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
@@ -531,7 +531,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/uob-training\.github\.io\/intermediate-python\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

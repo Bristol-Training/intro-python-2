@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.43">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intermediate Python – answer_function_big_numbers</title>
+<title>answer_function_big_numbers – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Starting from the initial code:</p>
-<div id="750e1e41" class="cell" data-execution_count="1">
+<div id="69468497" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>bignums.py</strong></pre>
@@ -137,13 +137,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> bignums.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="57be9121" class="cell" data-execution_count="2">
+<div id="471eb98d" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>[34, 545]</code></pre>
 </div>
 </div>
 <p>We pull out the middle four lines, indent them, put <code>def big(numbers):</code> in front and add <code>return big_numbers</code> to the end, paying careful attention to the indentation of the <code>return</code> statement. Finally, we update the variable name used in the function to match the argument name <code>numbers</code>:</p>
-<div id="a90688f4" class="cell" data-execution_count="3">
+<div id="fa14312d" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>bignums.py</strong></pre>
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> bignums.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7784db90" class="cell" data-execution_count="4">
+<div id="1d8eb41b" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>[34, 545]</code></pre>
 </div>
@@ -271,7 +271,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/uob-training\.github\.io\/intermediate-python\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

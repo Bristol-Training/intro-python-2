@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.43">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intermediate Python – String formatting</title>
+<title>String formatting – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Being able to print things to the screen is a fundamental part of interacting with a programming language. So far, we’ve kept it simple by passing the data we want to print directly to the <code>print</code> function:</p>
-<div id="3e61abb7" class="cell" data-execution_count="1">
+<div id="a6eeebc0" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -244,13 +244,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2f66db93" class="cell" data-execution_count="2">
+<div id="c16e37a0" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>42</code></pre>
 </div>
 </div>
 <p>We made things a bit nicer by using the fact that if you pass multiple arguments to <code>print</code> then it will print each of them, separated by spaces, allowing us to combine our data with a message:</p>
-<div id="74d0b548" class="cell" data-execution_count="3">
+<div id="04db46ca" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f3c16406" class="cell" data-execution_count="4">
+<div id="14a67d81" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>My num is 42</code></pre>
 </div>
@@ -274,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This works perfectly well but firstly you’re using the implicit space that’s added by <code>print</code> as part of your sentence and secondly you’re passing in two separate pieces of information where they are logically one.</p>
 <p>What we can do instead is create a single string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There’s a few different ways to do this in Python (an older but still valid method you may see uses <code>%</code> and another uses a <code>format()</code> function) but for this course we will use the method called <em>f-strings</em> which was introduced in Python 3.6 (released December 2016).</p>
 <p>If you put a single <code>f</code> directly in front of the string that you are creating, it will enable a special string mode which lets you place <code>{}</code> inside the string with a variable name between the <code>{</code> and the <code>}</code>:</p>
-<div id="534d88c2" class="cell" data-execution_count="5">
+<div id="92d390bc" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -290,13 +290,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="191d165c" class="cell" data-execution_count="6">
+<div id="10645b07" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>My num is 42</code></pre>
 </div>
 </div>
 <p>You can have as many interpolations as you like:</p>
-<div id="bcc75215" class="cell" data-execution_count="7">
+<div id="6750c7c5" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -313,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb11" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8968d5fb" class="cell" data-execution_count="8">
+<div id="6077a9b9" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>The answer is 42 and pi is 3.14159</code></pre>
 </div>
@@ -331,7 +331,7 @@ Exercise 1
 <p>For all the exercises in this course, we are going to be working on some Python code which converts to and from <a href="https://simple.wikipedia.org/wiki/Morse_code">Morse Code</a>. In each section we will add or change the code so make sure that you don’t skip any exercises.</p>
 <ul>
 <li><p>Copy the following code in the text editor into a script called <code>encode.py</code> and run it in the terminal with <code>python encode.py</code> to check that it works.</p>
-<div id="59420b71" class="cell" data-execution_count="9">
+<div id="502b072f" class="cell" data-execution_count="9">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -464,7 +464,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/uob-training\.github\.io\/intermediate-python\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
