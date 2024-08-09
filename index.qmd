@@ -6,6 +6,15 @@ Welcome to a short course which will introduce you to some more of the Python pr
 
 You can jump ahead to any chapter:
 
+1. [String formatting](./pages/01%20String%20formatting.qmd)
+2. [Using functions](./pages/02%20Using%20functions.qmd)
+3. [Writing functions](./pages/03%20Functions.qmd)
+4. [Modules](./pages/04%20Modules.qmd)
+5. [Exceptions](./pages/05%20Exceptions.qmd)
+6. [List comprehensions](./pages/06%20List%20comprehensions.qmd)
+7. [Summary](./pages/98%20Summary.qmd)
+
+
 For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor in your web browser where you can write and run Python code. The easiest way to get access to JupyterLab is to [install Anaconda](https://www.anaconda.com/products/individual#Downloads) which is a piece of software which includes Python along with lots of other tools. It is freely available for Windows, MacOS and Linux.
 
 Once Anaconda is installed, start "Anaconda Navigator" and press the JupyterLab "Launch" button on the main screen:
