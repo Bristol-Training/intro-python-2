@@ -20,16 +20,9 @@ To give you something to take away with you to practise with, there is a [worksh
 
 ## What's next
 
-Once you're comfortable with the material in this course, I suggest having a look at our course on [best practices in software engineering](https://milliams.com/courses/software_engineering_best_practices/) which covers testing your code and writing documentation. Otherwise, if you haven't already, you may be interested in the course on [data analysis in Python](https://milliams.com/courses/data_analysis_python/).
+Once you're comfortable with the material in this course, I suggest having a look at our course on [best practices in software engineering](https://milliams.com/courses/software_engineering_best_practices/) which covers testing your code and writing documentation. Otherwise, if you haven't already, you may be interested in the course on [data analysis in Python](https://uob-data-science-training.github.io/introduction-to-data-analysis-in-python/).
 
 If you want to get some practice with Python coding, take a look at [Codewars](https://www.codewars.com/?language=python). This is a website which sets you small challenges and lets you discuss with others what the best solution might be.
 
-## Credits
 
-This course was written by Matt Williams, based on the original course by Christopher Woods published at https://chryswoods.com/intermediate_python/. Some changes were made by the ACRC at the University of Bristol.
-
-All text is published under a [Creative Commons Attribution 4.0 International
-License](https://creativecommons.org/licenses/by/4.0/) with all code snippets licensed as MIT.
-
-The source for the material can be found on [GitLab](https://gitlab.com/milliams/intermediate_python) where fixes are welcome.
 
