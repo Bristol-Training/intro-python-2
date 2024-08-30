@@ -1,1 +1,1 @@
-Sitemap: https://uob-training.github.io/intermediate-python/sitemap.xml
+Sitemap: https://UoB-Data-Science-Training.github.io/intermediate-python/sitemap.xml

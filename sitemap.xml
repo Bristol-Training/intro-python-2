@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/04 Modules.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/04 Modules.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/01 String formatting.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/01 String formatting.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/05 Exceptions.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/05 Exceptions.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/06 List comprehensions.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/06 List comprehensions.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/index.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/index.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/appendix/aside_dataclasses.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/appendix/aside_dataclasses.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/appendix/aside_zip.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/appendix/aside_zip.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_function_big_numbers.html</loc>
-    <lastmod>2024-08-09T15:25:22.426Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_function_big_numbers.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_comprehension.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_comprehension.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_class.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_class.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_string_methods.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_string_methods.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_practice_questions.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_practice_questions.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_module_decode.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_module_decode.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_exceptions.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_exceptions.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_encode_function.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_encode_function.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_case.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_case.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_hello_name.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_hello_name.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_function_double.html</loc>
-    <lastmod>2024-08-09T15:25:22.426Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_function_double.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_raise.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_raise.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_decode_function.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_decode_function.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_module_encode.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_module_encode.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/answers/answer_morse_string_formatting.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/answers/answer_morse_string_formatting.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/utils/template.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/utils/template.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/appendix/appendix_practice_questions.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/appendix/appendix_practice_questions.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/appendix/appendix_Classes.html</loc>
-    <lastmod>2024-08-09T15:25:22.430Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/appendix/appendix_Classes.html</loc>
+    <lastmod>2024-08-30T14:52:25.318Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/02 Using functions.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/02 Using functions.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/99 Contributors.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/99 Contributors.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/03 Functions.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/03 Functions.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/intermediate-python/pages/98 Summary.html</loc>
-    <lastmod>2024-08-09T15:25:22.434Z</lastmod>
+    <loc>https://UoB-Data-Science-Training.github.io/intermediate-python/pages/98 Summary.html</loc>
+    <lastmod>2024-08-30T14:52:25.322Z</lastmod>
   </url>
 </urlset>

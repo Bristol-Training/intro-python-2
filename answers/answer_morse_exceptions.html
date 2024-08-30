@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -120,11 +120,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="9e4d3f7d" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="1">
+<div id="632e4c0e" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>f morse.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>morse.py</code> is the same as in the previous exercise. We have our test in <code>Message.__init__</code> to check for <code>!</code>:</p>
-<div id="8176f9b4" class="cell" data-tags="[&quot;nbval-ignore-output&quot;]" data-execution_count="2">
+<div id="71ef21a5" class="cell" data-tags="[&quot;nbval-ignore-output&quot;]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile morse.py</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
@@ -178,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>If we add some <code>!</code> to our <code>message_string</code> in <code>encode.py</code> then we see our <code>ValueError</code> exception raised:</p>
-<div id="256bca37" class="cell" data-execution_count="3">
+<div id="2c4f0a6b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile encode.py</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
@@ -193,7 +193,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Writing encode.py</code></pre>
 </div>
 </div>
-<div id="192e3e61" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="4">
+<div id="d6113f8a" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -218,7 +218,7 @@ File <span class="ansi-green-fg">~/work/intermediate-python/intermediate-python/
 </div>
 </div>
 <p>Moving all that code into a <code>try</code>/<code>except ValueError</code> block we can catch the error and print something</p>
-<div id="cd4040a0" class="cell" data-execution_count="5">
+<div id="d7ad0bd4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile encode.py</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
@@ -236,14 +236,14 @@ File <span class="ansi-green-fg">~/work/intermediate-python/intermediate-python/
 <pre><code>Overwriting encode.py</code></pre>
 </div>
 </div>
-<div id="dc5d32ce" class="cell" data-execution_count="6">
+<div id="0ca37afb" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Could not encode message: '!' is not valid in English strings</code></pre>
 </div>
 </div>
 <p>Passing in a valid string (removing the <code>!</code>) results in the code running correctly:</p>
-<div id="271c603e" class="cell" data-execution_count="7">
+<div id="fd0dd891" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile encode.py</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
@@ -261,7 +261,7 @@ File <span class="ansi-green-fg">~/work/intermediate-python/intermediate-python/
 <pre><code>Overwriting encode.py</code></pre>
 </div>
 </div>
-<div id="f0c39c23" class="cell" data-execution_count="8">
+<div id="ac589591" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
@@ -364,7 +364,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/uob-training\.github\.io\/intermediate-python\/");
+      var filterRegex = new RegExp("https:\/\/UoB-Data-Science-Training\.github\.io\/intermediate-python\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
