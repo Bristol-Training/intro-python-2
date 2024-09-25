@@ -1,43 +1,76 @@
 ---
-title: Intermediate Python
+title: Introduction
 ---
 
-Welcome to a short course which will introduce you to some more of the Python programming language and show how they can make it easier to share your code with other people.
+Welcome to this second course on Python programming! This course builds upon Beginning Python and delves deeper into working with advanced data structures, write functions, explore modules, and how to handle errors and exceptions. Get ready to take your Python skills to the next level!
 
-You can jump ahead to any chapter:
+For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor and Python terminal in your web browser. Setting up instructions can be found [here]("pages/001-workspace-setup.qmd").
 
-1. [String formatting](./pages/01%20String%20formatting.qmd)
-2. [Using functions](./pages/02%20Using%20functions.qmd)
-3. [Writing functions](./pages/03%20Functions.qmd)
-4. [Modules](./pages/04%20Modules.qmd)
-5. [Exceptions](./pages/05%20Exceptions.qmd)
-6. [List comprehensions](./pages/06%20List%20comprehensions.qmd)
-7. [Summary](./pages/98%20Summary.qmd)
+### Intended learning outcomes
+
+By the end of this course, you will:
+
+ By the end of this course, you'll be able to design and write fully-functional Python programs using commonly used data structures, custom functions, and file operations.
+
+- Know how to use lists and dictionaries
+- Use and write functions
+- Use modules
+- Read and handle errors and exceptions
 
 
-For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor in your web browser where you can write and run Python code. The easiest way to get access to JupyterLab is to [install Anaconda](https://www.anaconda.com/products/individual#Downloads) which is a piece of software which includes Python along with lots of other tools. It is freely available for Windows, MacOS and Linux.
+## How to read this documentation
 
-Once Anaconda is installed, start "Anaconda Navigator" and press the JupyterLab "Launch" button on the main screen:
+In this documentation, any time that we are seeing a small snippet of Python code, we'll see it written in a grey box like the following:
 
-![Anaconda Navigator](./assets/navigator.png "Anaconda Navigator")
+```{.python}
+print("Hello, Python")
+```
 
-This will open JupyterLab in your default web browser and will look something like this:
+If the commands are executed by the machine we will see the output of them below enclosed on a vertical purple line:
 
-![JupyterLab](./assets/jupyterlab1.png "JupyterLab")
+```{python}
+print("Hello, Python!")
+```
 
-The way that we will be setting up the space is to have a text editor on the left-hand side of the screen and a terminal on the right hand side. We'll use the editor to write our code and the terminal to run it.
+By contrast, you will see larger pices of code as scripts with a given name, e.g. `script.py`, in a code block with darker header:
 
-In the launcher tab, scroll down to the "Text File" entry and click that. It will turn the editor into a text editor. Then go to File → New and select "Terminal". It will now have two tabs inside the interface, one labelled "untitled.txt" and the other labelled "Terminal 1":
+```{.python filename="script.py"}
+greeting = "Hello"
+name = input("What is your name? ")
+print(greeting, name)
+```
 
-![JupyterLab](./assets/jupyterlab2.png "JupyterLab")
+We may ask you to run a script using the `Command Prompt` (Windows) or `Terminal` (Mac and Linux). We will show you what commands to run and will look like this:
+```{.bash filename="Terminal/Command Prompt"}
+python script.py
+```
 
-To make our lives easier, let's rearange things so that we can see the text editor at the same time as the terminal. Do this by pressing and holding down the left mouse button on the tab that says "Terminal 1" and slowly dragging it to the right-hand side of the window. You'll see a blue outline like this:
+**Please note that sometimes we will skip showing the execution of scripts on the Terminal/Command Prompt box, but we will assume you to run the script on your.**
 
-![JupyterLab](./assets/jupyterlab3.png "JupyterLab")
+In some cases we will introduce general programming concepts and structures using pseudocode, a high-level, easy-to-read syntax close to natural language. This should not be confused with Python code and cannot be executed on your machine, but it is useful to describe how your code should behave. Here there is an example:
+```
+FOR EACH sample IN my_study
+    IF (sample.value > 100)
+        DO SOMETHING
+    OTHERWISE
+        DO SOMETHING ELSE
+```
 
-Release the mouse button and you'll end up with the two showing side-by-side:
 
-![JupyterLab](./assets/jupyterlab4.png "JupyterLab")
+There are some exercices along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution. 
 
-This layout is just a recomendation and if you'd rather do it differently, that's fine. Also if you're comfortable using an IDE like VS Code, PyCharm or Spyder then you're welcome to as long as you have a Terminal window and a text editor.
+::: {#exampleN .callout-note icon=false title='Exercise'}
+This is an exercise. You will need to click in the below box to see the answer.
+:::
+
+::: {#answerN .callout-caution icon=false title='Answer (click to open)' collapse="true"}
+This is the answer.
+:::
+
+Last, we will highlight important points using green boxes like this one:
+
+::: {#keypointsN .callout-tip icon=false title='Key points'}
+These are important concepts and technical notes.
+:::
+
 
