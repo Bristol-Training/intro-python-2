@@ -1,0 +1,438 @@
+---
+title: Writing functions
+jupyter: python3
+---
+
+
+In the exercise at the end of the last chapter, you edited a script that could encode messages to Morse code. The script is good, but is not very easy to use or reusable. For someone to make use of the script, they will have to edit it and copy and paste your code every time they want to encode a different message.
+
+Functions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in the last chapter, e.g. `print()` wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest. Likewise with `math.sqrt()`, you don't need to understand the algorithm it uses, simply what it needs you to pass it, and what it returns back to you.
+
+You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Open a new text file, name it `convert.py` and type the following:
+
+```{python}
+#| filename: convert.py
+#| output: false
+weight_in_ounces = 6
+
+weight_in_grams = weight_in_ounces * 28.3495
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
+```
+
+```{python}
+#| echo: false
+weight_in_ounces = 6
+
+weight_in_grams = weight_in_ounces * 28.3495
+
+print(f"{weight_in_grams} g")
+```
+
+You can see this script as having three main parts to it:
+- The **set-up** where we define `weight_in_ounces`
+- The **data-processing** section where we read our inputs and create an output
+- The **output** section where we print our result to the screen
+
+The data processing section will work regardless of what data is inside the variable `weight_in_ounces` and so we can grab that bit of code and make it usable in other contexts quite easily, using functions.
+
+## Defining functions
+
+We can turn this into a function that can add any two arrays together by using `def`. To do this, type:
+
+```{python}
+#| filename: convert.py
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+```
+
+This has created a new function called `ounces_to_grams` which we can now call. In a similar fashion to other constructs in Python (like `for` loops and `if` statements) it has a rigid structure.
+
+First we must use the `def` keyword to start a function definition:
+
+<pre>
+ ↓
+<b style="color:darkred">def</b> ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Then we specify the name that we want to give the function. Like anything in Python, choose a descriptive name that describes what it does. This is the name which we will use when *calling* the function:
+
+<pre>
+           ↓
+def <b style="color:darkred">ounces_to_grams</b>(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Function definitions must then be followed by a pair of round brackets. This is a similar syntax to that used when *calling* a function and giving it arguments but here we're just defining it:
+
+<pre>
+                   ↓      ↓
+def ounces_to_grams<b style="color:darkred">(</b>weight<b style="color:darkred">)</b>:
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Between those brackets go the names of the parameters we want the function to accept. We can define zero or more parameters. Here we are defining one:
+
+<pre>
+                      ↓
+def ounces_to_grams(<b style="color:darkred">weight</b>):
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Finally, the line is completed with a colon:
+
+<pre>
+                           ↓
+def ounces_to_grams(weight)<b style="color:darkred">:</b>
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Since we've used a colon, we must indent the body of the function as we did with loops and conditional statements:
+
+<pre>
+def ounces_to_grams(weight):
+    <b style="color:darkred">new_weight = weight * 28.3495</b>  ← body of<b style="color:darkred">
+    return new_weight</b>              ← function
+</pre>
+
+Most functions will also want to return data back to the code that called it. You can choose what data is returned using the `return` keyword followed by the data you want to return:
+
+<pre>
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    <b style="color:darkred">return</b> new_weight
+      ↑
+</pre>
+
+The body of the function has been copied from our script above with the only change being that the variables have different names.
+
+## Calling functions
+
+You can now call the function using:
+
+
+```{python}
+#| filename: convert.py
+#| output: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_ounces = 6
+
+weight_in_grams = ounces_to_grams(weight_in_ounces)
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
+```
+
+```{python}
+#| echo: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_ounces = 6
+
+weight_in_grams = ounces_to_grams(weight_in_ounces)
+
+print(f"{weight_in_grams} g")
+```
+
+
+In this case you have called the function `ounces_to_grams` and passed in the argument `weight_in_ounces`.
+
+In the fuction, `weight_in_ounces` is copied to its internal variable, `weight`. The function `ounces_to_grams` then acts on `weight`, creating the new varaible `new_weight`.
+
+It then returns `new_weight`, which is assigned to `weight_in_grams`.
+
+You can use your new `ounces_to_grams` function to convert any numbers. Try typing:
+
+```{python}
+#| filename: convert.py
+#| output: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_ounces = 999
+
+weight_in_grams = ounces_to_grams(weight_in_ounces)
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
+```
+
+```{python}
+#| echo: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_ounces = 999
+
+weight_in_grams = ounces_to_grams(weight_in_ounces)
+
+print(f"{weight_in_grams} g")
+```
+
+Note that we can pass the values to the function directly, e.g. type:
+
+```{python}
+#| filename: convert.py
+#| output: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_grams = ounces_to_grams(12)
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
+```
+
+```{python}
+#| echo: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_grams = ounces_to_grams(12)
+
+print(f"{weight_in_grams} g")
+```
+
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+Take the following code:
+
+```python
+my_num = 10
+
+doubled = my_num * 2
+
+print(doubled)
+```
+
+and convert the multiplication part to a function called `double` which can be called like:
+
+```python
+doubled = double(my_num)
+```
+
+such that when run, the code prints:
+
+```
+20
+```
+
+[<small>answer</small>](../answers/answer_function_double.qmd)
+:::
+
+
+::: {#exercise-bonus .callout-tip title="Exercise (Bonus)" icon=false} 
+Take the following code:
+
+```python
+my_list = [5, 7, 34, 5, 3, 545]
+
+big_numbers = []
+for num in my_list:
+    if num > 10:
+        big_numbers.append(num)
+
+print(big_numbers)
+```
+
+and convert the data-processing parts to a function called `big` which can be called like:
+
+```python
+my_list = [5, 7, 34, 5, 3, 545]
+
+large_numbers = big(my_list)
+
+print(large_numbers)
+```
+
+giving
+
+```
+[34, 545]
+```
+
+Be careful to pay attention to the indentation, ensuring that it is consistent with the original code. Particularly, note that the `return` statement will cause the function to exit, so make sure that it doesn't run until after the loop has finished.
+
+[<small>answer</small>](../answers/answer_function_big_numbers.qmd)
+
+:::
+
+## How many arguments?
+
+Note that you must pass in the right number of arguments to a function. `ounces_to_grams` expects one arguments, so if you pass more or less, then that is an error. Try this now:
+
+```{python}
+#| filename: convert.py
+#| eval: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_grams = ounces_to_grams()  # We've removed the arguments to this function
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
+```
+
+    Traceback (most recent call last):
+    File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in <module>
+        weight_in_grams = ounces_to_grams()  # We've removed the arguments to this function
+                        ^^^^^^^^^^^^^^^^^
+    TypeError: ounces_to_grams() missing 1 required positional argument: 'weight'
+
+so as you can see, it tells you that you've given it the wrong number of arguments. It expects 1 (`weight`). Likewise, if you give too many arguments you get a similar error:
+
+```{python}
+#| filename: convert.py
+#| eval: false
+
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_grams = ounces_to_grams(12, 10)  # We've passed too many arguments now
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python convert.py
+```
+
+    Traceback (most recent call last):
+    File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in <module>
+        weight_in_grams = ounces_to_grams(12, 10)  # We've passed too many arguments now
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+    TypeError: ounces_to_grams() takes 1 positional argument but 2 were given
+
+It is possible to define functions that take no arguments:
+
+```{python}
+def pi():
+    return 3.14159
+
+answer = pi()
+```
+
+single arguments:
+
+```{python}
+def double(x):
+    return x * 2
+
+answer = double(4)
+```
+
+or lots of arguments:
+
+```{python}
+def lots_of_args(a, b, c, d, e):
+    return {"a": a, "b": b, "c": c, "d": d, "e": e}
+
+answer = lots_of_args(1, 2, 3, 4, 5)
+```
+
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
+Take `encode.py` from the previous chapter and edit it so that the part that does the conversion (everything from `morse = []` to `" ".join(morse)`) is moved into a function called `encode`. The function should take one argument and return the encoded morse string.
+
+To be more explicit, replace the following lines of code:
+
+```python
+morse = []
+
+for letter in message:
+    letter = letter.lower()
+    morse_letter = letter_to_morse[letter]
+    morse.append(morse_letter)
+
+morse_message = " ".join(morse)
+```
+
+and replace them with:
+
+```python
+def encode(message):
+    ...
+    
+    return ...
+
+morse_message = encode(message)
+```
+
+where the `...` should be replaced with the code to do the conversion and the variable to be returned.
+
+[<small>answer</small>](../answers/answer_morse_encode_function.qmd)
+
+:::
+
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false}
+- Make a second file called `decode.py` with the contents:
+  ```python
+  letter_to_morse = {
+      'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
+      'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
+      'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
+      'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
+      '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
+      '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
+  }
+
+  # We need to invert the dictionary. This will create a dictionary
+  # that can go from the morse back to the letter
+  morse_to_letter = {}
+  for letter in letter_to_morse:
+      morse = letter_to_morse[letter]
+      morse_to_letter[morse] = letter
+
+  message = "... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--"
+
+  english = []
+
+  # Now we cannot read by letter. We know that morse letters are
+  # separated by a space, so we split the morse string by spaces
+  morse_letters = message.split(" ")
+
+  for letter in morse_letters:
+      english.append(morse_to_letter[letter])
+
+  # Rejoin, but now we don't need to add any spaces
+  english_message = "".join(english)
+  
+  print(english_message)
+  ```
+- Edit `decode.py` so that the part that does the conversion (everything from `english = []` to `"".join(english)`) is moved into a function. The function should take one argument, `message` and return the decoded english message. Choose a sensible, one word name for the function
+
+[<small>answer</small>](../answers/answer_morse_decode_function.qmd)
+
+:::

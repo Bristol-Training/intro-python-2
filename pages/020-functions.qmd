@@ -1,0 +1,114 @@
+---
+title: Functions
+jupyter: python3
+---
+
+
+
+You're likely already comfortable with calling functions in Python. One of the first things you were probably taught was how to `print()` something. As you've continued your learning, you've probably come across a larger number of other ways of calling functions which are similar, but work slightly differently.
+
+In this section we're going to explore how Python works in these situations and how you can understand what's going on.
+
+In terms of *calling* functions, you have seen:
+
+- free functions like `print()` and `range()`
+- functions on objects (also called "methods") like `my_list.append()` and `my_str.split()`
+
+but you will also have written things like the following in your code:
+
+- data *literals* like `10`, `"hello"` and `[1, 2]`
+- *syntax* like `for house in town:` and `if height > 10:`
+
+So far you have probably learned these topics by following tutorials or attending workshops like this one. However, there is a central, official place where all the details of how these things work is written down so let's have an explore.
+
+Go to <https://docs.python.org>
+
+There are a lot of different sections linked from that page, but the two most important links for us are:
+1. The "Language Reference" (https://docs.python.org/3/reference/) which details all the in-built features of the language. It's quite technical and not the place you'd normally go to learn as a beginner. This covers our "literals" and "syntax" from above.
+2. The "Library Reference" (https://docs.python.org/3/library/) which covers all of the extra functions, classes and modules that Python provides. This is where we find all the cool stuff.
+
+## Built-in functions
+
+Python comes with a bunch of functionality that you can use without having to explicitly enable anything. This includes things like integers, strings, lists, `print()`ing, file `open()`ing etc.
+
+First, lets have a peek at the "built-in functions". There is a page describing these under the "Library Reference" in a page called [Built-in Functions](https://docs.python.org/3/library/functions.html).
+
+Here we find the documentation for many of the functions we've already been using, for example [`print()`](https://docs.python.org/3/library/functions.html#print) and [`max()`](https://docs.python.org/3/library/functions.html#max).
+
+It is worth, over time, becoming familiar with the various functions that are available here. Some are quite useful for everyday work and some are more niche.
+
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+
+Copy the following code into a new file called `hello.py`:
+
+```python
+my_name = ...
+
+name_length = ...
+
+print(f"Hello {my_name}! Your name is {name_length} characters long")
+```
+
+Replace the first `...` with a call to a built-in function which will read input from the person running the script.
+Replace the second `...` with a call to a function which will give the length of the string returned by the first.
+Search through the [built-in functions page](https://docs.python.org/3/library/functions.html) to find the appropriate functions.
+
+The script should, when run with `python hello.py`, then print out:
+
+```
+Please tell me your name: 
+```
+
+and wait for you to type your name like:
+
+```
+Please tell me your name: Matt
+```
+
+After pressing enter, it should then print out:
+
+```
+Please tell me your name: Matt
+Hello Matt! Your name is 4 characters long
+```
+
+[<small>answer</small>](../answers/answer_hello_name.qmd)
+
+:::
+
+
+## Built-in types
+
+As well as the free-standing built-in functions, Python has a bunch of built-in *data types*. This includes the data types you've already been using like integers, strings and lists. The details of them all are under the "Library Reference" on a page called [Built-in Types](https://docs.python.org/3/library/stdtypes.html).
+
+These types being built-in means that you don't need to explicitly enable their use and most have core-language syntax to create them.
+
+For example, the code
+
+```{python}
+animal = "horse"
+```
+
+creates a variable called `animal` from the string literal `"horse"` which is of the type `str`. This data type is built into the language and so the functionality that it has is documented on the [built-in types page under `str`](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str).
+
+This means that when we do:
+
+```python
+animal.capitalize()
+```
+
+it is looking at the data type of the variable `animal`, seeing that it is a `str` and then using the `capitalize` function that's available for that type to do the work.
+
+The documentation for all the built-in types is all on that page so it's the place to go to check what you can do with a `str`, an `int`, a `list` or a `dict`. There's also a few other built-in types you might want to look into in the future such as `complex`, `set` and `tuple`.
+
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
+Have a look at the documentation page for the [functions that you can call on strings](https://docs.python.org/3/library/stdtypes.html#string-methods).
+
+Experiment with one or two and see if you can understand the documentation. Start by trying to answer the following:
+
+1. Given a string like `s = "what is your name"`, find a function which can split `s` into a list like `["what", "is", "your", "name"]`
+2. Given a list like `["a", "b", "c"]`, find a function which can join it together into a string like `"a-b-c"`
+
+[<small>answer</small>](../answers/answer_string_methods.qmd)
+:::
+

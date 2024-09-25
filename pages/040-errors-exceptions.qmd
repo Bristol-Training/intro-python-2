@@ -1,0 +1,206 @@
+---
+title: Errors and Exceptions
+jupyter: python3
+---
+
+*Exceptions* are Python's error-handling system. You've probably come across exceptions as that's how Python lets you know when you've done something wrong! They're not just there to tell you off, a good error message is to tell you that the computer has got into a situation where it doesn't know what to do and is asking you, the programmer, to help it by giving more information.
+
+Let's start by considering our function from before which converts data from ounces to grams:
+
+
+```{python}
+#| filename: convert.py
+#| output: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+```
+
+
+```{python}
+#| filename: recipe.py
+#| output: false
+import convert
+
+weight_in_grams = convert.ounces_to_grams(10)
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python recipe.py
+```
+
+```{python}
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import convert
+
+weight_in_grams = convert.ounces_to_grams(10)
+
+print(f"{weight_in_grams} g")
+```
+
+
+Everything is looking good in this case, so let's have a look in some more detail.
+
+## Checking the value of data
+
+When you create a function you are creating a sort of promise. In this case, you're promising that if you call the function `ounces_to_grams` that it will "take whatever value you passed as an argument, interpret it as a mass in grams and return the corresponding mass in ounces". It might seem silly to write that out in full like that but it's a useful exercise to help make decisions about what the function should do in potentially unexpected situations.
+
+For example, what should happen if you passed the string `"banana"`? How exactly should the function "interpret it as a mass in grams"? You're writing the function so you get to decide the answer to that question. You could decide that it's reasonable to go and lookup the average mass of a banana in some database and return the value in ounces. It's your choice.
+
+I would suggest, however, that most users of your function would not expect that and it's more likely that it's a mistake that they've made. Good functions are easily explained and predictable and avoid guessing what the user meant. How though, can we let the person who called our function that there is a problem?
+
+Let's look at a simpler example to demonstrate how we can write some code in our funciton to help the person calling it understand if they make a mistake. Our function converts masses and since there's no such thing as a negative mass we need to decide what will happen if someone passes in a negative value. At the moment it will just return a negative mass:
+
+```{python}
+#| filename: recipe.py
+#| output: false
+import convert
+
+weight_in_grams = convert.ounces_to_grams(-30)
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python recipe.py
+```
+
+```{python}
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import convert
+
+weight_in_grams = convert.ounces_to_grams(-30)
+
+print(f"{weight_in_grams} g")
+```
+
+Since we're the ones writing the function, we get to decide what happens. For the purpose of this section, we want a negative mass to be impossible so we need to add in some code to check for it.
+
+The easiest place to start is by adding an `if` statement and printing out an informative message:
+
+```{python}
+#| filename: convert.py
+#| output: false
+def ounces_to_grams(weight):
+    if weight < 0:
+        print("Cannot convert negative mass")
+    
+    new_weight = weight * 28.3495
+    return new_weight
+```
+
+
+We see the message printed out, but the function has gone ahead and still returned the negative mass. What we want is a way to have the function display the message and stop running:
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python recipe.py
+```
+
+```{python}
+#| echo: false
+import sys
+sys.path.append('../scripts')
+import convert_print
+
+weight_in_grams = convert_print.ounces_to_grams(-30)
+
+print(f"{weight_in_grams} g")
+```
+
+We could "stop running the function" at that point by `return`ing something, but _what_? If we return something like `0` or `-1` to designate the failure mode, then the person calling the function could quite easily carry on without noticing, assuming that it's a valid mass.
+
+
+    def ounces_to_grams(weight):
+        if weight < 0:
+            print("Cannot convert negative mass")
+            # ... at this point we want to stop running the function
+
+        new_weight = weight * 28.3495
+        return new_weight
+
+## Raising exceptions
+
+Python solves this by allowing us to raise *exceptions*. An exception is an error message which the person calling the code *cannot* ignore which is useful as it helps prevent them write incorrect code.
+
+We can replace our `print` function call with the `raise` statement which we follow with the type of error we are notifying the user about.
+
+A list of all Python exception types is [here](http://docs.python.org/library/exceptions.html). It is important to choose the correct exception type for the error you're reporting. In our case, there is a problem with the value that the user is passing into our function, so I have chosen [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError):
+
+```{python}
+#| filename: convert.py
+#| output: false
+def ounces_to_grams(weight):
+    if weight < 0:
+        raise ValueError("Cannot convert negative mass")
+    
+    new_weight = weight * 28.3495
+    return new_weight
+```
+
+Now when we run our code, it will display the error:
+
+```{.bash filename="Terminal/Command Prompt"}
+python recipe.py
+```
+    Traceback (most recent call last):
+    File "/home/matt/courses/intermediate_python/recipe.py", line 4, in <module>
+        weight_in_grams = convert.ounces_to_grams(-30)
+    File "/home/matt/courses/intermediate_python/convert.py", line 4, in ounces_to_grams
+        raise ValueError("Cannot convert negative mass")
+    ValueError: Cannot convert negative mass
+
+Notice that the result of the function has not been displayed. This is because Python will stop running the code in the cell or script once an exception is raised. To prove this, see what happens if you print something after the function:
+
+```{python}
+#| filename: recipe.py
+#| eval: false
+import convert
+
+weight_in_grams = convert.ounces_to_grams(-30)
+
+print(f"this will never be printed")
+
+print(f"{weight_in_grams} g")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python recipe.py
+```
+    Traceback (most recent call last):
+    File "/home/matt/courses/intermediate_python/recipe.py", line 4, in <module>
+        weight_in_grams = convert.ounces_to_grams(-30)
+    File "/home/matt/courses/intermediate_python/convert.py", line 4, in ounces_to_grams
+        raise ValueError("Cannot convert negative mass")
+    ValueError: Cannot convert negative mass
+
+
+
+This means that we cannot accidentally ignore the error and use the erroneous value.
+
+You've almost certainly seen error message like this crop up when writing your own code. Hopefully, now that you know how to create them yourself, they've become a little less scary!
+
+
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+If we give our Morse code functions a string which can't be converted, e.g. `"hi!"`, `"m'aidez"` or `"😀🐍"` then we expect it to result in an error.
+
+Add a check to the start of the `encode` function to raise an exception if the passed `message` is not valid.
+
+At this point, don't worry about writing a check that's perfect, just think of *one thing* that you would check for and raise an exception if you see that. Start with some code that looks something like:
+
+```python
+if ... message ...:
+    raise ...
+```
+
+You'll also need to choose an appropriate exception type to raise. Take a look at the [documentation](https://docs.python.org/3/library/exceptions.html) and find the exception which makes sense if an incorrect value is passed in.
+
+[<small>answer</small>](../answers/answer_morse_raise.qmd)
+
+:::

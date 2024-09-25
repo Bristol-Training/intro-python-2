@@ -1,0 +1,95 @@
+---
+title: Importing functions from modules
+jupyter: python3
+---
+
+
+
+## Importing functions from modules
+
+While there are a good number of built-in functions and types, and you can go a long way without needing anything more, they are ultimately limited. Luckily, Python has a "batteries included" philosophy and provides a lot of additional functionality in its "standard library".
+
+The functionality provided by the standard library is provided in a series of *modules*, each of whch serves a particular purpose. The things in the standard library are always installed in any version of Python you have and you can rely on them being there.
+
+Note that even though they are always accessible, they do not count as "built-in" as in Python terms, that means something which you can use without having to access any extra modules.
+
+### The `math` module
+
+Let's start by looking at one of the modules. On the [Standard Library](https://docs.python.org/3/library/) page, if you scroll past the "built-in" sections you'll find a set of groups of modules. There are about 200 modules in total, some very useful and some very niche.
+
+If you carry on down the page you'll see, "[`math` — Mathematical functions](https://docs.python.org/3/library/math.html)" which is where we are going to look first.
+
+This module provides a bunch of mathematical tools such as averages, trigonometry etc.
+
+You can get access to the module by *importing* it by name:
+
+```{python}
+import math
+```
+
+Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the [square root function](https://docs.python.org/3/library/math.html#math.sqrt) you would do:
+
+
+```{python}
+#| filename: imports.py
+#| output: false
+import math
+
+print(math.sqrt(25))
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python imports.py
+```
+
+```{python}
+#| echo: false
+import math
+
+print(math.sqrt(25))
+```
+
+
+You can think of this as saying "from the `math` module that I've just imported, get the `sqrt` function inside it and call it".
+
+If you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:
+
+```{python}
+#| filename: imports.py
+#| output: false
+from math import sqrt
+
+print(sqrt(25))
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python imports.py
+```
+
+```{python}
+#| echo: false
+from math import sqrt
+
+print(sqrt(25))
+```
+
+We've seen two examples of places where dot `.` is used when calling functions in Python:
+
+1. calling a method on a variable like with `my_list.append()` or `my_string.split()`,
+2. calling a function from an imported module like `math.sqrt()`.
+
+In both these cases the dot is doing a very similar job. It's saying "look inside the thing on the left of the dot for a thing called ...". In some cases, it's looking inside a data type, and in other it's looking inside a module.
+
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
+Change the message in `encode.py` to use both upper and lower case letters:
+
+```python
+message = "SOS We have hit an iceberg and need help quickly"
+```
+
+When you now run the script with `python encode.py` you will find that it gives you a `KeyError`. This is because it is looking for an upper case "S" in the dictionary `letter_to_morse` and not finding one (dictionary keys are case-sensitive).
+
+Read through the documentation for the [string methods](https://docs.python.org/3/library/stdtypes.html#string-methods) to find one that might help convert the letter you have into one that matches the keys in the dictionary. You should be able to add a single line of code in the loop straight after `for letter in message:`.
+
+[<small>answer</small>](../answers/answer_morse_case.qmd)
+:::
