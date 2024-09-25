@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_function_double – Intermediate Python</title>
+<title>List comprehensions – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../pages/020-functions.html" rel="next">
+<link href="../pages/012-string-formatting.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,15 +103,157 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/013-list-comprehensions.html">List comprehensions</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Intermediate Python</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intermediate Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advanced Data Types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/011-dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/012-string-formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String formatting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/013-list-comprehensions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">List comprehensions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/021-importing-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Importing functions from modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/022-writing-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/030-modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/040-errors-exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Errors and Exceptions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/980-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
@@ -117,36 +261,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<div id="4e032bb1" class="cell" data-execution_count="1">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>doubler.py</strong></pre>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">List comprehensions</h1>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double(num):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> num <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_num <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>doubled <span class="op">=</span> double(my_num)</span>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The last thing we will cover in this workshop is a little different to the other parts of this session. Rather than being a technique for making your code more easily sharable, reliable or user-friendly, it’s instead a language feature which can make your life easier.</p>
+<p>There’s a common pattern that you will see come up a lot in programming in general and and Python in particular and that is “loop-append”. We’ve done it already in the morse code exercises. Let’s look at a section of <code>encode</code> first:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>morse <span class="op">=</span> []</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> message:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    letter <span class="op">=</span> letter.lower()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    morse.append(morse_letter)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(doubled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The code inside the function is doing a few different things. First it creates an empty list, knowing full-well that it’s about to be filled up. The next three lines then loop over some input container (<code>message</code>) and use some result of that to iteratively append to the end of <code>morse</code>.</p>
+<p><code>for</code> loops are useful when you want to <em>do something</em> for each item in a list but what we’re doing here is taking one container and <em>transforming</em> it into something new. The purpose of this code is to <em>create</em> the new container, not to <em>use</em> the old one.</p>
+<p>This is such a common pattern that Python has special built-in syntax for doing this loop-append in one go called <em>list comprehension</em>. Taking a simpler example for now of an input of a <code>range</code> function and the output being the square of the inputs:</p>
+<div id="04acf9ad" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> []</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    s.append(i<span class="op">*</span>i)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>[0, 1, 4, 9]</code></pre>
 </div>
 </div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> doubler.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="df3b802c" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>20</code></pre>
+<p>We end up outputting <span class="math inline">\(0^2\)</span>, <span class="math inline">\(1^2\)</span>, <span class="math inline">\(2^2\)</span> and <span class="math inline">\(3^2\)</span>. The equivalent with a list comprehension would be:</p>
+<div id="b23fc453" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[i<span class="op">*</span>i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>[0, 1, 4, 9]</code></pre>
 </div>
 </div>
-<p><a href="../pages/03 Functions.qmd#exercise-1">Return to course</a></p>
+<p>You can see that it has output exactly the same answer but was one in one line instead of four. You might recognise some familiar features in there but they’re not in the usual order. Let’s break it apart, step-by-step:</p>
+<p>We start with the outer square brackets. They’re doing a similar things here to when you create a normal list like <code>[1, 2, 3]</code> but in this situation, due to what’s inside they work a little differently but the result is still a normal Python list:</p>
+<pre>↓                     ↓
+<b style="color:darkred">[</b>i*i for i in range(4)<b style="color:darkred">]</b>
+</pre>
+<p>The next part is the input for the comprehension. This syntax is taken from the normal <code>for</code> loop syntax and works in the same way. We’re saying that we want to loop over <code>range(4)</code> and each time round the loop, we will use the variable <code>i</code> to refer to the current value:</p>
+<pre>              ↓
+[i*i <b style="color:darkred">for i in range(4)</b>]
+</pre>
+<p>The last part is where it differs. Rather than the body of the loop going on a new line after a colon, the body goes before the <code>for</code> keyword. You can only have a single expression here, not multiple lines of code. Also, there’s no need for an explicit <code>append</code> call. Whatever is written in that place will be added into the list as it is created:</p>
+<pre>  ↓
+[<b style="color:darkred">i*i</b> for i in range(4)]
+</pre>
+<p>List comprehensions are powerful because they allow you to do a lot in a single line but that can be an issue of you try to do too much and it becomes very noisy. I would suggest that you try to keep your list comprehensions not much more complicated than the example we saw above.</p>
+<div id="exercise-1" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Adapt <code>encode</code> and <code>decode</code> in the <code>morse</code> module to use list comprehensions for doing the conversion. <a href="../answers/answer_morse_comprehension.html"><small>answer</small></a></li>
+</ul>
+</div>
+</div>
 
 
 
@@ -571,6 +762,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../pages/012-string-formatting.html" class="pagination-link" aria-label="String formatting">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">String formatting</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../pages/020-functions.html" class="pagination-link" aria-label="Functions">
+        <span class="nav-page-text">Functions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -579,7 +782,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_function_double.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/013-list-comprehensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_function_double – Intermediate Python</title>
+<title>Functions – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../pages/021-importing-functions.html" rel="next">
+<link href="../pages/013-list-comprehensions.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,51 +106,242 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Functions</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Intermediate Python</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intermediate Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advanced Data Types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/011-dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/012-string-formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String formatting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/013-list-comprehensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List comprehensions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/021-importing-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Importing functions from modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/022-writing-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/030-modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/040-errors-exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Errors and Exceptions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/980-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#built-in-functions" id="toc-built-in-functions" class="nav-link active" data-scroll-target="#built-in-functions">Built-in functions</a></li>
+  <li><a href="#built-in-types" id="toc-built-in-types" class="nav-link" data-scroll-target="#built-in-types">Built-in types</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/020-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Functions</h1>
+</div>
 
 
 
-<div id="4e032bb1" class="cell" data-execution_count="1">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>doubler.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double(num):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> num <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_num <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>doubled <span class="op">=</span> double(my_num)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(doubled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> doubler.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="df3b802c" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>20</code></pre>
-</div>
-</div>
-<p><a href="../pages/03 Functions.qmd#exercise-1">Return to course</a></p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>You’re likely already comfortable with calling functions in Python. One of the first things you were probably taught was how to <code>print()</code> something. As you’ve continued your learning, you’ve probably come across a larger number of other ways of calling functions which are similar, but work slightly differently.</p>
+<p>In this section we’re going to explore how Python works in these situations and how you can understand what’s going on.</p>
+<p>In terms of <em>calling</em> functions, you have seen:</p>
+<ul>
+<li>free functions like <code>print()</code> and <code>range()</code></li>
+<li>functions on objects (also called “methods”) like <code>my_list.append()</code> and <code>my_str.split()</code></li>
+</ul>
+<p>but you will also have written things like the following in your code:</p>
+<ul>
+<li>data <em>literals</em> like <code>10</code>, <code>"hello"</code> and <code>[1, 2]</code></li>
+<li><em>syntax</em> like <code>for house in town:</code> and <code>if height &gt; 10:</code></li>
+</ul>
+<p>So far you have probably learned these topics by following tutorials or attending workshops like this one. However, there is a central, official place where all the details of how these things work is written down so let’s have an explore.</p>
+<p>Go to <a href="https://docs.python.org" class="uri">https://docs.python.org</a></p>
+<p>There are a lot of different sections linked from that page, but the two most important links for us are: 1. The “Language Reference” (https://docs.python.org/3/reference/) which details all the in-built features of the language. It’s quite technical and not the place you’d normally go to learn as a beginner. This covers our “literals” and “syntax” from above. 2. The “Library Reference” (https://docs.python.org/3/library/) which covers all of the extra functions, classes and modules that Python provides. This is where we find all the cool stuff.</p>
+<section id="built-in-functions" class="level3">
+<h3 class="anchored" data-anchor-id="built-in-functions">Built-in functions</h3>
+<p>Python comes with a bunch of functionality that you can use without having to explicitly enable anything. This includes things like integers, strings, lists, <code>print()</code>ing, file <code>open()</code>ing etc.</p>
+<p>First, lets have a peek at the “built-in functions”. There is a page describing these under the “Library Reference” in a page called <a href="https://docs.python.org/3/library/functions.html">Built-in Functions</a>.</p>
+<p>Here we find the documentation for many of the functions we’ve already been using, for example <a href="https://docs.python.org/3/library/functions.html#print"><code>print()</code></a> and <a href="https://docs.python.org/3/library/functions.html#max"><code>max()</code></a>.</p>
+<p>It is worth, over time, becoming familiar with the various functions that are available here. Some are quite useful for everyday work and some are more niche.</p>
+<div id="exercise-1" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Copy the following code into a new file called <code>hello.py</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> ...</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>name_length <span class="op">=</span> ...</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello </span><span class="sc">{</span>my_name<span class="sc">}</span><span class="ss">! Your name is </span><span class="sc">{</span>name_length<span class="sc">}</span><span class="ss"> characters long"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace the first <code>...</code> with a call to a built-in function which will read input from the person running the script. Replace the second <code>...</code> with a call to a function which will give the length of the string returned by the first. Search through the <a href="https://docs.python.org/3/library/functions.html">built-in functions page</a> to find the appropriate functions.</p>
+<p>The script should, when run with <code>python hello.py</code>, then print out:</p>
+<pre><code>Please tell me your name: </code></pre>
+<p>and wait for you to type your name like:</p>
+<pre><code>Please tell me your name: Matt</code></pre>
+<p>After pressing enter, it should then print out:</p>
+<pre><code>Please tell me your name: Matt
+Hello Matt! Your name is 4 characters long</code></pre>
+<p><a href="../answers/answer_hello_name.html"><small>answer</small></a></p>
+</div>
+</div>
+</section>
+<section id="built-in-types" class="level3">
+<h3 class="anchored" data-anchor-id="built-in-types">Built-in types</h3>
+<p>As well as the free-standing built-in functions, Python has a bunch of built-in <em>data types</em>. This includes the data types you’ve already been using like integers, strings and lists. The details of them all are under the “Library Reference” on a page called <a href="https://docs.python.org/3/library/stdtypes.html">Built-in Types</a>.</p>
+<p>These types being built-in means that you don’t need to explicitly enable their use and most have core-language syntax to create them.</p>
+<p>For example, the code</p>
+<div id="7a074659" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>animal <span class="op">=</span> <span class="st">"horse"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>creates a variable called <code>animal</code> from the string literal <code>"horse"</code> which is of the type <code>str</code>. This data type is built into the language and so the functionality that it has is documented on the <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">built-in types page under <code>str</code></a>.</p>
+<p>This means that when we do:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>animal.capitalize()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>it is looking at the data type of the variable <code>animal</code>, seeing that it is a <code>str</code> and then using the <code>capitalize</code> function that’s available for that type to do the work.</p>
+<p>The documentation for all the built-in types is all on that page so it’s the place to go to check what you can do with a <code>str</code>, an <code>int</code>, a <code>list</code> or a <code>dict</code>. There’s also a few other built-in types you might want to look into in the future such as <code>complex</code>, <code>set</code> and <code>tuple</code>.</p>
+<div id="exercise-2" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Have a look at the documentation page for the <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">functions that you can call on strings</a>.</p>
+<p>Experiment with one or two and see if you can understand the documentation. Start by trying to answer the following:</p>
+<ol type="1">
+<li>Given a string like <code>s = "what is your name"</code>, find a function which can split <code>s</code> into a list like <code>["what", "is", "your", "name"]</code></li>
+<li>Given a list like <code>["a", "b", "c"]</code>, find a function which can join it together into a string like <code>"a-b-c"</code></li>
+</ol>
+<p><a href="../answers/answer_string_methods.html"><small>answer</small></a></p>
+</div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -571,6 +764,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../pages/013-list-comprehensions.html" class="pagination-link" aria-label="List comprehensions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">List comprehensions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../pages/021-importing-functions.html" class="pagination-link" aria-label="Importing functions from modules">
+        <span class="nav-page-text">Importing functions from modules</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -579,7 +784,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_function_double.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/020-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

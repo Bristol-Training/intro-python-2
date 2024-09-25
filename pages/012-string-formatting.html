@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_morse_module_encode – Intermediate Python</title>
+<title>String formatting – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../pages/013-list-comprehensions.html" rel="next">
+<link href="../pages/011-dictionaries.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,12 +106,125 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/012-string-formatting.html">String formatting</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Intermediate Python</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intermediate Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advanced Data Types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/011-dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/012-string-formatting.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">String formatting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/013-list-comprehensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List comprehensions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/021-importing-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Importing functions from modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/022-writing-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/030-modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/040-errors-exceptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Errors and Exceptions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/980-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
@@ -117,65 +232,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">String formatting</h1>
+</div>
 
 
 
-<div id="7e6371c9" class="cell" data-execution_count="1">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Being able to print things to the screen is a fundamental part of interacting with a programming language. So far, we’ve kept it simple by passing the data we want to print directly to the <code>print</code> function:</p>
+<div id="a28d3054" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>morse.py</strong></pre>
+<pre><strong>format.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode(message):</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> []</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> message:</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        letter <span class="op">=</span> letter.lower()</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        morse.append(morse_letter)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> morse_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="9d570e14" class="cell" data-execution_count="2">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>encode.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>encoded_message <span class="op">=</span> morse.encode(message)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_num <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb3" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="863feaa0" class="cell" data-execution_count="3">
+<div id="a367a277" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
-<pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
-   Morse encoded: ... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--</code></pre>
+<pre><code>42</code></pre>
 </div>
 </div>
-<p><a href="../pages/04 Modules.qmd#exercise-1">Return to course</a></p>
+<p>We made things a bit nicer by using the fact that if you pass multiple arguments to <code>print</code> then it will print each of them, separated by spaces, allowing us to combine our data with a message:</p>
+<div id="db81dff0" class="cell" data-execution_count="3">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>format.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_num <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My num is"</span>, my_num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0117bb59" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>My num is 42</code></pre>
+</div>
+</div>
+<p>This works perfectly well but firstly you’re using the implicit space that’s added by <code>print</code> as part of your sentence and secondly you’re passing in two separate pieces of information where they are logically one.</p>
+<p>What we can do instead is create a single string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There’s a few different ways to do this in Python (an older but still valid method you may see uses <code>%</code> and another uses a <code>format()</code> function) but for this course we will use the method called <em>f-strings</em> which was introduced in Python 3.6 (released December 2016).</p>
+<p>If you put a single <code>f</code> directly in front of the string that you are creating, it will enable a special string mode which lets you place <code>{}</code> inside the string with a variable name between the <code>{</code> and the <code>}</code>:</p>
+<div id="77df6d08" class="cell" data-execution_count="5">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>format.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_num <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"My num is </span><span class="sc">{</span>my_num<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="7fbdfba5" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>My num is 42</code></pre>
+</div>
+</div>
+<p>You can have as many interpolations as you like:</p>
+<div id="040e38aa" class="cell" data-execution_count="7">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>format.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The answer is </span><span class="sc">{</span>answer<span class="sc">}</span><span class="ss"> and pi is </span><span class="sc">{</span>pi<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a899d313" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stdout">
+<pre><code>The answer is 42 and pi is 3.14159</code></pre>
+</div>
+</div>
+<div id="exercise-1" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For all the exercises in this course, we are going to be working on some Python code which converts to and from <a href="https://simple.wikipedia.org/wiki/Morse_code">Morse Code</a>. In each section we will add or change the code so make sure that you don’t skip any exercises.</p>
+<ul>
+<li><p>Copy the following code in the text editor into a script called <code>encode.py</code> and run it in the terminal with <code>python encode.py</code> to check that it works.</p>
+<div id="5aa01854" class="cell" data-execution_count="9">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>encode.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"please help"</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># `morse` is a list which will eventually contain the </span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># strings for each morse code letter in the message.</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>morse <span class="op">=</span> []</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> message:</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    morse.append(morse_letter)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to join together Morse code letters with spaces</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>morse_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></li>
+<li><p>If you get an error when running the code, first check that you have saved the file <code>encode.py</code>.</p></li>
+<li><p>If you get an error like <code>SyntaxError: invalid syntax</code> then try running the script with <code>python3 encode.py</code>.</p></li>
+<li><p><a href="../answers/answer_morse_string_formatting.html"><small>answer</small></a></p></li>
+</ul>
+</div>
+</div>
 
 
 
@@ -600,6 +816,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../pages/011-dictionaries.html" class="pagination-link" aria-label="Dictionaries">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dictionaries</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../pages/013-list-comprehensions.html" class="pagination-link" aria-label="List comprehensions">
+        <span class="nav-page-text">List comprehensions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -608,7 +836,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_morse_module_encode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/012-string-formatting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
