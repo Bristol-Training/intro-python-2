@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing functions – Intermediate Python</title>
+<title>Writing functions – Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/022-writing-functions.html">Writing functions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Functions</a></li><li class="breadcrumb-item"><a href="../pages/022-writing-functions.html">Writing functions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -130,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Intermediate Python</a> 
@@ -146,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Intermediate Python</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,48 +155,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Workspace setup</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Advanced Data Types</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/011-dictionaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dictionaries</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/012-string-formatting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">String formatting</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/013-list-comprehensions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">List comprehensions</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/021-importing-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Importing functions from modules</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/022-writing-functions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Writing functions</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/030-modules.html" class="sidebar-item-text sidebar-link">
@@ -240,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Functions</a></li><li class="breadcrumb-item"><a href="../pages/022-writing-functions.html">Writing functions</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Writing functions</h1>
 </div>
@@ -262,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the exercise at the end of the last chapter, you edited a script that could encode messages to Morse code. The script is good, but is not very easy to use or reusable. For someone to make use of the script, they will have to edit it and copy and paste your code every time they want to encode a different message.</p>
 <p>Functions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in the last chapter, e.g.&nbsp;<code>print()</code> wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest. Likewise with <code>math.sqrt()</code>, you don’t need to understand the algorithm it uses, simply what it needs you to pass it, and what it returns back to you.</p>
 <p>You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Open a new text file, name it <code>convert.py</code> and type the following:</p>
-<div id="062f9044" class="cell" data-execution_count="1">
+<div id="a0e9c9e8" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -280,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="bbba5156" class="cell" data-execution_count="2">
+<div id="de6659b2" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>170.09699999999998 g</code></pre>
 </div>
@@ -290,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="defining-functions" class="level3">
 <h3 class="anchored" data-anchor-id="defining-functions">Defining functions</h3>
 <p>We can turn this into a function that can add any two arrays together by using <code>def</code>. To do this, type:</p>
-<div id="847153aa" class="cell" data-execution_count="3">
+<div id="ce1cb71b" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -347,7 +357,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <section id="calling-functions" class="level3">
 <h3 class="anchored" data-anchor-id="calling-functions">Calling functions</h3>
 <p>You can now call the function using:</p>
-<div id="29808b92" class="cell" data-execution_count="4">
+<div id="185ca5c0" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -369,7 +379,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0bf02177" class="cell" data-execution_count="5">
+<div id="de226837" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>170.09699999999998 g</code></pre>
 </div>
@@ -378,7 +388,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <p>In the fuction, <code>weight_in_ounces</code> is copied to its internal variable, <code>weight</code>. The function <code>ounces_to_grams</code> then acts on <code>weight</code>, creating the new varaible <code>new_weight</code>.</p>
 <p>It then returns <code>new_weight</code>, which is assigned to <code>weight_in_grams</code>.</p>
 <p>You can use your new <code>ounces_to_grams</code> function to convert any numbers. Try typing:</p>
-<div id="ae40c842" class="cell" data-execution_count="6">
+<div id="83fb44fa" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -400,13 +410,13 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb9" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2cdedca0" class="cell" data-execution_count="7">
+<div id="86197665" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>28321.1505 g</code></pre>
 </div>
 </div>
 <p>Note that we can pass the values to the function directly, e.g.&nbsp;type:</p>
-<div id="162a7d04" class="cell" data-execution_count="8">
+<div id="9fbcf1f4" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -426,7 +436,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb12" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> convert.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ea641296" class="cell" data-execution_count="9">
+<div id="c4309262" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>340.19399999999996 g</code></pre>
 </div>
@@ -489,7 +499,7 @@ Exercise (Bonus)
 <section id="how-many-arguments" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-arguments">How many arguments?</h3>
 <p>Note that you must pass in the right number of arguments to a function. <code>ounces_to_grams</code> expects one arguments, so if you pass more or less, then that is an error. Try this now:</p>
-<div id="905eedd4" class="cell" data-execution_count="10">
+<div id="2c5e738e" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -515,7 +525,7 @@ File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in &l
                     ^^^^^^^^^^^^^^^^^
 TypeError: ounces_to_grams() missing 1 required positional argument: 'weight'</code></pre>
 <p>so as you can see, it tells you that you’ve given it the wrong number of arguments. It expects 1 (<code>weight</code>). Likewise, if you give too many arguments you get a similar error:</p>
-<div id="9efc8bee" class="cell" data-execution_count="11">
+<div id="10e20e87" class="cell" data-execution_count="11">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -541,21 +551,21 @@ File "/home/matt/projects/courses/intermediate_python/convert.py", line 6, in &l
                     ^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: ounces_to_grams() takes 1 positional argument but 2 were given</code></pre>
 <p>It is possible to define functions that take no arguments:</p>
-<div id="b946bf74" class="cell" data-execution_count="12">
+<div id="1395059a" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pi():</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">3.14159</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> pi()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>single arguments:</p>
-<div id="66ce9b40" class="cell" data-execution_count="13">
+<div id="bf3aac05" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double(x):</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> double(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>or lots of arguments:</p>
-<div id="f9766240" class="cell" data-execution_count="14">
+<div id="29e0d2bc" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lots_of_args(a, b, c, d, e):</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"a"</span>: a, <span class="st">"b"</span>: b, <span class="st">"c"</span>: c, <span class="st">"d"</span>: d, <span class="st">"e"</span>: e}</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>

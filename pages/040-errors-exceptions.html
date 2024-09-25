@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Errors and Exceptions – Intermediate Python</title>
+<title>Errors and Exceptions – Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -130,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Intermediate Python</a> 
@@ -146,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Intermediate Python</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,48 +155,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Workspace setup</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Advanced Data Types</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/011-dictionaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dictionaries</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/012-string-formatting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">String formatting</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/013-list-comprehensions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">List comprehensions</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/021-importing-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Importing functions from modules</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/022-writing-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writing functions</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/030-modules.html" class="sidebar-item-text sidebar-link">
@@ -260,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><em>Exceptions</em> are Python’s error-handling system. You’ve probably come across exceptions as that’s how Python lets you know when you’ve done something wrong! They’re not just there to tell you off, a good error message is to tell you that the computer has got into a situation where it doesn’t know what to do and is asking you, the programmer, to help it by giving more information.</p>
 <p>Let’s start by considering our function from before which converts data from ounces to grams:</p>
-<div id="d2691e1e" class="cell" data-execution_count="1">
+<div id="f658cca1" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -270,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="bcb1a249" class="cell" data-execution_count="2">
+<div id="edeb2b7c" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -288,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb3" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2469351a" class="cell" data-execution_count="3">
+<div id="8e63bd1b" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>283.495 g</code></pre>
 </div>
@@ -300,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For example, what should happen if you passed the string <code>"banana"</code>? How exactly should the function “interpret it as a mass in grams”? You’re writing the function so you get to decide the answer to that question. You could decide that it’s reasonable to go and lookup the average mass of a banana in some database and return the value in ounces. It’s your choice.</p>
 <p>I would suggest, however, that most users of your function would not expect that and it’s more likely that it’s a mistake that they’ve made. Good functions are easily explained and predictable and avoid guessing what the user meant. How though, can we let the person who called our function that there is a problem?</p>
 <p>Let’s look at a simpler example to demonstrate how we can write some code in our funciton to help the person calling it understand if they make a mistake. Our function converts masses and since there’s no such thing as a negative mass we need to decide what will happen if someone passes in a negative value. At the moment it will just return a negative mass:</p>
-<div id="d025c9b9" class="cell" data-execution_count="4">
+<div id="9f0d97fa" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -318,14 +328,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3f6f7195" class="cell" data-execution_count="5">
+<div id="67dd7d73" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>-850.485 g</code></pre>
 </div>
 </div>
 <p>Since we’re the ones writing the function, we get to decide what happens. For the purpose of this section, we want a negative mass to be impossible so we need to add in some code to check for it.</p>
 <p>The easiest place to start is by adding an <code>if</code> statement and printing out an informative message:</p>
-<div id="b7776bff" class="cell" data-execution_count="6">
+<div id="6c0afa3f" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -345,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb9" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7b6bac10" class="cell" data-execution_count="7">
+<div id="97190e02" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Cannot convert negative mass
 -850.485 g</code></pre>
@@ -365,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Python solves this by allowing us to raise <em>exceptions</em>. An exception is an error message which the person calling the code <em>cannot</em> ignore which is useful as it helps prevent them write incorrect code.</p>
 <p>We can replace our <code>print</code> function call with the <code>raise</code> statement which we follow with the type of error we are notifying the user about.</p>
 <p>A list of all Python exception types is <a href="http://docs.python.org/library/exceptions.html">here</a>. It is important to choose the correct exception type for the error you’re reporting. In our case, there is a problem with the value that the user is passing into our function, so I have chosen <a href="https://docs.python.org/3/library/exceptions.html#ValueError"><code>ValueError</code></a>:</p>
-<div id="b517f634" class="cell" data-execution_count="8">
+<div id="6b725d2b" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -392,7 +402,7 @@ File "/home/matt/courses/intermediate_python/convert.py", line 4, in ounces_to_g
     raise ValueError("Cannot convert negative mass")
 ValueError: Cannot convert negative mass</code></pre>
 <p>Notice that the result of the function has not been displayed. This is because Python will stop running the code in the cell or script once an exception is raised. To prove this, see what happens if you print something after the function:</p>
-<div id="db80b63e" class="cell" data-execution_count="9">
+<div id="d1dfb7f9" class="cell" data-execution_count="9">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
