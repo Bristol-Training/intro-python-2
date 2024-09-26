@@ -262,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Being able to print things to the screen is a fundamental part of interacting with a programming language. So far, we’ve kept it simple by passing the data we want to print directly to the <code>print</code> function:</p>
-<div id="2f69cf72" class="cell" data-execution_count="1">
+<div id="ed21d45c" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>We made things a bit nicer by using the fact that if you pass multiple arguments to <code>print</code> then it will print each of them, separated by spaces, allowing us to combine our data with a message:</p>
-<div id="816d93e9" class="cell" data-execution_count="2">
+<div id="e8e67ce6" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -292,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This works perfectly well but firstly you’re using the implicit space that’s added by <code>print</code> as part of your sentence and secondly you’re passing in two separate pieces of information where they are logically one.</p>
 <p>What we can do instead is create a single string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There’s a few different ways to do this in Python (an older but still valid method you may see uses <code>%</code> and another uses a <code>format()</code> function) but for this course we will use the method called <em>f-strings</em> which was introduced in Python 3.6 (released December 2016).</p>
 <p>If you put a single <code>f</code> directly in front of the string that you are creating, it will enable a special string mode which lets you place <code>{}</code> inside the string with a variable name between the <code>{</code> and the <code>}</code>:</p>
-<div id="191c5e8b" class="cell" data-execution_count="3">
+<div id="f2fe5168" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -306,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>You can have as many interpolations as you like:</p>
-<div id="87524ee7" class="cell" data-execution_count="4">
+<div id="09f38b79" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -320,20 +320,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>The answer is 42 and pi is 3.14159</code></pre>
 </div>
 </div>
-<div id="exercise-1" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
+<div id="exercise-1" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercise 1
+Exercise
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>For all the exercises in this course, we are going to be working on some Python code which converts to and from <a href="https://simple.wikipedia.org/wiki/Morse_code">Morse Code</a>. In each section we will add or change the code so make sure that you don’t skip any exercises.</p>
 <ul>
 <li><p>Copy the following code in the text editor into a script called <code>encode.py</code> and run it in the terminal with <code>python encode.py</code> to check that it works.</p>
-<div id="384fea80" class="cell" data-execution_count="5">
+<div id="7bee020a" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -381,11 +381,8 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<hr>
-<p>jupyter: python3</p>
-<hr>
 <p>The following code should be put into a file called <code>encode.py</code> using the text editor in JupyterLab:</p>
-<div id="15b51007" class="cell" data-execution_count="6">
+<div id="b43ab742" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -415,15 +412,6 @@ Answer
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>morse_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Once that code is in the file and the file has been saved, run the code by typing the following in the Terminal and pressing Enter:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb11" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="aa217ae9" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: please help
    Morse encoded: .--. .-.. . .- ... . / .... . .-.. .--.</code></pre>

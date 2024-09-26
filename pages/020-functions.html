@@ -329,7 +329,7 @@ Answer
 <div class="callout-body-container callout-body">
 <p>To get input from the person running your script, you can use the <a href="https://docs.python.org/3/library/functions.html#input"><code>input()</code></a> function.</p>
 <p>If you pass a string argument to it, it will use that as the “prompt” when asking for input.</p>
-<div id="5b1afbd0" class="cell" data-execution_count="1">
+<div id="b76ad9d0" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>hello.py</strong></pre>
@@ -347,7 +347,7 @@ Answer
 </div>
 <div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> hello.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ed6c5a4b" class="cell" data-execution_count="2">
+<div id="58a185da" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Please tell me your name: Matt
 Hello Matt! Your name is 4 characters long</code></pre>
@@ -362,7 +362,7 @@ Hello Matt! Your name is 4 characters long</code></pre>
 <p>As well as the free-standing built-in functions, Python has a bunch of built-in <em>data types</em>. This includes the data types you’ve already been using like integers, strings and lists. The details of them all are under the “Library Reference” on a page called <a href="https://docs.python.org/3/library/stdtypes.html">Built-in Types</a>.</p>
 <p>These types being built-in means that you don’t need to explicitly enable their use and most have core-language syntax to create them.</p>
 <p>For example, the code</p>
-<div id="7b9e32b0" class="cell" data-execution_count="3">
+<div id="e6142fb5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>animal <span class="op">=</span> <span class="st">"horse"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>creates a variable called <code>animal</code> from the string literal <code>"horse"</code> which is of the type <code>str</code>. This data type is built into the language and so the functionality that it has is documented on the <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">built-in types page under <code>str</code></a>.</p>
@@ -401,7 +401,7 @@ Answer
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You can split any string using the <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>str.split</code></a> function. By default it splits on spaces:</p>
-<div id="5ef82505" class="cell" data-execution_count="4">
+<div id="9f8ddede" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">"what is your name"</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>s.split()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -411,21 +411,21 @@ Answer
 <section id="join-a-list" class="level3">
 <h3 class="anchored" data-anchor-id="join-a-list">Join a list</h3>
 <p>You can join a list together by using the <a href="https://docs.python.org/3/library/stdtypes.html#str.join"><code>str.join</code></a> function. Note that in front of the dot you put the string that you want to join <em>with</em>, and you pass the list you want to join <em>together</em> as an argument.</p>
-<div id="1426e197" class="cell" data-execution_count="5">
+<div id="7640d7a3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">"-"</span>.join(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>'a-b-c'</code></pre>
 </div>
 </div>
-<div id="9929bef7" class="cell" data-execution_count="6">
+<div id="9946ee11" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">":"</span>.join(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>'a:b:c'</code></pre>
 </div>
 </div>
-<div id="805d3798" class="cell" data-execution_count="7">
+<div id="511c59d7" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">" "</span>.join(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
