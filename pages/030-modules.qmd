@@ -54,7 +54,7 @@ print(f"{weight_in_grams} g")
 If we run this new script now, you'll get an error that it doesn't know what `ounces_to_grams` is:
 
 ```{.bash filename="Terminal/Command Prompt"}
-python convert.py
+python recipes.py
 ```
 
 ```{python}

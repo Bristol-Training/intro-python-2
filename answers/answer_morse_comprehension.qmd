@@ -3,7 +3,7 @@ jupyter: python3
 ---
 
 ```{python}
-#|filename: morse.py
+#|filename: encode.py
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -30,44 +30,14 @@ def encode(message):
     morse_message = " ".join(morse)
     
     return morse_message
-    
-def decode(message):
-    english = [morse_to_letter[letter] for letter in message.split(" ")]
 
-    english_message = "".join(english)
-    
-    return english_message
-```
-
-```{python}
-#|filename: morse.py
-#|eval: false
-import morse
 
 message = "SOS We have hit an iceberg and need help quickly"
 
-encoded_message = morse.encode(message)
+encoded_message = encode(message)
 
 print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
-```
 
-```{.bash filename="Terminal/Command Prompt"}
-python morse.py
-```
-
-```{python}
-#| echo: false
-import sys
-sys.path.append('../scripts')
-
-import morse
-
-message = "SOS We have hit an iceberg and need help quickly"
-
-encoded_message = morse.encode(message)
-
-print(f"Incoming message: {message}")
-print(f"   Morse encoded: {encoded_message}")
 ```
 

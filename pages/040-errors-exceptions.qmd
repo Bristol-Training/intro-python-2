@@ -187,7 +187,7 @@ This means that we cannot accidentally ignore the error and use the erroneous va
 You've almost certainly seen error message like this crop up when writing your own code. Hopefully, now that you know how to create them yourself, they've become a little less scary!
 
 
-::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-tip title="Exercise" icon=false} 
 If we give our Morse code functions a string which can't be converted, e.g. `"hi!"`, `"m'aidez"` or `"😀🐍"` then we expect it to result in an error.
 
 Add a check to the start of the `encode` function to raise an exception if the passed `message` is not valid.
@@ -201,6 +201,9 @@ if ... message ...:
 
 You'll also need to choose an appropriate exception type to raise. Take a look at the [documentation](https://docs.python.org/3/library/exceptions.html) and find the exception which makes sense if an incorrect value is passed in.
 
-[<small>answer</small>](../answers/answer_morse_raise.qmd)
 
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_raise.qmd >}}
 :::

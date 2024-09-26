@@ -1,12 +1,7 @@
----
-jupyter: python3
----
-
 
 The following code should be put into a file called `encode.py` using the text editor in JupyterLab:
 ```{python}
 #| filename: encode.py
-#| output: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -32,41 +27,4 @@ morse_message = " ".join(morse)
 print(f"Incoming message: {message}")
 print(f"   Morse encoded: {morse_message}")
 ```
-
-
-Once that code is in the file and the file has been saved, run the code by typing the following in the Terminal and pressing Enter:
-
-```{.bash filename="Terminal/Command Prompt"}
-python encode.py
-```
-
-```{python}
-#| echo: false
-letter_to_morse = {
-    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
-    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
-    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
-    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
-    '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
-    '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
-}
-
-message = "please help"
-
-# `morse` is a list which will eventually contain the 
-# strings for each morse code letter in the message.
-morse = []
-
-for letter in message:
-    morse_letter = letter_to_morse[letter]
-    morse.append(morse_letter)
-
-# We need to join together Morse code letters with spaces
-morse_message = " ".join(morse)
-
-print(f"Incoming message: {message}")
-print(f"   Morse encoded: {morse_message}")
-```
-
-
 

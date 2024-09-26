@@ -52,7 +52,7 @@ print(f"The answer is {answer} and pi is {pi}")
 ```
 
 
-::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-tip title="Exercise" icon=false} 
 For all the exercises in this course, we are going to be working on some Python code which converts to and from [Morse Code](https://simple.wikipedia.org/wiki/Morse_code). In each section we will add or change the code so make sure that you don't skip any exercises.
 
 - Copy the following code in the text editor into a script called `encode.py` and run it in the terminal with `python encode.py` to check that it works.
