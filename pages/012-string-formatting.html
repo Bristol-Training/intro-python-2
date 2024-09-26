@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>String formatting – Introduction</title>
+<title>String formatting – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
@@ -262,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Being able to print things to the screen is a fundamental part of interacting with a programming language. So far, we’ve kept it simple by passing the data we want to print directly to the <code>print</code> function:</p>
-<div id="4a0ac7c6" class="cell" data-execution_count="1">
+<div id="9cee5614" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -278,13 +278,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="180b7661" class="cell" data-execution_count="2">
+<div id="4b5c3b6e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>42</code></pre>
 </div>
 </div>
 <p>We made things a bit nicer by using the fact that if you pass multiple arguments to <code>print</code> then it will print each of them, separated by spaces, allowing us to combine our data with a message:</p>
-<div id="bda28d0e" class="cell" data-execution_count="3">
+<div id="11a05a85" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -300,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e5543500" class="cell" data-execution_count="4">
+<div id="dccfcf99" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>My num is 42</code></pre>
 </div>
@@ -308,7 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This works perfectly well but firstly you’re using the implicit space that’s added by <code>print</code> as part of your sentence and secondly you’re passing in two separate pieces of information where they are logically one.</p>
 <p>What we can do instead is create a single string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There’s a few different ways to do this in Python (an older but still valid method you may see uses <code>%</code> and another uses a <code>format()</code> function) but for this course we will use the method called <em>f-strings</em> which was introduced in Python 3.6 (released December 2016).</p>
 <p>If you put a single <code>f</code> directly in front of the string that you are creating, it will enable a special string mode which lets you place <code>{}</code> inside the string with a variable name between the <code>{</code> and the <code>}</code>:</p>
-<div id="cf2df451" class="cell" data-execution_count="5">
+<div id="a60b30a1" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -324,13 +324,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="44f93dc7" class="cell" data-execution_count="6">
+<div id="34225d52" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>My num is 42</code></pre>
 </div>
 </div>
 <p>You can have as many interpolations as you like:</p>
-<div id="4839a424" class="cell" data-execution_count="7">
+<div id="bb528a90" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -347,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb11" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> format.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ee8e96ff" class="cell" data-execution_count="8">
+<div id="f2cc86e5" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>The answer is 42 and pi is 3.14159</code></pre>
 </div>
@@ -365,7 +365,7 @@ Exercise 1
 <p>For all the exercises in this course, we are going to be working on some Python code which converts to and from <a href="https://simple.wikipedia.org/wiki/Morse_code">Morse Code</a>. In each section we will add or change the code so make sure that you don’t skip any exercises.</p>
 <ul>
 <li><p>Copy the following code in the text editor into a script called <code>encode.py</code> and run it in the terminal with <code>python encode.py</code> to check that it works.</p>
-<div id="74b33190" class="cell" data-execution_count="9">
+<div id="933045b8" class="cell" data-execution_count="9">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -842,11 +842,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
+<p><a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a> © <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/012-string-formatting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intermediate-python/edit/main/pages/012-string-formatting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intermediate-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

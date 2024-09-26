@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>aside_zip – Introduction</title>
+<title>aside_zip – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,21 +122,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>The <code>zip</code> function provides a way to loop over more that one list at once. It takes two arguments, each of which should be a list and gives you back something you can loop over.</p>
 <p>For example, imagine we have the two lists <code>a</code> and <code>b</code>:</p>
-<div id="baf4d9da" class="cell" data-execution_count="1">
+<div id="f6a18384" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>we can pass them to the <code>zip</code> function and have a look at what it returns:</p>
-<div id="aea7f51d" class="cell" data-execution_count="2">
+<div id="8669a155" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">zip</span>(a, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>&lt;zip at 0x7f096caeb040&gt;</code></pre>
+<pre><code>&lt;zip at 0x7fa7f1fe74c0&gt;</code></pre>
 </div>
 </div>
 <p>hmm, this doesn’t look very useful, it’s just returned us a <em>zip</em>?</p>
 <p>In fact, it has given us back a <em>zip object</em>. This is an object which, when looped over, will give us the elements one at a time. The reason it is done like this is that it means that it only has to calculate the elements as it goes along rather than doing them all up-front. This is termed a <em>lazy iterator</em> and is something which crops up often in Python.</p>
 <p>To force it to give us all the elemnts at once, we can turn it into a list by using the <code>list</code> function:</p>
-<div id="d8ba3054" class="cell" data-execution_count="3">
+<div id="5690a2be" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">zip</span>(a, b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>[(1, 5), (2, 6), (3, 7), (4, 8)]</code></pre>
@@ -145,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>That looks more useful! It is a list where each element is a pair of values. The first element is the pair <code>1, 5</code>. This has come from the first element in <code>a</code> (<code>1</code>) and the first element in <code>b</code> (<code>5</code>).</p>
 <p>The second element in the list is <code>2, 6</code> which has come from the second element in each input list.</p>
 <p>We can see this in a slightly different way by looping over the result of the <code>zip</code> rather than passing it to the <code>list</code> function:</p>
-<div id="daeb14a6" class="cell" data-execution_count="4">
+<div id="543944f9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> <span class="bu">zip</span>(a, b):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Again we see that the pairs have been printed out, taken from each input list.</p>
 <p>We can break the element into its parts using indexing notation:</p>
-<div id="14337958" class="cell" data-execution_count="5">
+<div id="17c7513f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> <span class="bu">zip</span>(a, b):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"from a: </span><span class="sc">{</span>element[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">, from b: </span><span class="sc">{</span>element[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -168,7 +168,7 @@ from a: 4, from b: 8</code></pre>
 </div>
 </div>
 <p>The downside of this is that we have to remember that <code>element[0]</code> refers to <code>a</code>. Instead, we can break the pair apart directly in the <code>for</code> loop by providing a name for each part:</p>
-<div id="c0ccded3" class="cell" data-execution_count="6">
+<div id="0f469a58" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> from_a, from_b <span class="kw">in</span> <span class="bu">zip</span>(a, b):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"from a: </span><span class="sc">{</span>from_a<span class="sc">}</span><span class="ss">, from b: </span><span class="sc">{</span>from_b<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -607,11 +607,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
+<p><a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a> © <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/appendix/aside_zip.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intermediate-python/edit/main/appendix/aside_zip.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intermediate-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

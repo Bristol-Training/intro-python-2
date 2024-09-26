@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>List comprehensions – Introduction</title>
+<title>List comprehensions – Intermediate Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -157,7 +157,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
@@ -303,7 +303,7 @@ window.Quarto = {
 <p>The code inside the function is doing a few different things. First it creates an empty list, knowing full-well that it’s about to be filled up. The next three lines then loop over some input container (<code>message</code>) and use some result of that to iteratively append to the end of <code>morse</code>.</p>
 <p><code>for</code> loops are useful when you want to <em>do something</em> for each item in a list but what we’re doing here is taking one container and <em>transforming</em> it into something new. The purpose of this code is to <em>create</em> the new container, not to <em>use</em> the old one.</p>
 <p>This is such a common pattern that Python has special built-in syntax for doing this loop-append in one go called <em>list comprehension</em>. Taking a simpler example for now of an input of a <code>range</code> function and the output being the square of the inputs:</p>
-<div id="1b3d1763" class="cell" data-execution_count="1">
+<div id="7143cb68" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> []</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    s.append(i<span class="op">*</span>i)</span>
@@ -313,7 +313,7 @@ window.Quarto = {
 </div>
 </div>
 <p>We end up outputting <span class="math inline">\(0^2\)</span>, <span class="math inline">\(1^2\)</span>, <span class="math inline">\(2^2\)</span> and <span class="math inline">\(3^2\)</span>. The equivalent with a list comprehension would be:</p>
-<div id="783ca843" class="cell" data-execution_count="2">
+<div id="29fae0a9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[i<span class="op">*</span>i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[0, 1, 4, 9]</code></pre>
@@ -788,11 +788,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
+<p><a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a> © <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/013-list-comprehensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intermediate-python/edit/main/pages/013-list-comprehensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intermediate-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
