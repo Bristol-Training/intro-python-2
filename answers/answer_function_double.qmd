@@ -28,4 +28,3 @@ doubled = double(my_num)
 print(doubled)
 ```
 
-[Return to course](../pages/03%20Functions.qmd#exercise-1)

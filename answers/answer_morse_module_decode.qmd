@@ -77,5 +77,3 @@ decoded_message = morse.decode(message)
 
 print(decoded_message)
 ```
-
-[Return to course](../pages/04%20Modules.qmd#exercise-2)

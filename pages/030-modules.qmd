@@ -56,10 +56,20 @@ If we run this new script now, you'll get an error that it doesn't know what `ou
 ```{.bash filename="Terminal/Command Prompt"}
 python convert.py
 ```
-    Traceback (most recent call last):
-    File "/home/matt/courses/intermediate_python/recipe.py", line 2, in <module>
-        weight_in_grams = ounces_to_grams(12)
-    NameError: name 'ounces_to_grams' is not defined
+
+```{python}
+#| echo: false
+%reset -f
+```
+
+```{python}
+#| filename: recipes.py
+#| echo: false
+#| error: true
+weight_in_grams = ounces_to_grams(12)
+
+print(f"{weight_in_grams} g")
+```
 
 
 This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the `import` statement:
@@ -73,10 +83,6 @@ import convert
 weight_in_grams = convert.ounces_to_grams(12)
 
 print(f"{weight_in_grams} g")
-```
-
-```{.bash filename="Terminal/Command Prompt"}
-python recipe.py
 ```
 
 ```{python}
@@ -98,15 +104,19 @@ A module in Python is just a text file with Python code in it. All scripts *can*
 
 Secondly, when calling the fucntion, we need to explicily state that we're using the `ounces_to_grams` function from the `convert` module using `convert.ounces_to_grams`.
 
-::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 
 - Make a module, `morse` (so the file name must be `morse.py`), and move the `encode` function from `encode.py` from the previous chapter  into it. Delete it from the original file.
 - Also move the definition of the dictionary `letter_to_morse` into `morse.py`.
 - Edit `encode.py` so that it imports the new module and calls the function from the new module.
-- [<small>answer</small>](../answers/answer_morse_module_encode.qmd)
 :::
 
-::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_module_encode.qmd >}}
+:::
+
+
+::: {#exercise-2 .callout-note title="Exercise" icon=false} 
 
 Add into `morse.py` a function to convert Morse code to English. The code to do so is written below:
 
@@ -138,9 +148,13 @@ def decode(message):
 
 Then write a new script `decode.py` which imports `morse`, calls the `decode` function and decodes the message `"... . -.-. .-. . - / -- . ... ... .- --. ."`.
 
-[<small>answer</small>](../answers/answer_morse_module_decode.qmd)
-
 :::
+
+::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_module_decode.qmd >}}
+:::
+
+
 
 ## Testing
 

@@ -57,4 +57,3 @@ def decode(message):
     return english_message
 ```
 
-[Return to course](../pages/05%20Exceptions.qmd#exercise-1)

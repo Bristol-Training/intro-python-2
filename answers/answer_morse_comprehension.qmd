@@ -71,4 +71,3 @@ print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
 ```
 
-[Return to course](../pages/06%20List%20comprehensions.qmd#exercise-1)

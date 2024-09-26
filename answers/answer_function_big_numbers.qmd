@@ -70,4 +70,3 @@ large_numbers = big(my_list)
 print(large_numbers)
 ```
 
-[Return to course](../pages/03%20Functions.qmd#exercise-bonus)

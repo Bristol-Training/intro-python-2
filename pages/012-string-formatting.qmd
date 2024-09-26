@@ -9,22 +9,11 @@ Being able to print things to the screen is a fundamental part of interacting wi
 
 ```{python}
 #| filename: format.py
-#| output: false
 my_num = 42
 
 print(my_num)
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python format.py
-```
-
-```{python}
-#| echo: false
-my_num = 42
-
-print(my_num)
-```
 
 
 
@@ -32,22 +21,11 @@ We made things a bit nicer by using the fact that if you pass multiple arguments
 
 ```{python}
 #| filename: format.py
-#| output: false
 my_num = 42
 
 print("My num is", my_num)
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python format.py
-```
-
-```{python}
-#| echo: false
-my_num = 42
-
-print("My num is", my_num)
-```
 
 This works perfectly well but firstly you're using the implicit space that's added by `print` as part of your sentence and secondly you're passing in two separate pieces of information where they are logically one.
 
@@ -57,18 +35,6 @@ If you put a single `f` directly in front of the string that you are creating, i
 
 ```{python}
 #| filename: format.py
-#| output: false
-my_num = 42
-
-print(f"My num is {my_num}")
-```
-
-```{.bash filename="Terminal/Command Prompt"}
-python format.py
-```
-
-```{python}
-#| echo: false
 my_num = 42
 
 print(f"My num is {my_num}")
@@ -79,24 +45,12 @@ You can have as many interpolations as you like:
 
 ```{python}
 #| filename: format.py
-#| output: false
 answer = 42
 pi = 3.14159
 
 print(f"The answer is {answer} and pi is {pi}")
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python format.py
-```
-
-```{python}
-#| echo: false
-answer = 42
-pi = 3.14159
-
-print(f"The answer is {answer} and pi is {pi}")
-```
 
 ::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 For all the exercises in this course, we are going to be working on some Python code which converts to and from [Morse Code](https://simple.wikipedia.org/wiki/Morse_code). In each section we will add or change the code so make sure that you don't skip any exercises.
@@ -133,5 +87,9 @@ For all the exercises in this course, we are going to be working on some Python 
   ```
 - If you get an error when running the code, first check that you have saved the file `encode.py`.
 - If you get an error like `SyntaxError: invalid syntax` then try running the script with `python3 encode.py`.
-- [<small>answer</small>](../answers/answer_morse_string_formatting.qmd)
+
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_string_formatting.qmd >}}
 :::

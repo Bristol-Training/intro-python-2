@@ -32,18 +32,6 @@ Once it is imported, you can use any of the functions inside it by typing the na
 
 ```{python}
 #| filename: imports.py
-#| output: false
-import math
-
-print(math.sqrt(25))
-```
-
-```{.bash filename="Terminal/Command Prompt"}
-python imports.py
-```
-
-```{python}
-#| echo: false
 import math
 
 print(math.sqrt(25))
@@ -56,22 +44,11 @@ If you want to grab a specific function out of a module so that you can call it 
 
 ```{python}
 #| filename: imports.py
-#| output: false
 from math import sqrt
 
 print(sqrt(25))
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python imports.py
-```
-
-```{python}
-#| echo: false
-from math import sqrt
-
-print(sqrt(25))
-```
 
 We've seen two examples of places where dot `.` is used when calling functions in Python:
 
@@ -80,7 +57,7 @@ We've seen two examples of places where dot `.` is used when calling functions i
 
 In both these cases the dot is doing a very similar job. It's saying "look inside the thing on the left of the dot for a thing called ...". In some cases, it's looking inside a data type, and in other it's looking inside a module.
 
-::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
+::: {#exercise1 .callout-note title="Exercise" icon=false} 
 Change the message in `encode.py` to use both upper and lower case letters:
 
 ```python
@@ -91,5 +68,8 @@ When you now run the script with `python encode.py` you will find that it gives 
 
 Read through the documentation for the [string methods](https://docs.python.org/3/library/stdtypes.html#string-methods) to find one that might help convert the letter you have into one that matches the keys in the dictionary. You should be able to add a single line of code in the loop straight after `for letter in message:`.
 
-[<small>answer</small>](../answers/answer_morse_case.qmd)
+:::
+
+::: {#answer3 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_case.qmd >}}
 :::

@@ -32,5 +32,4 @@ name_length = len(my_name)
 print(f"Hello {my_name}! Your name is {name_length} characters long")
 ```
 
-[Return to course](../pages/02%20Using%20functions.qmd#exercise-1)
 

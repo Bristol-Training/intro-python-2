@@ -64,4 +64,3 @@ print(f"Incoming message: {message}")
 print(f"   Morse encoded: {morse_message}")
 ```
 
-[Return to course](../pages/02%20Using%20functions.qmd#exercise-3)

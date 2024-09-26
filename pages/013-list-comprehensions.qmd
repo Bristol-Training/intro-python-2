@@ -69,3 +69,7 @@ List comprehensions are powerful because they allow you to do a lot in a single 
 - Adapt `encode` and `decode` in the `morse` module to use list comprehensions for doing the conversion. [<small>answer</small>](../answers/answer_morse_comprehension.qmd)
 
 :::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_comprehension.qmd >}}
+:::

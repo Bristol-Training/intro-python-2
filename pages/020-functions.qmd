@@ -37,7 +37,7 @@ Here we find the documentation for many of the functions we've already been usin
 
 It is worth, over time, becoming familiar with the various functions that are available here. Some are quite useful for everyday work and some are more niche.
 
-::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 
 Copy the following code into a new file called `hello.py`:
 
@@ -72,10 +72,11 @@ Please tell me your name: Matt
 Hello Matt! Your name is 4 characters long
 ```
 
-[<small>answer</small>](../answers/answer_hello_name.qmd)
-
 :::
 
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_hello_name.qmd >}}
+:::
 
 ## Built-in types
 
@@ -101,7 +102,7 @@ it is looking at the data type of the variable `animal`, seeing that it is a `st
 
 The documentation for all the built-in types is all on that page so it's the place to go to check what you can do with a `str`, an `int`, a `list` or a `dict`. There's also a few other built-in types you might want to look into in the future such as `complex`, `set` and `tuple`.
 
-::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
+::: {#exercise2 .callout-tip title="Exercise" icon=false} 
 Have a look at the documentation page for the [functions that you can call on strings](https://docs.python.org/3/library/stdtypes.html#string-methods).
 
 Experiment with one or two and see if you can understand the documentation. Start by trying to answer the following:
@@ -109,6 +110,8 @@ Experiment with one or two and see if you can understand the documentation. Star
 1. Given a string like `s = "what is your name"`, find a function which can split `s` into a list like `["what", "is", "your", "name"]`
 2. Given a list like `["a", "b", "c"]`, find a function which can join it together into a string like `"a-b-c"`
 
-[<small>answer</small>](../answers/answer_string_methods.qmd)
 :::
 
+::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_string_methods.qmd >}}
+:::
