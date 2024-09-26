@@ -1,0 +1,26 @@
+```{python}
+#| filename: dict.py
+#| output: false
+sounds = {"cat": "meow", "dog": "woof"}
+
+sounds["horse"] = "neigh"
+sounds["cow"] = "moo"
+
+print(sounds)
+
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python dict.py
+```
+
+```{python}
+#| filename: dict.py
+#| echo: false
+sounds = {"cat": "meow", "dog": "woof"}
+
+sounds["horse"] = "neigh"
+sounds["cow"] = "moo"
+
+print(sounds)
+```

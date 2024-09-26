@@ -2,13 +2,14 @@ project:
   type: website
 
 website:
-  title: "Introduction"
+  title: "Intermediate Python"
   page-navigation: true
 
   sidebar: 
     title: "Intermediate Python"
     logo: "assets/UoB_RGB_24.png"
-    logo-alt: "Jean Golding Institute Logo"
+    align: center
+    logo-alt: "University of Bristol logo"
     style: "docked"
     border: true
     contents: 
@@ -30,8 +31,8 @@ website:
 
 
   page-footer:
-    left: "Course delivered by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/)<br>© [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)"  
-  repo-url: https://github.com/uob-training/beginning-python
+    left: "[Jean Golding Institute](https://www.bristol.ac.uk/golding/) © [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)"  
+  repo-url: https://github.com/uob-training/intermediate-python
   repo-actions: [edit, issue]
 
 format:

@@ -32,7 +32,7 @@ If the commands are executed by the machine we will see the output of them below
 print("Hello, Python!")
 ```
 
-By contrast, you will see larger pices of code as scripts with a given name, e.g. `script.py`, in a code block with darker header:
+By contrast, you will see larger peces of code as scripts with a given name, e.g. `script.py`, in a code block with darker header:
 
 ```{.python filename="script.py"}
 greeting = "Hello"
@@ -57,7 +57,7 @@ FOR EACH sample IN my_study
 ```
 
 
-There are some exercices along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution. 
+There are some exercises along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution. 
 
 ::: {#exampleN .callout-note icon=false title='Exercise'}
 This is an exercise. You will need to click in the below box to see the answer.
