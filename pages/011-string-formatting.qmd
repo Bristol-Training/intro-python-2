@@ -28,39 +28,39 @@ print(f"The answer is {answer} and pi is {pi}")
 
 We call this process of substituting values of variables into placeholders *string interpolation*, and you can have as many interpolations in a string as you like.
 
-::: {#exercise-1 .callout-tip title="Exercise" icon=false} 
+::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 For many of the exercises here, we are going to be working on some Python code which converts to and from [Morse Code](https://simple.wikipedia.org/wiki/Morse_code). In each section we will add or change the code so make sure that you don't skip any exercises.
 
 Copy the following code in the text editor into a script called `encode.py` and run it in the terminal with `python encode.py` or `python3 encode.py` to check that it works.
 
-  ```{python}
-  #| filename: encode.py
-  #| output: false
-  letter_to_morse = {
-      'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
-      'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
-      'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
-      'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
-      '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
-      '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
-  }
+```{python}
+#| filename: encode.py
+#| output: false
+letter_to_morse = {
+    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
+    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
+    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
+    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
+    '0':'-----', '1':'.----', '2':'..---', '3':'...--','4':'....-',
+    '5':'.....', '6':'-....', '7':'--...', '8':'---..','9':'----.', ' ':'/'
+}
 
-  message = "please help"
+message = "please help"
 
-  # `morse` is a list which will eventually contain the 
-  # strings for each morse code letter in the message.
-  morse = []
+# `morse` is a list which will eventually contain the 
+# strings for each morse code letter in the message.
+morse = []
 
-  for letter in message:
-      morse_letter = letter_to_morse[letter]
-      morse.append(morse_letter)
+for letter in message:
+  morse_letter = letter_to_morse[letter]
+  morse.append(morse_letter)
 
-  # We need to join together Morse code letters with spaces
-  morse_message = " ".join(morse)
+# We need to join together Morse code letters with spaces
+morse_message = " ".join(morse)
   
-  print(f"Incoming message: {message}")
-  print(f"   Morse encoded: {morse_message}")
-  ```
+print(f"Incoming message: {message}")
+print(f"   Morse encoded: {morse_message}")
+```
 
 :::
 
