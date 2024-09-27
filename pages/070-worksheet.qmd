@@ -216,7 +216,7 @@ print(references)
 
 ::: {#exercise-5 .callout-note title="Exercise 5" icon=false} 
 
-Take the fnction that you wrote in the last exercise and move it into a module called `refs`. You should then write a test file called `test_refs.py` containing:
+Take the function that you wrote in the last exercise and move it into a module called `refs`. You should then write a test file called `test_refs.py` containing:
 
 ```python
 import refs
@@ -235,7 +235,7 @@ else:
 You should make sure that the test passes when the test script is run with:
 
 ```{.bash filename="Terminal/Command Prompt"}
-python test_references.py
+python test_refs.py
 ```
 :::
 
@@ -273,7 +273,7 @@ else:
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
-python test_references.py
+python test_refs.py
 ```
 :::
 

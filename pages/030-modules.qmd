@@ -41,12 +41,12 @@ def ounces_to_grams(weight):
 
 ```{python}
 #| filename: recipes.py
-#| eval: false
+#| eval: true
+#| error: true
 weight_in_grams = ounces_to_grams(12)
 
 print(f"{weight_in_grams} g")
 ```
-
 
 If we try to run this new script now, you'll get an error that it doesn't know what `ounces_to_grams` is:
 
@@ -69,14 +69,29 @@ print(f"{weight_in_grams} g")
 ```
 
 
+
 This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the `import` statement:
 
 
 ```{python}
 #| filename: recipe.py
+#| eval: false
 import convert
 
 weight_in_grams = convert.ounces_to_grams(12)
+
+print(f"{weight_in_grams} g")
+```
+
+```{python}
+#| filename: convert.py
+#| output: true
+#| echo: false
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_grams = ounces_to_grams(12)
 
 print(f"{weight_in_grams} g")
 ```
