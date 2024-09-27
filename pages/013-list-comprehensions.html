@@ -309,7 +309,7 @@ window.Quarto = {
 <p>The code first creates an empty list, knowing full-well that it’s about to be filled up. The next three lines then loop over some input container (<code>message</code>) and use some result of that to iteratively append to the end of <code>morse</code>.</p>
 <p><code>for</code> loops are useful when you want to <em>do something</em> for each item in a list but what we’re doing here is taking one container and <em>transforming</em> it into something new. The purpose of this code is to <em>create</em> the new container, not to <em>use</em> the old one.</p>
 <p>This is such a common pattern that Python has special built-in syntax for doing this loop-append in one go called <em>list comprehension</em>. Taking a simpler example for now of an input of a <code>range</code> function and the output being the square of the inputs:</p>
-<div id="c990ee43" class="cell" data-execution_count="1">
+<div id="48401f56" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> []</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    s.append(i<span class="op">*</span>i)</span>
@@ -320,7 +320,7 @@ window.Quarto = {
 </div>
 </div>
 <p>We end up outputting <span class="math inline">\(0^2\)</span>, <span class="math inline">\(1^2\)</span>, <span class="math inline">\(2^2\)</span> and <span class="math inline">\(3^2\)</span>. The equivalent with a list comprehension would be:</p>
-<div id="989a5e07" class="cell" data-execution_count="2">
+<div id="6acea778" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[i<span class="op">*</span>i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[0, 1, 4, 9]</code></pre>
@@ -351,7 +351,7 @@ Exercise
 </div>
 <div class="callout-body-container callout-body">
 <p>Adapt <code>encode</code> function in the below script to use list comprehensions for doing the conversion.</p>
-<div id="5ddfc87f" class="cell" data-execution_count="3">
+<div id="aa82c77d" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -405,7 +405,7 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="4e6c8d8b" class="cell" data-execution_count="4">
+<div id="9ace4498" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
