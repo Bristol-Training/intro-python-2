@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Split a string</a></li><li class="breadcrumb-item"><a href="../pages/021-importing-functions.html">Importing functions from modules</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Functions</a></li><li class="breadcrumb-item"><a href="../pages/021-importing-functions.html">Importing functions from modules</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -158,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Advanced Data Types</span></a>
+ <span class="menu-text">Using advanced data types and methods</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -166,14 +166,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/011-dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries</span></a>
+  <a href="../pages/011-string-formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String formatting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/012-string-formatting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">String formatting</span></a>
+  <a href="../pages/012-dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -187,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../pages/020-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Split a string</span></a>
+ <span class="menu-text">Functions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -221,6 +221,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../pages/070-worksheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Worksheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../pages/980-summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary</span></a>
   </div>
@@ -236,19 +242,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#importing-functions-from-modules" id="toc-importing-functions-from-modules" class="nav-link active" data-scroll-target="#importing-functions-from-modules">Importing functions from modules</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intermediate-python/edit/main/pages/021-importing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intermediate-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Split a string</a></li><li class="breadcrumb-item"><a href="../pages/021-importing-functions.html">Importing functions from modules</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-functions.html">Functions</a></li><li class="breadcrumb-item"><a href="../pages/021-importing-functions.html">Importing functions from modules</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Importing functions from modules</h1>
 </div>
@@ -267,22 +267,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="importing-functions-from-modules" class="level3">
-<h3 class="anchored" data-anchor-id="importing-functions-from-modules">Importing functions from modules</h3>
-<p>While there are a good number of built-in functions and types, and you can go a long way without needing anything more, they are ultimately limited. Luckily, Python has a “batteries included” philosophy and provides a lot of additional functionality in its “standard library”.</p>
-<p>The functionality provided by the standard library is provided in a series of <em>modules</em>, each of whch serves a particular purpose. The things in the standard library are always installed in any version of Python you have and you can rely on them being there.</p>
-<p>Note that even though they are always accessible, they do not count as “built-in” as in Python terms, that means something which you can use without having to access any extra modules.</p>
+<p>While there are a good number of built-in functions and types, and you can go a long way without needing anything more, they are ultimately limited. Luckily, Python has a “batteries included” philosophy and provides a lot of additional functionality which can be explored in <a href="https://docs.python.org/3/library/">The Python Standard Library</a>.</p>
+<p>The functionality provided by the Standard Library is provided in a series of <em>modules</em>, each of which serves a particular purpose. The modules in the Standard Library are always installed in any version of Python you have. Note that even though they are always accessible, they do not count as “built-in” as in Python terms, that means something which you can use without having to access any extra modules.</p>
 <section id="the-math-module" class="level4">
 <h4 class="anchored" data-anchor-id="the-math-module">The <code>math</code> module</h4>
-<p>Let’s start by looking at one of the modules. On the <a href="https://docs.python.org/3/library/">Standard Library</a> page, if you scroll past the “built-in” sections you’ll find a set of groups of modules. There are about 200 modules in total, some very useful and some very niche.</p>
-<p>If you carry on down the page you’ll see, “<a href="https://docs.python.org/3/library/math.html"><code>math</code> — Mathematical functions</a>” which is where we are going to look first.</p>
-<p>This module provides a bunch of mathematical tools such as averages, trigonometry etc.</p>
+<p>Let’s start by looking at one of the modules, the “<a href="https://docs.python.org/3/library/math.html"><code>math</code> — Mathematical functions</a>” module. This module provides a bunch of mathematical tools such as averages, trigonometry etc.</p>
 <p>You can get access to the module by <em>importing</em> it by name:</p>
-<div id="2b132d0c" class="cell" data-execution_count="1">
+<div id="6770c2ff" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the <a href="https://docs.python.org/3/library/math.html#math.sqrt">square root function</a> you would do:</p>
-<div id="5c207cd7" class="cell" data-execution_count="2">
+<div id="ddb44872" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>imports.py</strong></pre>
@@ -295,9 +290,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>5.0</code></pre>
 </div>
 </div>
-<p>You can think of this as saying “from the <code>math</code> module that I’ve just imported, get the <code>sqrt</code> function inside it and call it”.</p>
-<p>If you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:</p>
-<div id="b44757a3" class="cell" data-execution_count="3">
+<p>You can think of this as saying “from the <code>math</code> module that I’ve just imported, get the <code>sqrt</code> function and call it”.</p>
+<p>Alternatively, if you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:</p>
+<div id="befee91d" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>imports.py</strong></pre>
@@ -310,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>5.0</code></pre>
 </div>
 </div>
-<p>We’ve seen two examples of places where dot <code>.</code> is used when calling functions in Python:</p>
+<p>Note that we have seen two examples of places where dot <code>.</code> is used when calling functions in Python:</p>
 <ol type="1">
 <li>calling a method on a variable like with <code>my_list.append()</code> or <code>my_string.split()</code>,</li>
 <li>calling a function from an imported module like <code>math.sqrt()</code>.</li>
@@ -326,10 +321,7 @@ Exercise
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Change the message in <code>encode.py</code> to use both upper and lower case letters:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>When you now run the script with <code>python encode.py</code> you will find that it gives you a <code>KeyError</code>. This is because it is looking for an upper case “S” in the dictionary <code>letter_to_morse</code> and not finding one (dictionary keys are case-sensitive).</p>
-<p>Read through the documentation for the <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">string methods</a> to find one that might help convert the letter you have into one that matches the keys in the dictionary. You should be able to add a single line of code in the loop straight after <code>for letter in message:</code>.</p>
+<p>We saw earlier how to check our current working directory in the Command Prompt/Terminal using <code>cd</code> (Windows) and <code>pwd</code> (MacOS and Linux). Using the <a href="https://docs.python.org/3/library/">The Python Standard Library</a>, find a function that returns the working directory in Python.</p>
 </div>
 </div>
 <div id="answer3" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
@@ -344,47 +336,14 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The function <a href="https://docs.python.org/3/library/stdtypes.html#str.lower"><code>str.lower</code></a> gives you back a copy of the string, but all made into lower case.</p>
-<p>In our situation, the first letter is “S” and so <code>letter.lower()</code> will give us <code>"s"</code>.</p>
-<div id="fffff10c" class="cell" data-execution_count="4">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>encode.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly"</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>morse <span class="op">=</span> []</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> message:</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    letter <span class="op">=</span> letter.lower()  <span class="co">#  ← We have added this line of code</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    morse.append(morse_letter)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>morse_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="8d5d6438" class="cell" data-execution_count="5">
+<p>One possible solution is to use the module <a href="https://docs.python.org/3/library/os.html"><code>os</code> - Miscellaneous operating system interfaces</a>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>current_directory <span class="op">=</span> os.getcwd()</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CWD:"</span>, current_directory)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c0eeafbe" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
-<pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
-   Morse encoded: ... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--</code></pre>
+<pre><code>CWD: /Users/JGI/Training/Python/intermediate-python/</code></pre>
 </div>
 </div>
 </div>
@@ -392,7 +351,6 @@ Answer
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -818,8 +776,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/020-functions.html" class="pagination-link" aria-label="Split a string">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Split a string</span>
+      <a href="../pages/020-functions.html" class="pagination-link" aria-label="Functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Functions</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -836,7 +794,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intermediate-python/edit/main/pages/021-importing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intermediate-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intermediate-python/edit/main/pages/021-importing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intermediate-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="38a19f3d" class="cell" data-execution_count="1">
+<div id="b513e4d7" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -133,51 +133,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Dog goes"</span>, dog_sound)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Horse goes"</span>, horse_sound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="3bade03a" class="cell" data-filename="dict.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Dog goes woof
 Horse goes neigh</code></pre>
 </div>
 </div>
 <p>If we edit our script so that it asks for a key that doesn’t exist, we will see an error being produced:</p>
-<div id="bd2b7594" class="cell" data-execution_count="3">
+<div id="81ce79ad" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {<span class="st">"cat"</span>: <span class="st">"meow"</span>, <span class="st">"dog"</span>: <span class="st">"woof"</span>, <span class="st">"horse"</span>: <span class="st">"neigh"</span>}</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fish_sound <span class="op">=</span> sounds[<span class="st">"fish"</span>]</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fish_sound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {<span class="st">"cat"</span>: <span class="st">"meow"</span>, <span class="st">"dog"</span>: <span class="st">"woof"</span>, <span class="st">"horse"</span>: <span class="st">"neigh"</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fish_sound <span class="op">=</span> sounds[<span class="st">"fish"</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fish_sound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 3</span>
+<span class="ansi-green-fg ansi-bold">      1</span> sounds <span style="color:rgb(98,98,98)">=</span> {<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">cat</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">meow</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">dog</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">woof</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">horse</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">neigh</span><span style="color:rgb(175,0,0)">"</span>}
+<span class="ansi-green-fg">----&gt; 3</span> fish_sound <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">sounds</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">fish</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-fg ansi-bold">      5</span> <span style="color:rgb(0,135,0)">print</span>(fish_sound)
+
+<span class="ansi-red-fg">KeyError</span>: 'fish'</pre>
 </div>
 </div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<pre><code>---------------------------------------------------------------------------
-
-KeyError                                  Traceback (most recent call last)
-
-~/courses/beginning_python/dict.py in &lt;module&gt;
-      2 sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
-      3 
-----&gt; 4 fish_sound = sounds["fish"]
-      5 
-      6 print(fish_sound)
-
-
-KeyError: 'fish'</code></pre>
 
 
 
