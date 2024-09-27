@@ -1,0 +1,69 @@
+---
+title: String formatting
+jupyter: python3
+---
+
+
+Being able to print things (on the screen for example) is a fundamental part of interacting with a programming language. So far, we've kept it simple by passing the data we want to print directly to `print()` using the fact that if you pass multiple arguments then it will print each of them, separated by spaces, combining our data with a message:
+
+```{python}
+#| filename: format.py
+my_num = 42
+
+print("My num is", my_num)
+```
+
+
+This works perfectly well but you are using the implicit space that's added by `print` as part of your sentence. What we can do instead is create a string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There's a few different ways to do this in Python (an older but still valid method you may see uses `%` and another uses a `format()` function) but for this course we will use the method called *f-strings* which was introduced in Python 3.6 (released December 2016).
+
+If you put a single `f` directly in front of the string that you are creating, it will enable a special string mode which lets you place `{}` inside the string with a variable name between the curly brackets `{}`:
+
+```{python}
+#| filename: format.py
+answer = 42
+pi = 3.14159
+
+print(f"The answer is {answer} and pi is {pi}")
+```
+
+We call this process of substituting values of variables into placeholders *string interpolation*, and you can have as many interpolations in a string as you like.
+
+::: {#exercise-1 .callout-tip title="Exercise" icon=false} 
+For many of the exercises here, we are going to be working on some Python code which converts to and from [Morse Code](https://simple.wikipedia.org/wiki/Morse_code). In each section we will add or change the code so make sure that you don't skip any exercises.
+
+Copy the following code in the text editor into a script called `encode.py` and run it in the terminal with `python encode.py` or `python3 encode.py` to check that it works.
+
+  ```{python}
+  #| filename: encode.py
+  #| output: false
+  letter_to_morse = {
+      'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
+      'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
+      'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
+      'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
+      '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
+      '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
+  }
+
+  message = "please help"
+
+  # `morse` is a list which will eventually contain the 
+  # strings for each morse code letter in the message.
+  morse = []
+
+  for letter in message:
+      morse_letter = letter_to_morse[letter]
+      morse.append(morse_letter)
+
+  # We need to join together Morse code letters with spaces
+  morse_message = " ".join(morse)
+  
+  print(f"Incoming message: {message}")
+  print(f"   Morse encoded: {morse_message}")
+  ```
+
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_morse_string_formatting.qmd >}}
+:::

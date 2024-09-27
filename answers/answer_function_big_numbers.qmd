@@ -2,23 +2,6 @@ Starting from the initial code:
 
 ```{python}
 #| filename: bignums.py
-#| output: false
-my_list = [5, 7, 34, 5, 3, 545]
-
-big_numbers = []
-for num in my_list:
-    if num > 10:
-        big_numbers.append(num)
-
-print(big_numbers)
-```
-
-```{.bash}
-python bignums.py
-```
-
-```{python}
-#| echo: false
 my_list = [5, 7, 34, 5, 3, 545]
 
 big_numbers = []
@@ -33,28 +16,6 @@ We pull out the middle four lines, indent them, put `def big(numbers):` in front
 
 ```{python}
 #| filename: bignums.py
-#| output: false
-def big(numbers):
-    big_numbers = []
-    for num in numbers:
-        if num > 10:
-            big_numbers.append(num)
-    return big_numbers
-
-
-my_list = [5, 7, 34, 5, 3, 545]
-
-large_numbers = big(my_list)
-
-print(large_numbers)
-```
-
-```{.bash filename="Terminal/Command Prompt"}
-python bignums.py
-```
-
-```{python}
-#| echo: false
 def big(numbers):
     big_numbers = []
     for num in numbers:

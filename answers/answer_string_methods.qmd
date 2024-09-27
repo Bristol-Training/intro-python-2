@@ -1,7 +1,3 @@
----
-title: Split a string
-jupyter: python3
----
 
 
 You can split any string using the [`str.split`](https://docs.python.org/3/library/stdtypes.html#str.split) function. By default it splits on spaces:

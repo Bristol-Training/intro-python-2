@@ -1,4 +1,5 @@
 We add a new function called `encode` which takes the exact code as before but with three changes:
+
 1. `def encode(message):` added to the beginning
 2. The code is indented by four spaces
 3. `return morse_message` added to the end

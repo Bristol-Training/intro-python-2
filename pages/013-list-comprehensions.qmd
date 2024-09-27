@@ -4,7 +4,7 @@ jupyter: python3
 ---
 
 
-The last thing we will cover in this workshop is a little different to the other parts of this session. Rather than being a technique for making your code more easily sharable, reliable or user-friendly, it's instead a language feature which can make your life easier.
+In this section we will see something a little different to the other parts of this session. Rather than being a technique for making your code more easily sharable, reliable or user-friendly, it's instead a language feature which can make your life easier.
 
 There's a common pattern that you will see come up a lot in programming in general and and Python in particular and that is "loop-append". We've done it already in the morse code exercises. Let's look at a section of `encode` first:
 
@@ -19,7 +19,7 @@ for letter in message:
 morse_message = " ".join(morse)
 ```
 
-The code inside the function is doing a few different things. First it creates an empty list, knowing full-well that it's about to be filled up. The next three lines then loop over some input container (`message`) and use some result of that to iteratively append to the end of `morse`.
+The code first creates an empty list, knowing full-well that it's about to be filled up. The next three lines then loop over some input container (`message`) and use some result of that to iteratively append to the end of `morse`.
 
 `for` loops are useful when you want to *do something* for each item in a list but what we're doing here is taking one container and *transforming* it into something new. The purpose of this code is to *create* the new container, not to *use* the old one.
 
@@ -30,6 +30,7 @@ This is such a common pattern that Python has special built-in syntax for doing 
 s = []
 for i in range(4):
     s.append(i*i)
+
 s
 ```
 
@@ -62,9 +63,9 @@ The last part is where it differs. Rather than the body of the loop going on a n
 [<b style="color:darkred">i*i</b> for i in range(4)]
 </pre>
 
-List comprehensions are powerful because they allow you to do a lot in a single line but that can be an issue of you try to do too much and it becomes very noisy. I would suggest that you try to keep your list comprehensions not much more complicated than the example we saw above.
+List comprehensions are powerful because they allow you to do a lot in a single line but that can be an issue of you try to do too much and it becomes very *noisy*. We would suggest that you try to keep your list comprehensions not much more complicated than the example we saw above.
 
-::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 Adapt `encode` function in the below script to use list comprehensions for doing the conversion. 
 
 ```{python}
@@ -104,3 +105,5 @@ print(f"   Morse encoded: {encoded_message}")
 ::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
 {{< include ../answers/answer_morse_comprehension.qmd >}}
 :::
+
+

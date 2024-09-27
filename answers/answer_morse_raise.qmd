@@ -1,12 +1,8 @@
----
-jupyter: python3
----
 
-We have added some code to the beginning of `morse.encode` to check, in the case of the passed string being an English string, that it contains no `!`. If it does, we raise a [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError).
+We have added some code to the beginning of `morse.encode` to check, in the case of the passed string being an English string, that it contains no `!`. If it does, we raise a [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError):
 
-From the docs:
+> `ValueError`: Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as `IndexError`.
 
-    > `ValueError`: Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as `IndexError`.
 
 ```{python}
 letter_to_morse = {

@@ -10,12 +10,10 @@ For the purpose of this course we will be using a free tool called JupyterLab wh
 
 By the end of this course, you will:
 
- By the end of this course, you'll be able to design and write fully-functional Python programs using commonly used data structures, custom functions, and file operations.
-
 - Know how to use lists and dictionaries
 - Use and write functions
-- Use modules
-- Read and handle errors and exceptions
+- Use and write modules
+- Handle errors and exceptions
 
 
 ## How to read this documentation

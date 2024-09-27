@@ -4,15 +4,13 @@ jupyter: python3
 ---
 
 
-In the last chapter we saw how we can take sections of code and make them reusable in different contexts without having to copy and paste the code. By using functions we give the code block a name and define what it needs in order to do its job.
+In the last chapter we saw how we can take sections of code and make them reusable in different contexts without having to copy and paste the code every time we want to use it in your script. By using functions we give the code block a name and define what it needs in order to do its job.
 
-Functions are a step in the right direction but they still have the problem that to use functions from one script in another you'll have to copy and paste them over. The answer to this is to move the functions to a common location which both scripts can access. The Python solution for this is *modules*. Just like we used modules from the Python standard library earlier, we can create our own modules too.
+Functions are a step in the right direction but they still have the problem that to use functions from one script in another you will have to copy and paste them over. The answer to this is to move the functions to a common location which both scripts can access. The Python solution for this is *modules*. Just like we used modules from The Python Standard Library earlier, we can create our own modules too.
 
-Continuing with the example of the `ounces_to_grams` function from the last chapter, let's see how we can use the function in other code, outside of that one script.
+Continuing with the example of the `ounces_to_grams` function from the last section, let's see how we can use the function in other code, outside of that one script.
 
 To demonstrate this, let's look at the code in our `convert.py` file and think about the different role that parts of it are playing.
-
-
 
 ```{python}
 #| filename: convert.py
@@ -28,10 +26,10 @@ print(f"{weight_in_grams} g")
 
 There are two main categories of code in this file:
 
-1. the function, `ounces_to_grams` is the sort of code which is useful in many different situations. It would be strange if it were only ever used to convert $12$ ounces into grams, but rather it could be used in a calculator, a recipe website, an engineering tool etc.
-2. the code below which *uses* the function. This is specific code which has been written to solve *today's* problem of converting this specific value. This is just one context in which you might use the `ounces_to_grams` function.
+1. The function, `ounces_to_grams` is the sort of code which is useful in many different situations.
+2. The code below which *uses* the function. This is specific code which has been written to solve *today's* problem of converting a specific value.
 
-Let's continue this though and make it explicit by moving the code for today's problem into its own file, `recipe.py` and delete that same code from `convert.py`:
+Let's continue this though and make it explicit by moving the code for today's problem into its own file `recipe.py` and delete that same code from `convert.py`:
 
 ```{python}
 #| filename: convert.py
@@ -50,8 +48,7 @@ print(f"{weight_in_grams} g")
 ```
 
 
-
-If we run this new script now, you'll get an error that it doesn't know what `ounces_to_grams` is:
+If we try to run this new script now, you'll get an error that it doesn't know what `ounces_to_grams` is:
 
 ```{.bash filename="Terminal/Command Prompt"}
 python recipes.py
@@ -77,7 +74,6 @@ This is because that function is indeed not defined in this script. We need to t
 
 ```{python}
 #| filename: recipe.py
-#| eval: false
 import convert
 
 weight_in_grams = convert.ounces_to_grams(12)
@@ -85,29 +81,16 @@ weight_in_grams = convert.ounces_to_grams(12)
 print(f"{weight_in_grams} g")
 ```
 
-```{python}
-#| echo: false
-import sys
-sys.path.append('../scripts')
-import convert
+Here we have done a few things. First, on the first line we have *imported* our module. This is Python's way of getting access to code which is inside other modules. You'll notice that the way we do this is identical to when we were importing modules from the Standard Library (e.g. `math`) earlier.
 
-weight_in_grams = convert.ounces_to_grams(12)
-
-print(f"{weight_in_grams} g")
-```
-
-Here we have done a few things. First, on the first line we have *imported* our module. This is Python's way of getting access to code which is inside other modules. You write the keyword `import` followed by a space and then the name of the module you want to import. You'll notice that the way we do this is identical to when we were importing `math` etc. earlier.
-
-The name of a module is the same as the name of the file but without the `.py` extension. So, since we saved our *file* above as `convert.py`, the name of the *module* is `convert`.
-
-A module in Python is just a text file with Python code in it. All scripts *can* be imported as modules but it makes sense to logically separate in your mind between "library" modules and "script" modules. Library modules are those which you import to get access to the code inside them. Script modules are those which you run at the terminal using `python script.py`.
-
-Secondly, when calling the fucntion, we need to explicily state that we're using the `ounces_to_grams` function from the `convert` module using `convert.ounces_to_grams`.
+The name of a module is the same as the name of the file but without the `.py` extension. So, since we saved our *file* above as `convert.py`, the name of the *module* is `convert`. Then, when calling the function, we need to explicily state that we're using the `ounces_to_grams` function from the `convert` module using `convert.ounces_to_grams`.
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 
+Do the following:
+
 - Make a module, `morse` (so the file name must be `morse.py`), and move the `encode` function from `encode.py` from the previous chapter  into it. Delete it from the original file.
-- Also move the definition of the dictionary `letter_to_morse` into `morse.py`.
+- Move the definition of the dictionary `letter_to_morse` into `morse.py`.
 - Edit `encode.py` so that it imports the new module and calls the function from the new module.
 :::
 
@@ -198,5 +181,5 @@ decode = morse.decode(code)
 print(message == decode)
 ```
 
-We'll cover move on how to write tests for your Python modules in the [Best Practices in Sofware Engineering](https://milliams.com/courses/software_engineering_best_practices/) course but for now, this round-trip will suffice.
+We'll cover move on how to write tests for your Python modules in the *Best Practices in Sofware Engineering* course but for now, this round-trip will suffice.
 
