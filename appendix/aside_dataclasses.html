@@ -137,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>The code for our <code>Dog</code> looked like this using traditional classes:</p>
-<div id="ccb8387a" class="cell" data-execution_count="1">
+<div id="7445bcd2" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, colour):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Python 3.7 (release June 2018) introduced a new feature called <a href="https://docs.python.org/3/library/dataclasses.html"><em>data classes</em></a> since it was recognised that while classes can be used for very complicated things, most classes exist to hold simple data with a few functions to extract or update those data. Writing <code>__init__</code> functions is boring with a lot of repetition and so data classes were created to automate some of the standard tasks when writing classes.</p>
 <p>To turn our <code>Dog</code> class into a data class we first import the feature from the <code>dataclasses</code> module, we then apply it to our class using a decoration, <code>@dataclass</code>. We can then remove our <code>__init__</code> function and replace it with a listing of attribute names, each tagged with the type of data that they should hold:</p>
-<div id="38729acc" class="cell" data-execution_count="2">
+<div id="e7506799" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">@dataclass</span></span>
@@ -179,22 +179,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>All the other functions in the class remain as they were.</p>
 <p>Using the class works in exactly the same way:</p>
-<div id="5431b839" class="cell" data-execution_count="3">
+<div id="b8fca762" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>our_dog <span class="op">=</span> Dog(<span class="st">"Spot"</span>, <span class="st">"brown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="1979f9c3" class="cell" data-execution_count="4">
+<div id="fc9de58a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(our_dog.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Spot is brown</code></pre>
 </div>
 </div>
-<div id="508e6204" class="cell" data-execution_count="5">
+<div id="26c81cef" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(our_dog.energy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1</code></pre>
 </div>
 </div>
-<div id="88a14f25" class="cell" data-execution_count="6">
+<div id="6e4446a4" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>our_dog.exercise()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>You take Spot for a walk</code></pre>
