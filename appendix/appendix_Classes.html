@@ -153,11 +153,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Python has a feature which allows us to combine code and data together into a single object which contains everything it needs to do anything we ask of it, these are <em>classes</em>. Classes are a way of creating a “template” which is then used to create <em>objects</em> which you can interact with.</p>
 <p>With functions we were giving names to actions (or verbs) but with classes we can give names to <em>concepts</em>.</p>
 <p>Image that we want to write some code to represent our pet dog, Spot. The dog has a name and a colour. Based on the tools we know so far, we might represent this as a dictionary:</p>
-<div id="c1320f82" class="cell" data-execution_count="1">
+<div id="46585ce0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>our_dog <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Spot"</span>, <span class="st">"colour"</span>: <span class="st">"brown"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The problem with a dictionary, however, is that if you’re passing it to a function you have to be very careful to ensure that it has all the keys correctly set that the function expects. For example, if there were a function <code>describe</code> which looks like:</p>
-<div id="576f4363" class="cell" data-execution_count="2">
+<div id="52e44ec3" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> describe(dog):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>dog[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>dog[<span class="st">'colour'</span>]<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -171,18 +171,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="starting-our-class" class="level3">
 <h3 class="anchored" data-anchor-id="starting-our-class">Starting our class</h3>
 <p>We would represent this as a class with:</p>
-<div id="8b688804" class="cell" data-execution_count="3">
+<div id="3b91d257" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, colour):</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.colour <span class="op">=</span> colour</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This has created a new data type called <code>Dog</code> which we can create instances of with:</p>
-<div id="21f2861e" class="cell" data-execution_count="4">
+<div id="95232148" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>our_dog <span class="op">=</span> Dog(<span class="st">"Spot"</span>, <span class="st">"brown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can ask for information from that instance using the dot syntax:</p>
-<div id="c5007e44" class="cell" data-execution_count="5">
+<div id="e7aa0873" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(our_dog.name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Spot</code></pre>
@@ -190,18 +190,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><code>Dog</code> and <code>our_dog</code> are different kind of thing. <code>Dog</code> is called a <em>class</em> and can be seen as a template for creating dog <em>objects</em>. <code>our_dog</code> is one such object.</p>
 <p>You can make multiple objects from a class, for example we can make a second dog, Fido with:</p>
-<div id="dfc50e2c" class="cell" data-execution_count="6">
+<div id="3ea9a047" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>other_dog <span class="op">=</span> Dog(<span class="st">"Fido"</span>, <span class="st">"grey"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and get information about <em>that</em> dog with the same attribute names on the new object:</p>
-<div id="be639739" class="cell" data-execution_count="7">
+<div id="e47817b4" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(other_dog.colour)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>grey</code></pre>
 </div>
 </div>
 <p>This means that we can tweak our <code>describe</code> function to accept a <code>Dog</code> object and we can trust that it will always work. no matter which <code>Dog</code> we pass to it:</p>
-<div id="cc19dc84" class="cell" data-execution_count="8">
+<div id="eb729592" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> describe(dog):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>dog<span class="sc">.</span>name<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>dog<span class="sc">.</span>colour<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>replace <code>dog</code> with <code>self</code></li>
 </ol>
 <p>this give us:</p>
-<div id="b49e569d" class="cell" data-execution_count="9">
+<div id="c03a4e73" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, colour):</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -245,18 +245,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>colour<span class="sc">}</span><span class="ss">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Since we have changed the code defining what a <code>Dog</code> is, we need to recreate our objects so that they know about the changes:</p>
-<div id="76f4c273" class="cell" data-execution_count="10">
+<div id="2e34a601" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>our_dog <span class="op">=</span> Dog(<span class="st">"Spot"</span>, <span class="st">"brown"</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>other_dog <span class="op">=</span> Dog(<span class="st">"Fido"</span>, <span class="st">"grey"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can now call the describe function on each <code>Dog</code> object using the dot syntax:</p>
-<div id="db8b1962" class="cell" data-execution_count="11">
+<div id="01f2a7ac" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(our_dog.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Spot is brown</code></pre>
 </div>
 </div>
-<div id="b46eb4c7" class="cell" data-execution_count="12">
+<div id="45abc029" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(other_dog.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Fido is grey</code></pre>
@@ -270,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Having the bare facts about the dog is useful but we want to be able to make it a living, breathing thing. Let’s introduce the concept of “energy” for the dog. It will be a number which increases when we feed it and decreases when we exercise it.</p>
 <p>Previously we added all object attributes as arguments to <code>__init__</code> and then assigned them to <code>self</code> with <code>self.name =</code>. It is perfectly possible to set object attributes statically, without having them depend on the arguments that were passed in.</p>
 <p>For example, we want our dog to have <code>energy</code> as an attribute. Let’s decide that by default, all <code>Dog</code>s have an energy of <code>1</code> when they are first created. We can assign the variable <code>self.energy</code> in <code>__init__</code>:</p>
-<div id="7fb27aa3" class="cell" data-execution_count="13">
+<div id="53cf05c5" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, colour):</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>colour<span class="sc">}</span><span class="ss">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now that we have <code>energy</code> as an attribute we can go ahead and write a function which uses it. We want our dog to be able to take our dog for a walk which will use up energy. We add another method to the class called <code>exercise</code>:</p>
-<div id="8423c527" class="cell" data-execution_count="14">
+<div id="0ebd61a7" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, colour):</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -297,23 +297,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>See that in the <code>exercise</code> function we are accessing the energy with <code>self.energy</code>.</p>
 <p>We can test that this is working by recreating our dog instance and seeing how calling <code>exercise</code> affects the dog’s energy:</p>
-<div id="f5212f87" class="cell" data-execution_count="15">
+<div id="e176c161" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>our_dog <span class="op">=</span> Dog(<span class="st">"Spot"</span>, <span class="st">"brown"</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>other_dog <span class="op">=</span> Dog(<span class="st">"Fido"</span>, <span class="st">"grey"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="5f8e5b11" class="cell" data-execution_count="16">
+<div id="ff7c00e8" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(our_dog.energy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1</code></pre>
 </div>
 </div>
-<div id="1d5875e2" class="cell" data-execution_count="17">
+<div id="44d1a5b4" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>our_dog.exercise()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>You take Spot for a walk</code></pre>
 </div>
 </div>
-<div id="58af9566" class="cell" data-execution_count="18">
+<div id="cf32c8e3" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(our_dog.energy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0</code></pre>
@@ -321,14 +321,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>After calling the <code>exercise</code> function, we can see that Spot’s energy has reduced by one.</p>
 <p>But note that Fido’s energy has not been affected:</p>
-<div id="fae185a3" class="cell" data-execution_count="19">
+<div id="e0aa9598" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(other_dog.energy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1</code></pre>
 </div>
 </div>
 <p>Let’s complete the story by also implementing a function which we can use to feed our dog to give it energy:</p>
-<div id="c18e65e9" class="cell" data-execution_count="20">
+<div id="c6037e64" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, colour):</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -354,19 +354,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If a function is generic, how can it know that at one point in your program it’s being called on object A and and some later time being called on object B? We do this by accepting to the function, as an parameter, the object that we’re calling it on. It is <em>this</em> that <code>self</code> is referring to.</p>
 <p>To show this in action, let’s walk through an example:</p>
 <p>We can construct as many instances (objects) of a class as we want, and each will have its own <code>self</code> and its own set of attributes:</p>
-<div id="cb2654b6" class="cell" data-execution_count="21">
+<div id="0abbc14d" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>our_dog <span class="op">=</span> Dog(<span class="st">"Spot"</span>, <span class="st">"brown"</span>)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>other_dog <span class="op">=</span> Dog(<span class="st">"Fido"</span>, <span class="st">"grey"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we describe <code>our_dog</code> we get:</p>
-<div id="787b30eb" class="cell" data-execution_count="22">
+<div id="b07ef9f1" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>our_dog.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>'Spot is brown'</code></pre>
 </div>
 </div>
 <p>but calling the same function on the other dog gives us a different result:</p>
-<div id="f4dc8860" class="cell" data-execution_count="23">
+<div id="2b6598fb" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>other_dog.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>'Fido is grey'</code></pre>
