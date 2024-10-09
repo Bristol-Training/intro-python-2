@@ -17,8 +17,8 @@ website:
       - "pages/001-workspace-setup.qmd"
       - section: "pages/010-advanced-data-types.qmd"
         contents:
-          - "pages/011-string-formatting.qmd"
           - "pages/012-dictionaries.qmd"
+          - "pages/011-string-formatting.qmd"
           - "pages/013-list-comprehensions.qmd"
       - section: "pages/020-functions.qmd"
         contents:
