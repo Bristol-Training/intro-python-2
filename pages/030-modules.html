@@ -166,14 +166,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/011-string-formatting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">String formatting</span></a>
+  <a href="../pages/012-dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/012-dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries</span></a>
+  <a href="../pages/011-string-formatting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String formatting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Functions are a step in the right direction but they still have the problem that to use functions from one script in another you will have to copy and paste them over. The answer to this is to move the functions to a common location which both scripts can access. The Python solution for this is <em>modules</em>. Just like we used modules from The Python Standard Library earlier, we can create our own modules too.</p>
 <p>Continuing with the example of the <code>ounces_to_grams</code> function from the last section, let’s see how we can use the function in other code, outside of that one script.</p>
 <p>To demonstrate this, let’s look at the code in our <code>convert.py</code> file and think about the different role that parts of it are playing.</p>
-<div id="23229a0f" class="cell" data-execution_count="1">
+<div id="ecc31e28" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -297,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The code below which <em>uses</em> the function. This is specific code which has been written to solve <em>today’s</em> problem of converting a specific value.</li>
 </ol>
 <p>Let’s continue this though and make it explicit by moving the code for today’s problem into its own file <code>recipe.py</code> and delete that same code from <code>convert.py</code>:</p>
-<div id="8220c31a" class="cell" data-execution_count="2">
+<div id="6a5909e4" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -307,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="b3507210" class="cell" data-execution_count="3">
+<div id="2ca17bd8" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipes.py</strong></pre>
@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipes.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0d69eb01" class="cell" data-filename="recipes.py" data-execution_count="5">
+<div id="d830b2ae" class="cell" data-filename="recipes.py" data-execution_count="5">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -341,7 +341,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 </div>
 <p>This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the <code>import</code> statement:</p>
-<div id="78218436" class="cell" data-execution_count="6">
+<div id="73b0a463" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -353,7 +353,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="de7f70fd" class="cell" data-filename="convert.py" data-execution_count="7">
+<div id="8f80e0d0" class="cell" data-filename="convert.py" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>340.19399999999996 g</code></pre>
 </div>
@@ -390,7 +390,7 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="a3c6e5d6" class="cell" data-execution_count="8">
+<div id="9be80adc" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>morse.py</strong></pre>
@@ -418,7 +418,7 @@ Answer
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> morse_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="dfc96848" class="cell" data-execution_count="9">
+<div id="168e5145" class="cell" data-execution_count="9">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -439,7 +439,7 @@ Answer
 </div>
 <div class="sourceCode" id="cb10" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fe2af074" class="cell" data-execution_count="10">
+<div id="2636dce3" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
    Morse encoded: ... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--</code></pre>
@@ -497,7 +497,7 @@ Answer
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="4cc9b1e8" class="cell" data-execution_count="11">
+<div id="5c178c2e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
@@ -545,7 +545,7 @@ Answer
 <span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> english_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0978ec1c" class="cell" data-execution_count="12">
+<div id="b3ac48cf" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>decode.py</strong></pre>
@@ -565,7 +565,7 @@ Answer
 </div>
 <div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> decode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6921d5f4" class="cell" data-execution_count="13">
+<div id="fe622d22" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>secret message</code></pre>
 </div>
@@ -584,7 +584,7 @@ Defining aliases
 </div>
 <div class="callout-body-container callout-body">
 <p>You can assign an <em>alias</em> to a module, so you don’t need to type the full name every time. In the example above, we could do</p>
-<div id="572a9c2e" class="cell" data-execution_count="14">
+<div id="aad50929" class="cell" data-execution_count="14">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -607,7 +607,7 @@ Defining aliases
 <p>So far we’ve been writing code and running it, but have you actually checked that the code is doing the right thing? Testing code is a very important part of the software development process because if you want other people to trust your work, you need to show that you’ve checked that your code does what you claim.</p>
 <p>There are more formal methods for software testing but we’ll start with a common technique used with encoders/decoders and that is the <em>round-trip</em>. If we take a message, convert it to morse code and then convert it back, we should end up with the message we started with.</p>
 <p>Make a new file called <code>test_morse.py</code>:</p>
-<div id="72fad092" class="cell" data-execution_count="15">
+<div id="63b1e936" class="cell" data-execution_count="15">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>test_morse.py</strong></pre>
@@ -629,7 +629,7 @@ Defining aliases
 </div>
 <div class="sourceCode" id="cb20" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> test_morse.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="652f9ff1" class="cell" data-execution_count="16">
+<div id="7c61ad20" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>

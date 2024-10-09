@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/012-dictionaries.html" rel="next">
-<link href="../pages/010-advanced-data-types.html" rel="prev">
+<link href="../pages/013-list-comprehensions.html" rel="next">
+<link href="../pages/012-dictionaries.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -166,14 +166,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/011-string-formatting.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">String formatting</span></a>
+  <a href="../pages/012-dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/012-dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries</span></a>
+  <a href="../pages/011-string-formatting.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">String formatting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -268,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Being able to print things (on the screen for example) is a fundamental part of interacting with a programming language. So far, we’ve kept it simple by passing the data we want to print directly to <code>print()</code> using the fact that if you pass multiple arguments then it will print each of them, separated by spaces, combining our data with a message:</p>
-<div id="252b87b8" class="cell" data-execution_count="1">
+<div id="70d5ccd2" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -283,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>This works perfectly well but you are using the implicit space that’s added by <code>print</code> as part of your sentence. What we can do instead is create a string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There’s a few different ways to do this in Python (an older but still valid method you may see uses <code>%</code> and another uses a <code>format()</code> function) but for this course we will use the method called <em>f-strings</em> which was introduced in Python 3.6 (released December 2016).</p>
 <p>If you put a single <code>f</code> directly in front of the string that you are creating, it will enable a special string mode which lets you place <code>{}</code> inside the string with a variable name between the curly brackets <code>{}</code>:</p>
-<div id="439aac5b" class="cell" data-execution_count="2">
+<div id="3294d20f" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -310,7 +310,7 @@ Exercise
 <div class="callout-body-container callout-body">
 <p>For many of the exercises here, we are going to be working on some Python code which converts to and from <a href="https://simple.wikipedia.org/wiki/Morse_code">Morse Code</a>. In each section we will add or change the code so make sure that you don’t skip any exercises.</p>
 <p>Copy the following code in the text editor into a script called <code>encode.py</code> and run it in the terminal with <code>python encode.py</code> or <code>python3 encode.py</code> to check that it works.</p>
-<div id="e75889a7" class="cell" data-execution_count="3">
+<div id="3488f55b" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -356,7 +356,7 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The following code should be put into a file called <code>encode.py</code> using the text editor in JupyterLab:</p>
-<div id="32e94885" class="cell" data-execution_count="4">
+<div id="84f317e8" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>encode.py</strong></pre>
@@ -820,13 +820,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/010-advanced-data-types.html" class="pagination-link" aria-label="Using advanced data types and methods">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using advanced data types and methods</span>
+      <a href="../pages/012-dictionaries.html" class="pagination-link" aria-label="Dictionaries">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dictionaries</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/012-dictionaries.html" class="pagination-link" aria-label="Dictionaries">
-        <span class="nav-page-text">Dictionaries</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/013-list-comprehensions.html" class="pagination-link" aria-label="List comprehensions">
+        <span class="nav-page-text">List comprehensions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
