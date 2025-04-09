@@ -66,7 +66,7 @@ The last part is where it differs. Rather than the body of the loop going on a n
 List comprehensions are powerful because they allow you to do a lot in a single line but that can be an issue of you try to do too much and it becomes very *noisy*. We would suggest that you try to keep your list comprehensions not much more complicated than the example we saw above.
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
-Adapt `encode` function in the below script to use list comprehensions for doing the conversion. 
+Adapt the below script to use list comprehensions for doing the conversion.
 
 ```{python}
 #| filename: encode.py
@@ -80,25 +80,19 @@ letter_to_morse = {
 }
 
 
-def encode(message):
-    morse = []
+morse = []
+for letter in message:
+    letter = letter.lower()
+    morse_letter = letter_to_morse[letter]
+    morse.append(morse_letter)
 
-    for letter in message:
-        letter = letter.lower()
-        morse_letter = letter_to_morse[letter]
-        morse.append(morse_letter)
-
-    morse_message = " ".join(morse)
-    
-    return morse_message
+morse_message = " ".join(morse)
 
 
 message = "SOS We have hit an iceberg and need help quickly"
 
-encoded_message = encode(message)
-
 print(f"Incoming message: {message}")
-print(f"   Morse encoded: {encoded_message}")
+print(f"   Morse encoded: {morse_message}")
 ```
 :::
 

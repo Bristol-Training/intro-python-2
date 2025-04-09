@@ -10,29 +10,11 @@ letter_to_morse = {
     '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
 }
 
-
-# We need to invert the dictionary. This will create a dictionary
-# that can go from the morse back to the letter
-morse_to_letter = {}
-for letter in letter_to_morse:
-    morse = letter_to_morse[letter]
-    morse_to_letter[morse] = letter
-
-def encode(message):
-
-    morse = [letter_to_morse[letter] for letter in message.lower()]
-
-    morse_message = " ".join(morse)
-    
-    return morse_message
-
+morse = [letter_to_morse[letter.lower()] for letter in message]
+morse_message = " ".join(morse)
 
 message = "SOS We have hit an iceberg and need help quickly"
 
-encoded_message = encode(message)
-
 print(f"Incoming message: {message}")
-print(f"   Morse encoded: {encoded_message}")
-
+print(f"   Morse encoded: {morse_message}")
 ```
-
