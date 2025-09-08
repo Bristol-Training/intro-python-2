@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/utils/template.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/001-workspace-setup.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_class.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/011-string-formatting.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_case.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/980-summary.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_function_big_numbers.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/013-list-comprehensions.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_string_methods.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/070-worksheet.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_decode_function.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/030-modules.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_practice_questions.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/022-writing-functions.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_add_to_dictionary.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/appendix/appendix_Classes.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_module_decode.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/appendix/aside_dataclasses.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_module_encode.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_case.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/070-worksheet.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_comprehension.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/020-functions.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_raise.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/990-contributors.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_exceptions.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/010-advanced-data-types.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_add_to_dictionary.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/030-modules.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_function_big_numbers.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/012-dictionaries.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_module_encode.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/021-importing-functions.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_hello_name.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/appendix/appendix_Classes.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_function_double.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/appendix/aside_zip.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/utils/template.html</loc>
+    <lastmod>2025-09-08T11:55:26.131Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/appendix/aside_dataclasses.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_decode_function.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/013-list-comprehensions.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_country_dictionary.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/022-writing-functions.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_module_decode.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/011-string-formatting.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_string_formatting.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/040-errors-exceptions.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_class.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/001-workspace-setup.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_first_dictionary.html</loc>
+    <lastmod>2025-09-08T11:55:26.124Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/pages/980-summary.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_morse_encode_function.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_string_formatting.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_practice_questions.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_encode_function.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/answers/answer_string_methods.html</loc>
+    <lastmod>2025-09-08T11:55:26.125Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_country_dictionary.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/appendix/aside_zip.html</loc>
+    <lastmod>2025-09-08T11:55:26.126Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_function_double.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/index.html</loc>
+    <lastmod>2025-09-08T11:55:26.129Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_exceptions.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/020-functions.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_comprehension.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/990-contributors.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_hello_name.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/040-errors-exceptions.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_morse_raise.html</loc>
-    <lastmod>2024-10-09T11:36:08.136Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/012-dictionaries.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/answers/answer_first_dictionary.html</loc>
-    <lastmod>2024-10-09T11:36:08.132Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/021-importing-functions.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/intermediate-python/index.html</loc>
-    <lastmod>2024-10-09T11:36:08.140Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-2/pages/010-advanced-data-types.html</loc>
+    <lastmod>2025-09-08T11:55:26.130Z</lastmod>
   </url>
 </urlset>
