@@ -4,10 +4,9 @@ title: Dictionaries
 
 Lists let you store lots of variables, and to access them by their location in the list. However, there are times when you may want to access them using more complex relationships. One example is a *dictionary*, which lets you store variables and access them using a *key*.
 
-Dictionaries in Python are created using curly brackets. Make a new file called `dict.py` with the below code and run it:
+Dictionaries in Python are created using curly brackets. 
 
 ```{python }
-#| filename: dict.py
 sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
 
 cat_sound = sounds["cat"]
@@ -24,7 +23,6 @@ Since dictionaries can be quite large and it can sometimes be hard to see which 
 
 
 ```{python }
-#| filename: dict.py
 #| output: false
 sounds = {
     "cat": "meow",
@@ -58,7 +56,6 @@ Let's say that we want to add in a new sound for a cow into our `sounds` diction
 
 
 ```{python}
-#| filename: dict.py
 #| output: false
 sounds = {
     "cat": "meow",
@@ -77,12 +74,9 @@ This is saying that we want the value `"moo"` associated with the key `"cow"` in
 
 Running it, we see:
 
-```{.bash filename="Terminal/Command Prompt"}
-python dict.py
-```
+
 
 ```{python}
-#| filename: dict.py
 #| echo: false
 sounds = {
     "cat": "meow",
@@ -98,7 +92,7 @@ print(sounds)
 
 ::: {#exercise-2 .callout-note title="Exercise" icon=false} 
 
-Edit `dict.py` so that the dictionary is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.
+Edit your dictionary so that it is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.
 
 :::
 
@@ -113,8 +107,7 @@ When discussing `for` loops you were told that Python allows you to loop over lo
 
 To discover how it works, let's do the naïve thing first and just see what happens when we loop over a dictionary:
 
-```{python include="../scripts/dict6.py" filename="dict.py"}
-#| filename: dict.py
+```{python}
 
 sounds = {
     "cat": "meow",
@@ -132,7 +125,6 @@ What if, for example, you wanted to loop over the *values* instead. Well, there 
 
 
 ```{python}
-#| filename: dict.py
 sounds = {
     "cat": "meow",
     "dog": "woof",
@@ -147,7 +139,6 @@ for sound in sounds.values():
 If we want to loop over the dictionary and get both the keys *and* the values, there is a method called `items`. Since it will be giving us two things each loop iteration, we'll have to use the same trick as we did with `enumerate` and give two variable names in the `for` loop declaration:
 
 ```{python}
-#| filename: dict.py
 sounds = {
     "cat": "meow",
     "dog": "woof",
