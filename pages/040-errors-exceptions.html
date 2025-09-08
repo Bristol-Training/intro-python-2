@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Errors and Exceptions – Intermediate Python</title>
+<title>Errors and Exceptions – Intro to Python 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -282,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="checking-the-value-of-data">Checking the value of data</h3>
 <p>When you create a function you are creating a sort of contract. In this case, you are agreeing that if you call the function <code>ounces_to_grams</code>, this will “take whatever value you passed as an argument, interpret it as a mass in grams and return the corresponding mass in ounces”. It might seem silly to write that out in full like that but it’s a useful exercise to help make decisions about what the function should do in potentially unexpected situations. What should happen if you passed the string <code>"banana"</code>? Most users of your function would not expect that and it’s more likely that it’s a mistake that they’ve made. Good functions are easily explained and predictable and avoid guessing what the user meant. How though, can we let the person who called our function that there is a problem?</p>
 <p>Let’s look at a simple example to demonstrate how we can write some code in our function to help the person calling it understand if they make a mistake. Our function converts masses and since there’s no such thing as a negative mass we need to decide what will happen if someone passes in a negative value. At the moment it will just return a negative mass:</p>
-<div id="c61e5191" class="cell" data-execution_count="2">
+<div id="be0ad52e" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -294,13 +294,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="87caa504" class="cell" data-execution_count="3">
+<div id="5a78357f" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>-850.485 g</code></pre>
 </div>
 </div>
 <p>We need to decide what happens in situations like this. For the purpose of this section, we want a negative mass to be impossible so we need to add in some code to check for it. The easiest place to start could be by adding an <code>if</code> statement and printing out an informative message:</p>
-<div id="b7d60fd0" class="cell" data-execution_count="5">
+<div id="fac63b76" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -319,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb4" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="34dd4bdd" class="cell" data-execution_count="6">
+<div id="9e451522" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Cannot convert negative mass
 -850.485 g</code></pre>
@@ -339,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Python solves this by allowing us to raise <em>exceptions</em>. An exception is an error message which the person calling the code <em>cannot</em> ignore which is useful as it helps prevent them write incorrect code.</p>
 <p>We can replace our <code>print</code> function call with the <code>raise</code> statement which we follow with the type of error we are notifying the user about.</p>
 <p>A list of all Python exception types is <a href="http://docs.python.org/library/exceptions.html">here</a>. It is important to choose the correct exception type for the error you are reporting. In our case, there is a problem with the value that the user is passing into our function, so I have chosen <a href="https://docs.python.org/3/library/exceptions.html#ValueError"><code>ValueError</code></a>:</p>
-<div id="529839bc" class="cell" data-execution_count="7">
+<div id="89d58ddb" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -359,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="55dc8ffe" class="cell" data-execution_count="8">
+<div id="4f9cd4dd" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -417,7 +417,7 @@ Answer
 <blockquote class="blockquote">
 <p><code>ValueError</code>: Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as <code>IndexError</code>.</p>
 </blockquote>
-<div id="083a354d" class="cell" data-execution_count="9">
+<div id="461496e0" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>

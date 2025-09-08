@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Worksheet answers – Intermediate Python</title>
+<title>Worksheet answers – Intro to Python 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>## Exercise 1</p>
 <p>The function we can use is <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime.now"><code>datetime.datetime.now()</code></a>. There is an <a href="https://docs.python.org/3/library/datetime.html#examples-of-usage-datetime">example in that module as well</a>.</p>
-<div id="e3f0a06f" class="cell" data-execution_count="1">
+<div id="0519e194" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile ex1.py</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
@@ -149,17 +149,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_now.isoformat())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing ex1.py</code></pre>
+<pre><code>Overwriting ex1.py</code></pre>
 </div>
 </div>
-<div id="007ee478" class="cell" data-tags="[&quot;nbval-ignore-output&quot;]" data-execution_count="2">
+<div id="cdf52fc7" class="cell" data-tags="[&quot;nbval-ignore-output&quot;]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run ex1.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2025-09-08T14:28:42.807922</code></pre>
+<pre><code>2025-09-08T15:31:53.211812</code></pre>
 </div>
 </div>
 <p>## Exercise 2</p>
-<div id="a8d52469" class="cell" data-execution_count="3">
+<div id="ca27ae7f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile ex2.py</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> first_word(l):</span>
@@ -171,17 +171,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> first_word(sentence)</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing ex2.py</code></pre>
+<pre><code>Overwriting ex2.py</code></pre>
 </div>
 </div>
-<div id="24e9665e" class="cell" data-execution_count="4">
+<div id="e4eb9ca2" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run ex2.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>This</code></pre>
 </div>
 </div>
 <p>## Exercise 3</p>
-<div id="3dd2fe7f" class="cell" data-execution_count="5">
+<div id="766d0bf5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile ex3.py</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_word_match(words, match, case_sensitive):</span>
@@ -205,10 +205,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>count2 <span class="op">=</span> count_word_match(<span class="st">"To be or not to be"</span>, <span class="st">"to"</span>, <span class="va">False</span>)</span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(count2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing ex3.py</code></pre>
+<pre><code>Overwriting ex3.py</code></pre>
 </div>
 </div>
-<div id="9f7e773c" class="cell" data-execution_count="6">
+<div id="a4caf818" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run ex3.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>## Exercise 4</p>
 <p>This exercise it tricker, but if you make some assumptions about the format of the input, you can make your life easier. For example, you can assume for now that every reference like <code>[4]</code> is surrounded by spaces. This allows <code>str.split()</code> to pull each one out as a “word”. You can also assume that every reference is an integer number.</p>
-<div id="5c76d278" class="cell" data-execution_count="7">
+<div id="303788a9" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile ex4.py</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_references(text):</span>
@@ -242,10 +242,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(references)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing ex4.py</code></pre>
+<pre><code>Overwriting ex4.py</code></pre>
 </div>
 </div>
-<div id="fdafb04a" class="cell" data-execution_count="8">
+<div id="67316b4a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run ex4.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 3, 10, 7]</code></pre>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="alternative-solution">Alternative solution</h4>
 <p>If you are familiar with regular expressions (we haven’t covered them in this course, so you might not be) then you can use this pattern matching language to extract the references. This is more reliable as the above method does not work if there is, e.g., no space between the <code>]</code> and the next letter: <code>bad ref [3].</code>.</p>
 <p>In this case, the regular expression <code>\[(\d+)\]</code> means: find an openning square bracket (<code>\[</code>), followed by one or more (<code>+</code>) digits (<code>\d</code>), followed by a closing square bracket (<code>\]</code>). If you find that, then pull out the digit part (<code>()</code>). It’s a very concise way of describing a pattern.</p>
-<div id="3f67227e" class="cell" data-execution_count="9">
+<div id="88d7a39a" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile ex4_re.py</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
@@ -275,17 +275,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(references)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing ex4_re.py</code></pre>
+<pre><code>Overwriting ex4_re.py</code></pre>
 </div>
 </div>
-<div id="de19dda0" class="cell" data-tags="[&quot;nbval_ignore_output&quot;]" data-execution_count="10">
+<div id="4113263c" class="cell" data-tags="[&quot;nbval_ignore_output&quot;]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run ex4_re.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 3, 10, 7]</code></pre>
 </div>
 </div>
 <p>## Exercise 5</p>
-<div id="f53f31fa" class="cell" data-execution_count="11">
+<div id="5bc044fa" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile refs.py</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_references(text):</span>
@@ -300,10 +300,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> refs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing refs.py</code></pre>
+<pre><code>Overwriting refs.py</code></pre>
 </div>
 </div>
-<div id="ca0fe998" class="cell" data-execution_count="12">
+<div id="cc281383" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile test_refs.py</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> refs</span>
@@ -318,10 +318,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Test failed:"</span>, numbers, <span class="st">"is not the same as"</span>, expected)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Writing test_refs.py</code></pre>
+<pre><code>Overwriting test_refs.py</code></pre>
 </div>
 </div>
-<div id="ce9e8f0c" class="cell" data-execution_count="13">
+<div id="9fc1d53a" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run test_refs.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Test passed</code></pre>

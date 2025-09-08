@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Intermediate Python</title>
+<title>Introduction – Intro to Python 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -291,29 +291,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this documentation, any time that we are seeing a small snippet of Python code, we’ll see it written in a grey box like the following:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If the commands are executed by the machine we will see the output of them below enclosed on a vertical purple line:</p>
-<div id="ece9548b" class="cell" data-execution_count="1">
+<div id="62407623" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello, Python!</code></pre>
 </div>
 </div>
-<p>By contrast, you will see larger peces of code as scripts with a given name, e.g.&nbsp;<code>script.py</code>, in a code block with darker header:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
-</div>
-<div class="sourceCode" id="cb4" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">"Hello"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your name? "</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greeting, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>We may ask you to run a script using the <code>Command Prompt</code> (Windows) or <code>Terminal</code> (Mac and Linux). We will show you what commands to run and will look like this:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>Please note that sometimes we will skip showing the execution of scripts on the Terminal/Command Prompt box, but we will assume you to run the script on your.</strong></p>
+<!-- 
+By contrast, you will see larger peces of code as scripts with a given name, e.g. `script.py`, in a code block with darker header:
+
+::: {#efcf42a7 .cell execution_count=2}
+``` {.python .cell-code}
+greeting = "Hello"
+name = input("What is your name? ")
+print(greeting, name)
+```
+
+::: {.cell-output .cell-output-error}
+
+::: {.ansi-escaped-output}
+```{=html}
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> greeting = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Hello</span><span class="ansi-yellow-fg">"</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> name = <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">input</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg">What is your name? </span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">      3</span> <span style="color:rgb(0,135,0)">print</span>(greeting, name)
+
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/work/intro-python-2/intro-python-2/.pixi/envs/default/lib/python3.13/site-packages/ipykernel/kernelbase.py:1274</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-fg">   1272</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="color:rgb(0,135,0)">self</span>._allow_stdin:
+<span class="ansi-green-fg">   1273</span>     msg = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">raw_input was called, but this frontend does not support input requests.</span><span class="ansi-yellow-fg">"</span>
+<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1274</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> StdinNotImplementedError(msg)
+<span class="ansi-green-fg">   1275</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span>._input_request(
+<span class="ansi-green-fg">   1276</span>     <span style="color:rgb(0,135,0)">str</span>(prompt),
+<span class="ansi-green-fg">   1277</span>     <span style="color:rgb(0,135,0)">self</span>._parent_ident[<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">shell</span><span class="ansi-yellow-fg">"</span>],
+<span class="ansi-green-fg">   1278</span>     <span style="color:rgb(0,135,0)">self</span>.get_parent(<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">shell</span><span class="ansi-yellow-fg">"</span>),
+<span class="ansi-green-fg">   1279</span>     password=<span style="font-weight:bold;color:rgb(0,135,0)">False</span>,
+<span class="ansi-green-fg">   1280</span> )
+
+<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.</pre>
+```
+:::
+
+:::
+:::
+
+
+We may ask you to run a script using the `Command Prompt` (Windows) or `Terminal` (Mac and Linux). We will show you what commands to run and will look like this:
+```{.bash filename="Terminal/Command Prompt"}
+python script.py
+```
+
+**Please note that sometimes we will skip showing the execution of scripts on the Terminal/Command Prompt box, but we will assume you to run the script on your.** -->
 <p>In some cases we will introduce general programming concepts and structures using pseudocode, a high-level, easy-to-read syntax close to natural language. This should not be confused with Python code and cannot be executed on your machine, but it is useful to describe how your code should behave. Here there is an example:</p>
 <pre><code>FOR EACH sample IN my_study
     IF (sample.value &gt; 100)
