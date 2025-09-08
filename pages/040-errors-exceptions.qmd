@@ -3,7 +3,7 @@ title: Errors and Exceptions
 jupyter: python3
 ---
 
-*Exceptions* are Python's error-handling system. You've probably come across exceptions as that's how Python lets you know when you've done something wrong! They're not just there to tell you off, a good error message is to tell you that the computer has got into a situation where it doesn't know what to do and is asking you, the programmer, to help it by giving more information.
+*Exceptions* are Python's error-handling system. You've probably come across exceptions as that's how Python lets you know when you've done something wrong! They're not just there to tell you off, a good error message is to tell you that the computer has got into a situation where it doesn't know what to do and is asking you, the programmer, to help it by giving more information. 
 
 Here we will use the module `convert.py` and script `recipe.py` we created in the previous section.
 
