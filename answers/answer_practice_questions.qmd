@@ -9,19 +9,13 @@ jupyter: python3
  
  The function we can use is [`datetime.datetime.now()`](https://docs.python.org/3/library/datetime.html#datetime.datetime.now). There is an [example in that module as well](https://docs.python.org/3/library/datetime.html#examples-of-usage-datetime).
 
-```{python}
-%%writefile ex1.py
 
+```{python}
 import datetime
 
 time_now = datetime.datetime.now()
 
 print(time_now.isoformat())
-```
-
-```{python}
-#| tags: [nbval-ignore-output]
-%run ex1.py
 ```
 
  ## Exercise 2
@@ -114,9 +108,6 @@ If you are familiar with regular expressions (we haven't covered them in this co
 
 In this case, the regular expression `\[(\d+)\]` means: find an openning square bracket (`\[`), followed by one or more (`+`) digits (`\d`), followed by a closing square bracket (`\]`). If you find that, then pull out the digit part (`()`). It's a very concise way of describing a pattern.
 
-```{python}
-%%writefile ex4_re.py
-
 import re
 
 def find_references(text):
@@ -125,8 +116,17 @@ def find_references(text):
     ref_numbers = []
     for ref in ref_matches:
         ref_numbers.append(int(ref))
-        
+
+```{python}
+def first_word(l):
+    words = l.split()
+    the_first_word = words[0]
+    return the_first_word
+
     return ref_numbers
+word = first_word(sentence)
+print(word)
+```
 
 example_text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
 

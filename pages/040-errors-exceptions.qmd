@@ -55,9 +55,8 @@ def ounces_to_grams(weight):
     return new_weight
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python recipe.py
-```
+
+If you run this code in a notebook cell, you'll see the message printed out, but the function has gone ahead and still returned the negative mass. What we want is a way to have the function display the message and stop running. We could stop the function at that point by `return`ing something, but *what*? If we return something like `0` or `-1` to designate the failure mode, then the person calling the function could quite easily carry on without noticing, assuming that it's a mass.
 
 ```{python}
 #| echo: false

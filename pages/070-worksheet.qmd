@@ -42,9 +42,8 @@ time_now = datetime.datetime.now()
 print(time_now.isoformat())
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python ex1.py
-```
+
+Run the code cell above to see the output.
 
 ```{python}
 #| echo: false

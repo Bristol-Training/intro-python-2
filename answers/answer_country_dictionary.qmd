@@ -1,5 +1,4 @@
 ```{python}
-#| filename: dict.py
 capitals = {
     "France": "Paris",
     "United Kingdom": "London",

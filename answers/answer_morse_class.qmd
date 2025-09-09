@@ -2,11 +2,11 @@
 jupyter: python3
 ---
 
-We add the definition of the class `Message` to the top of the `morse` module.
+
+We add the definition of the class `Message` to the top of the code cell.
+
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile morse.py
 
 class Message:
     def __init__(self, message):

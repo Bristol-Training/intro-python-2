@@ -7,11 +7,11 @@ jupyter: python3
 !rm -f morse.py
 ```
 
-`morse.py` is the same as in the previous exercise. We have our test in `Message.__init__` to check for `!`:
+
+The code is the same as in the previous exercise. We have our test in `Message.__init__` to check for `!`:
+
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile morse.py
 
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 

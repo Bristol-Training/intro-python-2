@@ -66,10 +66,9 @@ The last part is where it differs. Rather than the body of the loop going on a n
 List comprehensions are powerful because they allow you to do a lot in a single line but that can be an issue of you try to do too much and it becomes very *noisy*. We would suggest that you try to keep your list comprehensions not much more complicated than the example we saw above.
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
-Adapt `encode` function in the below script to use list comprehensions for doing the conversion. 
+Adapt the `encode` function below to use list comprehensions for doing the conversion. Copy the code into a notebook cell and run it.
 
 ```{python}
-#| filename: encode.py
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 

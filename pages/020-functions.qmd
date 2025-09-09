@@ -21,7 +21,7 @@ It is worth, over time, becoming familiar with the various functions that are av
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 
-Copy the following code into a new script `hello.py`:
+Copy the following code into a notebook cell and run it:
 
 ```python
 my_name = ...
@@ -31,8 +31,8 @@ name_length = ...
 print(f"Hello {my_name}! Your name is {name_length} characters long")
 ```
 
-Replace the first `...` with a call to a built-in function which will read *input* from the person running the script.
-Replace the second `...` with a call to a function which will give the *length* of the string `my_name`. When executed, the script should print out:
+Replace the first `...` with a call to a built-in function which will read *input* from the person running the code cell.
+Replace the second `...` with a call to a function which will give the *length* of the string `my_name`. When executed, the code cell should print out:
 
 ```
 Please tell me your name: Jean

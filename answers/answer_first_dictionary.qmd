@@ -1,6 +1,6 @@
 
+
 ```{python}
-#| filename: dict.py
 sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
 
 dog_sound = sounds["dog"]
@@ -12,12 +12,13 @@ print("Horse goes", horse_sound)
 
 
 
-If we edit our script so that it asks for a key that doesn't exist, we will see an error being produced:
+
+If we edit our code so that it asks for a key that doesn't exist, we will see an error being produced:
+
 
 
 ```{python}
 #| error: true
-#| filename: dict.py
 sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
 
 fish_sound = sounds["fish"]

@@ -1,7 +1,6 @@
 Starting from the initial code:
 
 ```{python}
-#| filename: bignums.py
 my_list = [5, 7, 34, 5, 3, 545]
 
 big_numbers = []
@@ -15,7 +14,6 @@ print(big_numbers)
 We pull out the middle four lines, indent them, put `def big(numbers):` in front and add `return big_numbers` to the end, paying careful attention to the indentation of the `return` statement. Finally, we update the variable name used in the function to match the argument name `numbers`:
 
 ```{python}
-#| filename: bignums.py
 def big(numbers):
     big_numbers = []
     for num in numbers:

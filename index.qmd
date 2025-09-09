@@ -4,7 +4,7 @@ title: Introduction
 
 Welcome to this second course on Python programming! This course builds upon Beginning Python and delves deeper into working with advanced data structures, write functions, explore modules, and how to handle errors and exceptions. Get ready to take your Python skills to the next level!
 
-For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor and Python terminal in your web browser. Setting up instructions can be found [here]("pages/001-workspace-setup.qmd").
+For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor and Python terminal in your web browser. Setting up instructions can be found [here](./pages/001-workspace-setup.qmd).
 
 ### Intended learning outcomes
 

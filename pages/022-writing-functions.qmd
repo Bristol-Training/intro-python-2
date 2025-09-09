@@ -8,10 +8,9 @@ In previous sections you edited a script that encodes messages to Morse code. Th
 
 Functions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in the last chapter, e.g. `print()` wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest. Likewise with `math.sqrt()`, you don't need to understand the algorithm it uses, simply what it needs you to pass it, and what it returns back to you.
 
-You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Create a new script `convert.py` with the below code and run it.
+You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Copy the code below into a notebook cell and run it.
 
 ```{python}
-#| filename: convert.py
 weight_in_ounces = 6
 
 weight_in_grams = weight_in_ounces * 28.3495
@@ -19,7 +18,7 @@ weight_in_grams = weight_in_ounces * 28.3495
 print(f"{weight_in_grams} g")
 ```
 
-You can see this script has three main parts:
+You can see this code has three main parts:
 
 - The **set-up** where we define `weight_in_ounces`
 - The **data-processing** section where we read our inputs and create an output

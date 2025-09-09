@@ -1,6 +1,7 @@
 
 
-Here we make the same changes as with `encode.py`:
+
+Here we make the same changes as with the previous code cell:
 
 1. `def decode(message):` added to the beginning
 2. The code is indented by four spaces
@@ -9,7 +10,6 @@ Here we make the same changes as with `encode.py`:
 
 
 ```{python}
-#| filename: decode.py
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 

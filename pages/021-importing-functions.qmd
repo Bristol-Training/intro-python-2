@@ -49,7 +49,7 @@ In both these cases the dot is doing a very similar job. It's saying "look insid
 
 ::: {#exercise1 .callout-note title="Exercise" icon=false} 
 
-We saw earlier how to check our current working directory in the Command Prompt/Terminal using `cd` (Windows) and `pwd` (MacOS and Linux). Using the [The Python Standard Library](https://docs.python.org/3/library/), find a function that returns the working directory in Python.
+We saw earlier how to check our current working directory using `cd` (Windows) and `pwd` (MacOS and Linux). Using the [The Python Standard Library](https://docs.python.org/3/library/), find a function that returns the working directory in Python. Try it in a notebook cell.
 
 :::
 

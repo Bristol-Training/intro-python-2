@@ -7,7 +7,6 @@ We add a new function called `encode` which takes the exact code as before but w
 We then call our function with `morse_message = encode(message)`
 
 ```{python}
-#| filename: encode.py
 letter_to_morse = {'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
                    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
                    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',

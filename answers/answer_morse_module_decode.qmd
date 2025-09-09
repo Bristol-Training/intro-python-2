@@ -49,9 +49,8 @@ def decode(message):
     return english_message
 ```
 
+
 ```{python}
-#| filename: decode.py
-#| eval: false
 import morse
 
 message = "... . -.-. .-. . - / -- . ... ... .- --. ."

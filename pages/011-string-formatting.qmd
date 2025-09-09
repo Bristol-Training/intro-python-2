@@ -31,7 +31,7 @@ We call this process of substituting values of variables into placeholders *stri
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 For many of the exercises here, we are going to be working on some Python code which converts to and from [Morse Code](https://simple.wikipedia.org/wiki/Morse_code). In each section we will add or change the code so make sure that you don't skip any exercises.
 
-Copy the following code in the text editor into a script called `encode.py` and run it in the terminal with `python encode.py` or `python3 encode.py` to check that it works.
+Copy the following code into a notebook code cell and run the cell to check that it works.
 
 ```{python}
 #| filename: encode.py

@@ -8,8 +8,6 @@ In our situation, the first letter is "S" and so `letter.lower()` will give us `
 
 
 ```{python}
-#| filename: encode.py
-#| output: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -34,9 +32,7 @@ print(f"Incoming message: {message}")
 print(f"   Morse encoded: {morse_message}")
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python encode.py
-```
+
 
 ```{python}
 #| echo: false
