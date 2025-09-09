@@ -1,12 +1,8 @@
-```python
+```{python}
 sounds = {"cat": "meow", "dog": "woof"}
 
 sounds["horse"] = "neigh"
 sounds["cow"] = "moo"
 
 print(sounds)
-```
-
-```python
-sounds = {"cat": "meow", "dog": "woof"}
 ```

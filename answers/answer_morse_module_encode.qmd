@@ -27,31 +27,11 @@ def encode(message):
 ```
 
 ```{python}
-import morse
 
 message = "SOS We have hit an iceberg and need help quickly"
 
-encoded_message = morse.encode(message)
+encoded_message = encode(message)
 
 print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
 ```
-
-```{.bash filename="Terminal/Command Prompt"}
-python encode.py
-```
-
-```{python}
-#| echo: false
-import sys
-sys.path.append('../scripts')
-import morse
-
-message = "SOS We have hit an iceberg and need help quickly"
-
-encoded_message = morse.encode(message)
-
-print(f"Incoming message: {message}")
-print(f"   Morse encoded: {encoded_message}")
-```
-

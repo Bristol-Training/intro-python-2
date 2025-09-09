@@ -76,12 +76,9 @@ def decode(message):
     return english_message
 ```
 
-We then change our `test_morse.py` file as directed:
+
 
 ```{python}
-%%writefile test_morse.py
-
-from morse import Message
 
 my_message = Message("hello world")
 morse_string = my_message.as_morse()
@@ -92,7 +89,4 @@ decoded_string = incoming_message.as_english()
 print(decoded_string == "hello world")
 ```
 
-```{python}
-%run test_morse.py
-```
 

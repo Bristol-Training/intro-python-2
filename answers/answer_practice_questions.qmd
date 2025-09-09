@@ -21,8 +21,6 @@ print(time_now.isoformat())
  ## Exercise 2
 
 ```{python}
-%%writefile ex2.py
-
 def first_word(l):
     words = l.split()
     the_first_word = words[0]
@@ -33,15 +31,11 @@ word = first_word(sentence)
 print(word)
 ```
 
-```{python}
-%run ex2.py
-```
+
 
  ## Exercise 3
 
 ```{python}
-%%writefile ex3.py
-
 def count_word_match(words, match, case_sensitive):
     if not case_sensitive:
         # Make both the words and the match a consistent case
@@ -64,17 +58,12 @@ count2 = count_word_match("To be or not to be", "to", False)
 print(count2)
 ```
 
-```{python}
-%run ex3.py
-```
 
  ## Exercise 4
  
  This exercise it tricker, but if you make some assumptions about the format of the input, you can make your life easier. For example, you can assume for now that every reference like `[4]` is surrounded by spaces. This allows `str.split()` to pull each one out as a "word". You can also assume that every reference is an integer number.
 
 ```{python}
-%%writefile ex4.py
-
 def find_references(text):
     words = text.split()
     
@@ -98,15 +87,13 @@ references = find_references(example_text)
 print(references)
 ```
 
-```{python}
-%run ex4.py
-```
-
 ### Alternative solution
 
 If you are familiar with regular expressions (we haven't covered them in this course, so you might not be) then you can use this pattern matching language to extract the references. This is more reliable as the above method does not work if there is, e.g., no space between the `]` and the next letter: `bad ref [3].`.
 
 In this case, the regular expression `\[(\d+)\]` means: find an openning square bracket (`\[`), followed by one or more (`+`) digits (`\d`), followed by a closing square bracket (`\]`). If you find that, then pull out the digit part (`()`). It's a very concise way of describing a pattern.
+
+```{python}
 
 import re
 
@@ -117,33 +104,34 @@ def find_references(text):
     for ref in ref_matches:
         ref_numbers.append(int(ref))
 
-```{python}
+    return ref_numbers
+
 def first_word(l):
     words = l.split()
     the_first_word = words[0]
     return the_first_word
 
     return ref_numbers
+
+
+
+sentence = "This is a collection of words"
+
 word = first_word(sentence)
 print(word)
 ```
 
+```{python}
 example_text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
 
 references = find_references(example_text)
-
 print(references)
 ```
 
-```{python}
-#| tags: [nbval_ignore_output]
-%run ex4_re.py
-```
 
  ## Exercise 5
 
 ```{python}
-%%writefile refs.py
 
 def find_references(text):
     words = text.split()
@@ -156,16 +144,11 @@ def find_references(text):
             refs.append(reference_number)
     
     return refs
-```
 
-```{python}
-%%writefile test_refs.py
-
-import refs
 
 text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
 
-numbers = refs.find_references(text)
+numbers = find_references(text)
 
 expected = [1, 3, 10, 7]
 if numbers == expected:
@@ -174,7 +157,6 @@ else:
     print("Test failed:", numbers, "is not the same as", expected)
 ```
 
-```{python}
-%run test_refs.py
-```
+
+
 

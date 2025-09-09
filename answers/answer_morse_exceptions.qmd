@@ -2,10 +2,6 @@
 jupyter: python3
 ---
 
-```{python}
-#| tags: [remove_cell]
-!rm -f morse.py
-```
 
 
 The code is the same as in the previous exercise. We have our test in `Message.__init__` to check for `!`:
@@ -61,37 +57,28 @@ def decode(message):
     return english_message
 ```
 
-If we add some `!` to our `message_string` in `encode.py` then we see our `ValueError` exception raised:
+
+If we add some `!` to our `message_string` then we see our `ValueError` exception raised:
 
 ```{python}
-%%writefile encode.py
-
-import morse
-
+#| tags: [raises-exception]
 message = "SOS We have hit an iceberg and need help quickly!!!!!"  # ← Added ! to end of string
 
-encoded_message = morse.encode(message)
+encoded_message = encode(message)
 
 print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
 ```
 
-```{python}
-#| tags: [raises-exception]
-%run encode.py
-```
+
 
 Moving all that code into a `try`/`except ValueError` block we can catch the error and print something
 
 ```{python}
-%%writefile encode.py
-
-import morse
-
 message = "SOS We have hit an iceberg and need help quickly!!!!!"
 
 try:
-    encoded_message = morse.encode(message)
+    encoded_message = encode(message)
 
     print(f"Incoming message: {message}")
     print(f"   Morse encoded: {encoded_message}")
@@ -99,21 +86,15 @@ except ValueError as e:
     print(f"Could not encode message: {e}")
 ```
 
-```{python}
-%run encode.py
-```
+
 
 Passing in a valid string (removing the `!`) results in the code running correctly:
 
 ```{python}
-%%writefile encode.py
-
-import morse
-
 message = "SOS We have hit an iceberg and need help quickly"  # Removed ! from end of string
 
 try:
-    encoded_message = morse.encode(message)
+    encoded_message = encode(message)
 
     print(f"Incoming message: {message}")
     print(f"   Morse encoded: {encoded_message}")
@@ -121,7 +102,5 @@ except ValueError as e:
     print(f"Could not encode message: {e}")
 ```
 
-```{python}
-%run encode.py
-```
+
 

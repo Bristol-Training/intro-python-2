@@ -51,28 +51,11 @@ def decode(message):
 
 
 ```{python}
-import morse
-
 message = "... . -.-. .-. . - / -- . ... ... .- --. ."
 
-decoded_message = morse.decode(message)
+decoded_message = decode(message)
 
 print(decoded_message)
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python decode.py
-```
 
-```{python}
-#| echo: false
-import sys
-sys.path.append('../scripts')
-import morse
-
-message = "... . -.-. .-. . - / -- . ... ... .- --. ."
-
-decoded_message = morse.decode(message)
-
-print(decoded_message)
-```
