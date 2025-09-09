@@ -1,4 +1,5 @@
 
+Your `morse.py` file should look like this:
 
 ```{python}
 letter_to_morse = {
@@ -49,8 +50,20 @@ def decode(message):
     return english_message
 ```
 
+```{python}
+#| eval: false
+import morse
+
+message = "... . -.-. .-. . - / -- . ... ... .- --. ."
+
+decoded_message = morse.decode(message)
+
+print(decoded_message)
+```
+
 
 ```{python}
+#| echo: false
 message = "... . -.-. .-. . - / -- . ... ... .- --. ."
 
 decoded_message = decode(message)

@@ -22,7 +22,6 @@ import math
 Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the [square root function](https://docs.python.org/3/library/math.html#math.sqrt) you would do:
 
 ```{python}
-#| filename: imports.py
 import math
 
 print(math.sqrt(25))
@@ -33,7 +32,6 @@ You can think of this as saying "from the `math` module that I've just imported,
 Alternatively, if you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:
 
 ```{python}
-#| filename: imports.py
 from math import sqrt
 
 print(sqrt(25))
@@ -57,7 +55,8 @@ We saw earlier how to check our current working directory using `cd` (Windows) a
 
 One possible solution is to use the module [`os` - Miscellaneous operating system interfaces](https://docs.python.org/3/library/os.html).
 
-```{.python}
+```{python}
+#| eval: false
 import os
 
 current_directory = os.getcwd()

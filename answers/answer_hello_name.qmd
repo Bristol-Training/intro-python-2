@@ -18,8 +18,6 @@ print(f"Hello {my_name}! Your name is {name_length} characters long")
 #| echo: false
 my_name = "Jean"
 
-print("Please tell me your name:", my_name)
-
 name_length = len(my_name)
 
 print(f"Hello {my_name}! Your name is {name_length} characters long")

@@ -8,7 +8,7 @@ This page contains a number of questions and exercises to give you a chance to p
 You should create a new `.py` Python file for each exercise.
 
 ::: {#exercise-1 .callout-note title="Exercise 1" icon=false} 
-The first exercise is to practise searching the documentation. From the list of modules in the standard library, find one that contains a function to give the current date and time.
+The first exercise is to practice searching the documentation. From the list of modules in the standard library, find one that contains a function to give the current date and time.
 
 Fill in the `...` in the snippet below.
 
@@ -32,7 +32,6 @@ The output should be something like the following, but with today's date and tim
  The function we can use is [`datetime.datetime.now()`](https://docs.python.org/3/library/datetime.html#datetime.datetime.now). There is an [example in that module as well](https://docs.python.org/3/library/datetime.html#examples-of-usage-datetime).
 
 ```{python}
-#| filename: ex1.py
 #| eval: false
 
 import datetime
@@ -83,6 +82,8 @@ This
 :::
 
 ::: {#answer2 .callout-caution icon=false title='Answer 2' collapse="true"}
+
+You could create a file called `ex2.py` containing:
 ```{python}
 #| filename: ex2.py
 
@@ -91,11 +92,23 @@ def first_word(l):
     the_first_word = words[0]
     return the_first_word
 
+```
+
+You can then use it in a notebook cell like:
+```{python}
+#| eval: false
+import ex2
+sentence = "This is a collection of words"
+word = ex2.first_word(sentence)
+print(word)
+```
+```{python}
+#| echo: false
+#| eval: true
 sentence = "This is a collection of words"
 word = first_word(sentence)
 print(word)
 ```
-
 :::
 
 
@@ -134,6 +147,8 @@ giving the output:
 
 
 ::: {#answer3 .callout-caution icon=false title='Answer 3' collapse="true"}
+
+You could create a file called `ex3.py` containing:
 ```{python}
 #| filename: ex3.py
 
@@ -152,9 +167,22 @@ def count_word_match(words, match, case_sensitive):
     
     return count
 
+```
+
+You can then use it in a notebook cell like:
+```{python}
+#| eval: false
+import ex3
+count1 = ex3.count_word_match("To be or not to be", "to", True)
+print(count1)
+count2 = ex3.count_word_match("To be or not to be", "to", False)
+print(count2)
+```
+```{python}
+#| echo: false
+#| eval: true
 count1 = count_word_match("To be or not to be", "to", True)
 print(count1)
-
 count2 = count_word_match("To be or not to be", "to", False)
 print(count2)
 ```
@@ -181,8 +209,9 @@ The function should be called `find_references`.
 :::
 
 ::: {#answer4 .callout-caution icon=false title='Answer 4' collapse="true"}
- This exercise it tricker, but if you make some assumptions about the format of the input, you can make your life easier. For example, you can assume for now that every reference like `[4]` is surrounded by spaces. This allows `str.split()` to pull each one out as a "word". You can also assume that every reference is an integer number.
+ This exercise it trickier, but if you make some assumptions about the format of the input, you can make your life easier. For example, you can assume for now that every reference like `[4]` is surrounded by spaces. This allows `str.split()` to pull each one out as a "word". You can also assume that every reference is an integer number.
 
+You could create a file called `ex4.py` containing:
 ```{python}
 #| filename: ex4.py
 
@@ -209,13 +238,36 @@ references = find_references(example_text)
 print(references)
 ```
 
+You can then use it in a notebook cell like:
+```{python}
+#| eval: false
+
+import ex4
+
+example_text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
+
+references = ex4.find_references(example_text)
+
+print(references)
+```
+
+
+```{python}
+#| echo: false
+#| eval: true
+
+example_text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
+references = find_references(example_text)
+print(references)
+```
+
 :::
 
 
 
 ::: {#exercise-5 .callout-note title="Exercise 5" icon=false} 
 
-Take the function that you wrote in the last exercise and move it into a module called `refs`. You should then write a test file called `test_refs.py` containing:
+Take the function that you wrote in the last exercise and move it into a module called `refs`. You should test it in a notebook cell by importing it and calling it as you did above, and comparing it against the expected output.
 
 ```python
 import refs
@@ -231,14 +283,11 @@ else:
     print("Test failed:", numbers, "is not the same as", expected)
 ```
 
-You should make sure that the test passes when the test script is run with:
 
-```{.bash filename="Terminal/Command Prompt"}
-python test_refs.py
-```
 :::
 
 ::: {#answer5 .callout-caution icon=false title='Answer 5' collapse="true"}
+You're refs module, `refs.py`, could look like this:
 ```{python}
 #| filename: refs.py
 
@@ -255,9 +304,10 @@ def find_references(text):
     return refs
 ```
 
-```{python}
-#| filename: test_refs.py
+You can then test it in a notebook cell like this:
 
+```{python}
+#| eval: false
 import refs
 
 text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
@@ -271,8 +321,19 @@ else:
     print("Test failed:", numbers, "is not the same as", expected)
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python test_refs.py
+```{python}
+#| echo: false
+#| eval: true
+
+text = "I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."
+references = find_references(text)
+expected = [1, 3, 10, 7]
+if references == expected:
+    print("Test passed")
+else:
+    print("Test failed:", references, "is not the same as", expected)
+
 ```
+
 :::
 

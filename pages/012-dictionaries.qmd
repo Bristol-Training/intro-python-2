@@ -56,7 +56,6 @@ Let's say that we want to add in a new sound for a cow into our `sounds` diction
 
 
 ```{python}
-#| output: false
 sounds = {
     "cat": "meow",
     "dog": "woof",
@@ -76,18 +75,7 @@ This is saying that we want the value `"moo"` associated with the key `"cow"` in
 
 
 
-```{python}
-#| echo: false
-sounds = {
-    "cat": "meow",
-    "dog": "woof",
-    "horse": "neigh"
-}
 
-sounds["cow"] = "moo"
-
-print(sounds)
-```
 
 
 ::: {#exercise-2 .callout-note title="Exercise" icon=false} 

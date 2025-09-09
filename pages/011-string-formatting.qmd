@@ -34,7 +34,6 @@ For many of the exercises here, we are going to be working on some Python code w
 Copy the following code into a notebook code cell and run the cell
 
 ```{python}
-#| filename: encode.py
 #| output: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 

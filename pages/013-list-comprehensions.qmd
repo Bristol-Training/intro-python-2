@@ -69,6 +69,7 @@ List comprehensions are powerful because they allow you to do a lot in a single 
 Adapt the `encode` function below to use list comprehensions for doing the conversion. 
 
 ```{python}
+#| output: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
