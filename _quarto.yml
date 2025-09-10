@@ -6,7 +6,7 @@ website:
   page-navigation: true
 
   sidebar: 
-    title: "Intermediate Python"
+    title: "Intro to Python 2"
     logo: "assets/UoB_RGB_24.png"
     align: center
     logo-alt: "University of Bristol logo"

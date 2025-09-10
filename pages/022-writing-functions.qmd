@@ -8,10 +8,9 @@ In previous sections you edited a script that encodes messages to Morse code. Th
 
 Functions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in the last chapter, e.g. `print()` wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest. Likewise with `math.sqrt()`, you don't need to understand the algorithm it uses, simply what it needs you to pass it, and what it returns back to you.
 
-You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Create a new script `convert.py` with the below code and run it.
+You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Copy the code below into a notebook cell and run it.
 
 ```{python}
-#| filename: convert.py
 weight_in_ounces = 6
 
 weight_in_grams = weight_in_ounces * 28.3495
@@ -19,7 +18,7 @@ weight_in_grams = weight_in_ounces * 28.3495
 print(f"{weight_in_grams} g")
 ```
 
-You can see this script has three main parts:
+You can see this code has three main parts:
 
 - The **set-up** where we define `weight_in_ounces`
 - The **data-processing** section where we read our inputs and create an output
@@ -32,7 +31,6 @@ The data processing section will work regardless of what data is inside the vari
 We can turn this into a function that can convert ounces to grams by using `def`. To do this, type:
 
 ```{python}
-#| filename: convert.py
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
     return new_weight
@@ -94,7 +92,6 @@ You can now call the function using:
 
 
 ```{python}
-#| filename: convert.py
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
     return new_weight
@@ -112,7 +109,6 @@ In this case you have called the function `ounces_to_grams` and passed in the ar
 You can use your new `ounces_to_grams` function to convert any numbers. Try typing:
 
 ```{python}
-#| filename: convert.py
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
     return new_weight
@@ -128,7 +124,6 @@ print(f"{weight_in_grams} g")
 Note that we can also pass the values to the function directly, e.g. type:
 
 ```{python}
-#| filename: convert.py
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
     return new_weight
@@ -207,7 +202,6 @@ Be careful to pay attention to the indentation, ensuring that it is consistent w
 Note that you must pass in the right number of arguments to a function. `ounces_to_grams` expects one arguments, so if you pass more or less you will get an error. Try this now:
 
 ```{python}
-#| filename: convert.py
 #| error: true
 def ounces_to_grams(weight):
     new_weight = weight * 28.3495
@@ -222,7 +216,6 @@ print(f"{weight_in_grams} g")
 As you can see, Python tells you that you've given the function a wrong number of arguments. It expects 1 (`weight`). Likewise, if you give too many arguments you get a similar error:
 
 ```{python}
-#| filename: convert.py
 #| error: true
 
 def ounces_to_grams(weight):
@@ -242,6 +235,7 @@ def pi():
     return 3.14159
 
 answer = pi()
+print(answer)
 ```
 
 single arguments:
@@ -251,6 +245,7 @@ def double(x):
     return x * 2
 
 answer = double(4)
+print(answer)
 ```
 
 or lots of arguments:
@@ -260,10 +255,11 @@ def lots_of_args(a, b, c, d, e):
     return {"a": a, "b": b, "c": c, "d": d, "e": e}
 
 answer = lots_of_args(1, 2, 3, 4, 5)
+print(answer)
 ```
 
 ::: {#exercise-3 .callout-note title="Exercise" icon=false} 
-Take `encode.py` from the previous chapter and edit it so that the part that does the conversion is moved into a function called `encode`. The function should take one argument and return the encoded morse string.
+Take your code for encoding from the previous chapter and edit it so that the part that does the conversion is moved into a function called `encode`. The function should take one argument and return the encoded morse string.
 
 To be more explicit, replace the following lines of code:
 
@@ -298,7 +294,7 @@ where the `...` should be replaced with the code to do the conversion and the va
 :::
 
 ::: {#exercise-4 .callout-note title="Exercise" icon=false}
-- Make a second file called `decode.py` with the contents:
+- Code to decode morse to English is given below:
   ```python
   letter_to_morse = {
       'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
@@ -332,7 +328,7 @@ where the `...` should be replaced with the code to do the conversion and the va
   
   print(english_message)
   ```
-- Edit `decode.py` so that the part that does the conversion (everything from `english = []` to `"".join(english)`) is moved into a function. The function should take one argument, `message` and return the decoded english message. 
+- Edit this so that the part that does the conversion (everything from `english = []` to `"".join(english)`) is moved into a function. The function should take one argument, `message` and return the decoded english message. 
 
 :::
 

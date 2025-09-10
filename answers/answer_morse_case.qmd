@@ -8,38 +8,6 @@ In our situation, the first letter is "S" and so `letter.lower()` will give us `
 
 
 ```{python}
-#| filename: encode.py
-#| output: false
-letter_to_morse = {
-    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
-    'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
-    'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
-    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..',
-    '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-',
-    '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/'
-}
-
-message = "SOS We have hit an iceberg and need help quickly"
-
-morse = []
-
-for letter in message:
-    letter = letter.lower()  #  ← We have added this line of code
-    morse_letter = letter_to_morse[letter]
-    morse.append(morse_letter)
-
-morse_message = " ".join(morse)
-
-print(f"Incoming message: {message}")
-print(f"   Morse encoded: {morse_message}")
-```
-
-```{.bash filename="Terminal/Command Prompt"}
-python encode.py
-```
-
-```{python}
-#| echo: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 

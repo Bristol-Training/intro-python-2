@@ -38,7 +38,7 @@ print(cat_sound)
 
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
-Edit `dict.py` to ask for the sound for the dog and the horse.
+Edit you code to ask for the sound for the dog and the horse.
 What happens if you ask for an animal that isn't in the dictionary?
 
 :::
@@ -56,7 +56,6 @@ Let's say that we want to add in a new sound for a cow into our `sounds` diction
 
 
 ```{python}
-#| output: false
 sounds = {
     "cat": "meow",
     "dog": "woof",
@@ -72,22 +71,11 @@ print(sounds)
 
 This is saying that we want the value `"moo"` associated with the key `"cow"` in the dictionary `sounds`.
 
-Running it, we see:
 
 
 
-```{python}
-#| echo: false
-sounds = {
-    "cat": "meow",
-    "dog": "woof",
-    "horse": "neigh"
-}
 
-sounds["cow"] = "moo"
 
-print(sounds)
-```
 
 
 ::: {#exercise-2 .callout-note title="Exercise" icon=false} 

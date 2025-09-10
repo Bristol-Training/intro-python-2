@@ -1,7 +1,6 @@
 
-The following code should be put into a file called `encode.py` using the text editor in JupyterLab:
+The following code should be put into a notebook code cell and run:
 ```{python}
-#| filename: encode.py
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 

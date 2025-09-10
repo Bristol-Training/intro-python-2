@@ -3,7 +3,7 @@ title: Using advanced data types and methods
 jupyter: python3
 ---
 
-In [Beginning Python](https://bristol-training.github.io/beginning-python/) we saw different basic data types (integers, floats, booleans and strings) and a data structure called `list` (an ordered, mutable sequence that can contain heterogeneous elements) and how to perform basic operations with it (indexing, slicing and adding elements).
+In [Introduction to Python part 1](https://bristol-training.github.io/intro-python-1/) we saw different basic data types (integers, floats, booleans and strings) and a data structure called `list` (an ordered, mutable sequence that can contain heterogeneous elements) and how to perform basic operations with it (indexing, slicing and adding elements).
 
 Python provides several other powerful built-in data types and methods that allow you to work with more complex data structures. In this section, we will see how to perform more advanced operations with strings and lists, and we will introduce a new data structure called `dictionary`. Understanding how to effectively use these data structures is crucial for writing efficient code.
 

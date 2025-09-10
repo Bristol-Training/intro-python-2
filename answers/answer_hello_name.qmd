@@ -3,24 +3,20 @@ jupyter: python3
 ---
 
 
-To get input from the person running your script, you can use the function [`input()`](https://docs.python.org/3/library/functions.html#input). And to get the length of your variable you can call [`len()`](https://docs.python.org/3/library/functions.html#len).
+To get input from the person running your code, you can use the function [`input()`](https://docs.python.org/3/library/functions.html#input). And to get the length of your variable you can call [`len()`](https://docs.python.org/3/library/functions.html#len).
+
 
 
 ```{python}
-#| filename: hello.py
 #| eval: false
 my_name = input("Please tell me your name: ")
-
 name_length = len(my_name)
-
 print(f"Hello {my_name}! Your name is {name_length} characters long")
 ```
 
 ```{python}
 #| echo: false
 my_name = "Jean"
-
-print("Please tell me your name:", my_name)
 
 name_length = len(my_name)
 

@@ -1,10 +1,7 @@
----
-jupyter: python3
----
+Your `morse.py` file should look like this:
 
 ```{python}
 #| filename: morse.py
-#| eval: false
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -28,8 +25,10 @@ def encode(message):
     return morse_message
 ```
 
+
+Your notebook code cell should look like this:
+
 ```{python}
-#| filename: encode.py
 #| eval: false
 import morse
 
@@ -41,21 +40,13 @@ print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python encode.py
-```
-
 ```{python}
 #| echo: false
-import sys
-sys.path.append('../scripts')
-import morse
 
 message = "SOS We have hit an iceberg and need help quickly"
 
-encoded_message = morse.encode(message)
+encoded_message = encode(message)
 
 print(f"Incoming message: {message}")
 print(f"   Morse encoded: {encoded_message}")
 ```
-

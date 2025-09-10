@@ -5,6 +5,7 @@ We have added some code to the beginning of `morse.encode` to check, in the case
 
 
 ```{python}
+#| filename: morse.py
 letter_to_morse = {
     'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 
     'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 
@@ -52,4 +53,6 @@ def decode(message):
     
     return english_message
 ```
+
+You will need to restart your Python kernel to ensure that this new version of `morse.py` is used, try rerunning it and seeing what happens!
 

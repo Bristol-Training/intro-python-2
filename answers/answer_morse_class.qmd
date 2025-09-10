@@ -2,11 +2,11 @@
 jupyter: python3
 ---
 
-We add the definition of the class `Message` to the top of the `morse` module.
+
+We add the definition of the class `Message` to the top of the code cell.
+
 
 ```{python}
-#| tags: [nbval-ignore-output]
-%%writefile morse.py
 
 class Message:
     def __init__(self, message):
@@ -76,12 +76,9 @@ def decode(message):
     return english_message
 ```
 
-We then change our `test_morse.py` file as directed:
+We run our code.
 
 ```{python}
-%%writefile test_morse.py
-
-from morse import Message
 
 my_message = Message("hello world")
 morse_string = my_message.as_morse()
@@ -92,7 +89,4 @@ decoded_string = incoming_message.as_english()
 print(decoded_string == "hello world")
 ```
 
-```{python}
-%run test_morse.py
-```
 
