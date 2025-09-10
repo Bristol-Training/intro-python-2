@@ -15,7 +15,7 @@ jobs:
             - name: Checkout source
               uses: actions/checkout@v4
 
-            - name: Install pixi
+            - name: Install UV
               run: |
                     curl -LsSf https://astral.sh/uv/install.sh | sh
                     echo "$HOME/.uv/bin" >> $GITHUB_PATH
