@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbbf71ec37cb521decfeca5a0f68f7d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-01b434cf95e323acf67b4f22ec0acf16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -122,149 +122,110 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="e65ef6b8" class="cell" data-tags="[&quot;remove_cell&quot;]" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>f morse.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The code is the same as in the previous exercise. We have our test in <code>Message.__init__</code> to check for <code>!</code>:</p>
+<div id="63f1aa7f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode(message):</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"!"</span> <span class="kw">in</span> message:                                            <span class="co"># ← new code</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"'!' is not valid in English strings"</span>)  <span class="co"># ←</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> []</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> message:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        letter <span class="op">=</span> letter.lower()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        morse.append(morse_letter)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> morse_message</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to invert the dictionary. This will create a dictionary</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># that can go from the morse back to the letter</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>morse_to_letter <span class="op">=</span> {}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> letter_to_morse:</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> letter_to_morse[letter]</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    morse_to_letter[morse] <span class="op">=</span> letter</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decode(message):</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    english <span class="op">=</span> []</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    morse_letters <span class="op">=</span> message.split(<span class="st">" "</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> morse_letters:</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        english_letter <span class="op">=</span> morse_to_letter[letter]</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        english.append(english_letter)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    english_message <span class="op">=</span> <span class="st">""</span>.join(english)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> english_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>morse.py</code> is the same as in the previous exercise. We have our test in <code>Message.__init__</code> to check for <code>!</code>:</p>
-<div id="8a7e3817" class="cell" data-tags="[&quot;nbval-ignore-output&quot;]" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile morse.py</span>
+<p>If we add some <code>!</code> to our <code>message_string</code> then we see our <code>ValueError</code> exception raised:</p>
+<div id="bf2c8796" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly!!!!!"</span>  <span class="co"># ← Added ! to end of string</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode(message):</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"!"</span> <span class="kw">in</span> message:                                            <span class="co"># ← new code</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"'!' is not valid in English strings"</span>)  <span class="co"># ←</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> []</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> message:</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        letter <span class="op">=</span> letter.lower()</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        morse.append(morse_letter)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> morse_message</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to invert the dictionary. This will create a dictionary</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># that can go from the morse back to the letter</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>morse_to_letter <span class="op">=</span> {}</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> letter_to_morse:</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> letter_to_morse[letter]</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    morse_to_letter[morse] <span class="op">=</span> letter</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decode(message):</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    english <span class="op">=</span> []</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    morse_letters <span class="op">=</span> message.split(<span class="st">" "</span>)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> morse_letters:</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        english_letter <span class="op">=</span> morse_to_letter[letter]</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        english.append(english_letter)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    english_message <span class="op">=</span> <span class="st">""</span>.join(english)</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> english_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Writing morse.py</code></pre>
-</div>
-</div>
-<p>If we add some <code>!</code> to our <code>message_string</code> in <code>encode.py</code> then we see our <code>ValueError</code> exception raised:</p>
-<div id="68843aa3" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile encode.py</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly!!!!!"</span>  <span class="co"># ← Added ! to end of string</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>encoded_message <span class="op">=</span> morse.encode(message)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Overwriting encode.py</code></pre>
-</div>
-</div>
-<div id="cec8dce6" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>encoded_message <span class="op">=</span> encode(message)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/work/intro-python-2/intro-python-2/answers/encode.py:6</span>
-<span class="ansi-green-fg">      2</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">morse</span>
-<span class="ansi-green-fg">      4</span> message = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">SOS We have hit an iceberg and need help quickly!!!!!</span><span class="ansi-yellow-fg">"</span>  <span style="font-style:italic;color:rgb(95,135,135)"># ← Added ! to end of string</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">6</span> encoded_message = <span class="ansi-yellow-bg">morse</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">encode</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">message</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">      8</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Incoming message: </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>message<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
-<span class="ansi-green-fg">      9</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">   Morse encoded: </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>encoded_message<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 3</span>
+<span class="ansi-green-fg">      1</span> message = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">SOS We have hit an iceberg and need help quickly!!!!!</span><span class="ansi-yellow-fg">"</span>  <span style="font-style:italic;color:rgb(95,135,135)"># ← Added ! to end of string</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> encoded_message = <span class="ansi-yellow-bg">encode</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">message</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">      5</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Incoming message: </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>message<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-green-fg">      6</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">   Morse encoded: </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>encoded_message<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/work/intro-python-2/intro-python-2/answers/morse.py:14</span>, in <span class="ansi-cyan-fg">encode</span><span class="ansi-blue-fg">(message)</span>
-<span class="ansi-green-fg">     12</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">encode</span>(message):
-<span class="ansi-green-fg">     13</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">!</span><span class="ansi-yellow-fg">"</span> <span style="font-weight:bold;color:rgb(175,0,255)">in</span> message:                                            <span style="font-style:italic;color:rgb(95,135,135)"># ← new code</span>
-<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">14</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">!</span><span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg"> is not valid in English strings</span><span class="ansi-yellow-fg">"</span>)  <span style="font-style:italic;color:rgb(95,135,135)"># ←</span>
-<span class="ansi-green-fg">     16</span>     morse = []
-<span class="ansi-green-fg">     18</span>     <span style="font-weight:bold;color:rgb(0,135,0)">for</span> letter <span style="font-weight:bold;color:rgb(175,0,255)">in</span> message:
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[1]</span><span class="ansi-green-fg">, line 13</span>, in <span class="ansi-cyan-fg">encode</span><span class="ansi-blue-fg">(message)</span>
+<span class="ansi-green-fg">     11</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">encode</span>(message):
+<span class="ansi-green-fg">     12</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">!</span><span class="ansi-yellow-fg">"</span> <span style="font-weight:bold;color:rgb(175,0,255)">in</span> message:                                            <span style="font-style:italic;color:rgb(95,135,135)"># ← new code</span>
+<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">13</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">!</span><span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg"> is not valid in English strings</span><span class="ansi-yellow-fg">"</span>)  <span style="font-style:italic;color:rgb(95,135,135)"># ←</span>
+<span class="ansi-green-fg">     15</span>     morse = []
+<span class="ansi-green-fg">     17</span>     <span style="font-weight:bold;color:rgb(0,135,0)">for</span> letter <span style="font-weight:bold;color:rgb(175,0,255)">in</span> message:
 
 <span class="ansi-red-fg">ValueError</span>: '!' is not valid in English strings</pre>
 </div>
 </div>
 </div>
 <p>Moving all that code into a <code>try</code>/<code>except ValueError</code> block we can catch the error and print something</p>
-<div id="125e4840" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile encode.py</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly!!!!!"</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    encoded_message <span class="op">=</span> morse.encode(message)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Could not encode message: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Overwriting encode.py</code></pre>
-</div>
-</div>
-<div id="5ed80d17" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="38600c18" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly!!!!!"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    encoded_message <span class="op">=</span> encode(message)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Could not encode message: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Could not encode message: '!' is not valid in English strings</code></pre>
 </div>
 </div>
 <p>Passing in a valid string (removing the <code>!</code>) results in the code running correctly:</p>
-<div id="d23647eb" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile encode.py</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly"</span>  <span class="co"># Removed ! from end of string</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    encoded_message <span class="op">=</span> morse.encode(message)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Could not encode message: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Overwriting encode.py</code></pre>
-</div>
-</div>
-<div id="53dd004d" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="00c612f1" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly"</span>  <span class="co"># Removed ! from end of string</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    encoded_message <span class="op">=</span> encode(message)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Could not encode message: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
    Morse encoded: ... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--</code></pre>

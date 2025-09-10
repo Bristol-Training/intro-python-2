@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbbf71ec37cb521decfeca5a0f68f7d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-01b434cf95e323acf67b4f22ec0acf16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="../assets/UoB_RGB_24.png" alt="University of Bristol logo" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Intermediate Python</a> 
+      <a href="../">Intro to Python 2</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -275,34 +275,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="the-math-module">The <code>math</code> module</h4>
 <p>Let’s start by looking at one of the modules, the “<a href="https://docs.python.org/3/library/math.html"><code>math</code> — Mathematical functions</a>” module. This module provides a bunch of mathematical tools such as averages, trigonometry etc.</p>
 <p>You can get access to the module by <em>importing</em> it by name:</p>
-<div id="a20003c8" class="cell" data-execution_count="1">
+<div id="5bc7586b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the <a href="https://docs.python.org/3/library/math.html#math.sqrt">square root function</a> you would do:</p>
-<div id="291e064d" class="cell" data-execution_count="2">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>imports.py</strong></pre>
-</div>
+<div id="55509a0c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5.0</code></pre>
 </div>
 </div>
 <p>You can think of this as saying “from the <code>math</code> module that I’ve just imported, get the <code>sqrt</code> function and call it”.</p>
 <p>Alternatively, if you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:</p>
-<div id="32c9b324" class="cell" data-execution_count="3">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>imports.py</strong></pre>
-</div>
+<div id="1c8c20ae" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5.0</code></pre>
 </div>
@@ -323,7 +313,7 @@ Exercise
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We saw earlier how to check our current working directory in the Command Prompt/Terminal using <code>cd</code> (Windows) and <code>pwd</code> (MacOS and Linux). Using the <a href="https://docs.python.org/3/library/">The Python Standard Library</a>, find a function that returns the working directory in Python.</p>
+<p>We saw earlier how to check our current working directory using <code>cd</code> (Windows) and <code>pwd</code> (MacOS and Linux). Using the <a href="https://docs.python.org/3/library/">The Python Standard Library</a>, find a function that returns the working directory in Python. Try it in a notebook cell.</p>
 </div>
 </div>
 <div id="answer3" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
@@ -339,11 +329,13 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>One possible solution is to use the module <a href="https://docs.python.org/3/library/os.html"><code>os</code> - Miscellaneous operating system interfaces</a>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<div id="24ed13d0" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>current_directory <span class="op">=</span> os.getcwd()</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CWD:"</span>, current_directory)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="7307ee32" class="cell" data-execution_count="4">
+</div>
+<div id="00e197d6" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>CWD: /Users/JGI/Training/Python/intermediate-python/</code></pre>
 </div>

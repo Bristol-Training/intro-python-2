@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbbf71ec37cb521decfeca5a0f68f7d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-01b434cf95e323acf67b4f22ec0acf16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="../assets/UoB_RGB_24.png" alt="University of Bristol logo" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Intermediate Python</a> 
+      <a href="../">Intro to Python 2</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -297,13 +297,13 @@ Exercise
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Copy the following code into a new script <code>hello.py</code>:</p>
+<p>Copy the following code into a notebook cell and run it:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> ...</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>name_length <span class="op">=</span> ...</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello </span><span class="sc">{</span>my_name<span class="sc">}</span><span class="ss">! Your name is </span><span class="sc">{</span>name_length<span class="sc">}</span><span class="ss"> characters long"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace the first <code>...</code> with a call to a built-in function which will read <em>input</em> from the person running the script. Replace the second <code>...</code> with a call to a function which will give the <em>length</em> of the string <code>my_name</code>. When executed, the script should print out:</p>
+<p>Replace the first <code>...</code> with a call to a built-in function which will read <em>input</em> from the person running the code cell. Replace the second <code>...</code> with a call to a function which will give the <em>length</em> of the string <code>my_name</code>. When executed, the code cell should print out:</p>
 <pre><code>Please tell me your name: Jean
 Hello Jean! Your name is 4 characters long</code></pre>
 <p>If you need it, you can search through the <a href="https://docs.python.org/3/library/functions.html">built-in functions page</a> to find the appropriate functions.</p>
@@ -321,23 +321,15 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>To get input from the person running your script, you can use the function <a href="https://docs.python.org/3/library/functions.html#input"><code>input()</code></a>. And to get the length of your variable you can call <a href="https://docs.python.org/3/library/functions.html#len"><code>len()</code></a>.</p>
-<div id="3a84eab4" class="cell" data-execution_count="1">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>hello.py</strong></pre>
-</div>
+<p>To get input from the person running your code, you can use the function <a href="https://docs.python.org/3/library/functions.html#input"><code>input()</code></a>. And to get the length of your variable you can call <a href="https://docs.python.org/3/library/functions.html#len"><code>len()</code></a>.</p>
+<div id="4604d470" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Please tell me your name: "</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>name_length <span class="op">=</span> <span class="bu">len</span>(my_name)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello </span><span class="sc">{</span>my_name<span class="sc">}</span><span class="ss">! Your name is </span><span class="sc">{</span>name_length<span class="sc">}</span><span class="ss"> characters long"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>name_length <span class="op">=</span> <span class="bu">len</span>(my_name)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello </span><span class="sc">{</span>my_name<span class="sc">}</span><span class="ss">! Your name is </span><span class="sc">{</span>name_length<span class="sc">}</span><span class="ss"> characters long"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="2d221cd2" class="cell" data-execution_count="2">
+<div id="4dca2e3b" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
-<pre><code>Please tell me your name: Jean
-Hello Jean! Your name is 4 characters long</code></pre>
+<pre><code>Hello Jean! Your name is 4 characters long</code></pre>
 </div>
 </div>
 </div>
@@ -349,7 +341,7 @@ Hello Jean! Your name is 4 characters long</code></pre>
 <p>Python has a bunch of built-in <em>data types</em>, the details of them all are on the page called <a href="https://docs.python.org/3/library/stdtypes.html">Built-in Types</a>. That is the place to go to check what you can do with a <code>str</code>, an <code>int</code>, a <code>list</code> or a <code>dict</code>. There’s also a few other built-in types you might want to look into in the future such as <code>complex</code>, <code>set</code> and <code>tuple</code>.</p>
 <p>These types being built-in means that you don’t need to explicitly enable their use and most have core-language syntax to create them.</p>
 <p>For example, the code</p>
-<div id="a87ee131" class="cell" data-execution_count="3">
+<div id="6e6d918b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>animal <span class="op">=</span> <span class="st">"horse"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>creates a variable called <code>animal</code> from the string literal <code>"horse"</code> which is of the type <code>str</code>. This data type is built into the language and so the functionality that it has is documented on <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">built-in type <code>str</code></a>.</p>
@@ -387,7 +379,7 @@ Answer
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You can split any string using the <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>str.split</code></a> function. By default it splits on spaces:</p>
-<div id="154962c5" class="cell" data-execution_count="4">
+<div id="aed96acd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">"what is your name"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>s.split()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -397,21 +389,21 @@ Answer
 <section id="join-a-list" class="level3">
 <h3 class="anchored" data-anchor-id="join-a-list">Join a list</h3>
 <p>You can join a list together by using the <a href="https://docs.python.org/3/library/stdtypes.html#str.join"><code>str.join</code></a> function. Note that in front of the dot you put the string that you want to join <em>with</em>, and you pass the list you want to join <em>together</em> as an argument.</p>
-<div id="3fcbf7b1" class="cell" data-execution_count="5">
+<div id="90e05ac8" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">"-"</span>.join(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>'a-b-c'</code></pre>
 </div>
 </div>
-<div id="ec63bf39" class="cell" data-execution_count="6">
+<div id="35b000f8" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">":"</span>.join(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>'a:b:c'</code></pre>
 </div>
 </div>
-<div id="4a6f7e87" class="cell" data-execution_count="7">
+<div id="07e9025e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">" "</span>.join(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
@@ -452,11 +444,7 @@ Answer
 <div class="callout-body-container callout-body">
 <p>The function <a href="https://docs.python.org/3/library/stdtypes.html#str.lower"><code>str.lower</code></a> gives you back a copy of the string, but all made into lower case.</p>
 <p>In our situation, the first letter is “S” and so <code>letter.lower()</code> will give us <code>"s"</code>.</p>
-<div id="553d3ef7" class="cell" data-execution_count="8">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>encode.py</strong></pre>
-</div>
+<div id="2c20a887" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
@@ -479,15 +467,6 @@ Answer
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>morse_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb17" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> encode.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="306e1289" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
    Morse encoded: ... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--</code></pre>

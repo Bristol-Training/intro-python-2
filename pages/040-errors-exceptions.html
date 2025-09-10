@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbbf71ec37cb521decfeca5a0f68f7d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-01b434cf95e323acf67b4f22ec0acf16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="../assets/UoB_RGB_24.png" alt="University of Bristol logo" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Intermediate Python</a> 
+      <a href="../">Intro to Python 2</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -277,12 +277,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><em>Exceptions</em> are Python’s error-handling system. You’ve probably come across exceptions as that’s how Python lets you know when you’ve done something wrong! They’re not just there to tell you off, a good error message is to tell you that the computer has got into a situation where it doesn’t know what to do and is asking you, the programmer, to help it by giving more information.</p>
-<p>Here we will use the module <code>convert.py</code> and script <code>recipe.py</code> we created in the previous section.</p>
+<p>Here we will use the module <code>convert.py</code>. <strong>Don’t forget to restart your notebook kernel</strong> so that it forgets any previous version of <code>convert.py</code> you may have loaded.</p>
 <section id="checking-the-value-of-data" class="level3">
 <h3 class="anchored" data-anchor-id="checking-the-value-of-data">Checking the value of data</h3>
 <p>When you create a function you are creating a sort of contract. In this case, you are agreeing that if you call the function <code>ounces_to_grams</code>, this will “take whatever value you passed as an argument, interpret it as a mass in grams and return the corresponding mass in ounces”. It might seem silly to write that out in full like that but it’s a useful exercise to help make decisions about what the function should do in potentially unexpected situations. What should happen if you passed the string <code>"banana"</code>? Most users of your function would not expect that and it’s more likely that it’s a mistake that they’ve made. Good functions are easily explained and predictable and avoid guessing what the user meant. How though, can we let the person who called our function that there is a problem?</p>
 <p>Let’s look at a simple example to demonstrate how we can write some code in our function to help the person calling it understand if they make a mistake. Our function converts masses and since there’s no such thing as a negative mass we need to decide what will happen if someone passes in a negative value. At the moment it will just return a negative mass:</p>
-<div id="be0ad52e" class="cell" data-execution_count="2">
+<div id="39a3fb04" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>recipe.py</strong></pre>
@@ -294,13 +294,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="5a78357f" class="cell" data-execution_count="3">
+<div id="d3d34aa1" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>-850.485 g</code></pre>
 </div>
 </div>
 <p>We need to decide what happens in situations like this. For the purpose of this section, we want a negative mass to be impossible so we need to add in some code to check for it. The easiest place to start could be by adding an <code>if</code> statement and printing out an informative message:</p>
-<div id="fac63b76" class="cell" data-execution_count="5">
+<div id="9d8d65ca" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -313,64 +313,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb4" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="9e451522" class="cell" data-execution_count="6">
+<p>If you run this code in a notebook cell, you’ll see the message printed out, but the function has gone ahead and still returned the negative mass. What we want is a way to have the function display the message and stop running. We could stop the function at that point by <code>return</code>ing something, but <em>what</em>? If we return something like <code>0</code> or <code>-1</code> to designate the failure mode, then the person calling the function could quite easily carry on without noticing, assuming that it’s a mass.</p>
+<div id="877032f5" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Cannot convert negative mass
 -850.485 g</code></pre>
 </div>
 </div>
 <p>We see the message printed out, but the function has gone ahead and still returned the negative mass. What we want is a way to have the function display the message and stop running. We could stop the function at that point by <code>return</code>ing something, but <em>what</em>? If we return something like <code>0</code> or <code>-1</code> to designate the failure mode, then the person calling the function could quite easily carry on without noticing, assuming that it’s a mass.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>     <span class="kw">def</span> ounces_to_grams(weight):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> weight <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Cannot convert negative mass"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="co"># ... at this point we want to stop running the function</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| filename: convert.py</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>     <span class="kw">def</span> ounces_to_grams(weight):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> weight <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Cannot convert negative mass"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            <span class="co"># ... at this point we want to stop running the function</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="raising-exceptions" class="level3">
 <h3 class="anchored" data-anchor-id="raising-exceptions">Raising exceptions</h3>
 <p>Python solves this by allowing us to raise <em>exceptions</em>. An exception is an error message which the person calling the code <em>cannot</em> ignore which is useful as it helps prevent them write incorrect code.</p>
 <p>We can replace our <code>print</code> function call with the <code>raise</code> statement which we follow with the type of error we are notifying the user about.</p>
 <p>A list of all Python exception types is <a href="http://docs.python.org/library/exceptions.html">here</a>. It is important to choose the correct exception type for the error you are reporting. In our case, there is a problem with the value that the user is passing into our function, so I have chosen <a href="https://docs.python.org/3/library/exceptions.html#ValueError"><code>ValueError</code></a>:</p>
-<div id="89d58ddb" class="cell" data-execution_count="7">
+<div id="7798e813" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> weight <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Cannot convert negative mass"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> weight <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Cannot convert negative mass"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p>Now when we run our code, it will display the error:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
+<div id="0c89cc80" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> convert</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> convert.ounces_to_grams(<span class="op">-</span><span class="dv">30</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> recipe.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="4f9cd4dd" class="cell" data-execution_count="8">
+<div id="f6f4a8c8" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[8]</span><span class="ansi-green-fg">, line 5</span>
-<span class="ansi-green-fg">      2</span> sys.path.append(<span class="ansi-yellow-fg">'</span><span class="ansi-yellow-fg">../scripts</span><span class="ansi-yellow-fg">'</span>)
-<span class="ansi-green-fg">      3</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">convert_exception</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">5</span> weight_in_grams = <span class="ansi-yellow-bg">convert_exception</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">ounces_to_grams</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">-</span><span class="ansi-green-fg ansi-yellow-bg">30</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">      7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>weight_in_grams<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> g</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[8]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> weight_in_grams = <span class="ansi-yellow-bg">ounces_to_grams</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">-</span><span class="ansi-green-fg ansi-yellow-bg">30</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">      2</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>weight_in_grams<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg"> g</span><span class="ansi-yellow-fg">"</span>)
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/work/intro-python-2/intro-python-2/pages/../scripts/convert_exception.py:3</span>, in <span class="ansi-cyan-fg">ounces_to_grams</span><span class="ansi-blue-fg">(weight)</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[7]</span><span class="ansi-green-fg">, line 3</span>, in <span class="ansi-cyan-fg">ounces_to_grams</span><span class="ansi-blue-fg">(weight)</span>
 <span class="ansi-green-fg">      1</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg">ounces_to_grams</span>(weight):
 <span class="ansi-green-fg">      2</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> weight &lt; <span class="ansi-green-fg">0</span>:
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Cannot convert negative mass</span><span class="ansi-yellow-fg">"</span>)
@@ -396,8 +390,8 @@ Exercise
 <p>If we give our Morse code functions a string which can’t be converted, e.g.&nbsp;<code>"hi!"</code> or <code>"m'aidez"</code> then we expect it to result in an error.</p>
 <p>Add a check to the start of the <code>encode</code> function to raise an exception if the passed <code>message</code> is not valid.</p>
 <p>At this point, don’t worry about writing a check that’s perfect, just think of <em>one thing</em> that you would check for and raise an exception if you see that. Start with some code that looks something like:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ... message ...:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ... message ...:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You’ll also need to choose an appropriate exception type to raise. Take a look at the <a href="https://docs.python.org/3/library/exceptions.html">Standard Library</a> and find the exception which makes sense if an incorrect value is passed in.</p>
 </div>
 </div>
@@ -417,54 +411,60 @@ Answer
 <blockquote class="blockquote">
 <p><code>ValueError</code>: Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as <code>IndexError</code>.</p>
 </blockquote>
-<div id="461496e0" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode(message):</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"!"</span> <span class="kw">in</span> message:                                            <span class="co"># ← new code</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"'!' is not valid in English strings"</span>)  <span class="co"># ←</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> []</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> message:</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        letter <span class="op">=</span> letter.lower()</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        morse.append(morse_letter)</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> morse_message</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to invert the dictionary. This will create a dictionary</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># that can go from the morse back to the letter</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>morse_to_letter <span class="op">=</span> {}</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> letter_to_morse:</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> letter_to_morse[letter]</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    morse_to_letter[morse] <span class="op">=</span> letter</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decode(message):</span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>    english <span class="op">=</span> []</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>    morse_letters <span class="op">=</span> message.split(<span class="st">" "</span>)</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> morse_letters:</span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>        english_letter <span class="op">=</span> morse_to_letter[letter]</span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>        english.append(english_letter)</span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>    english_message <span class="op">=</span> <span class="st">""</span>.join(english)</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> english_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c723bfde" class="cell" data-execution_count="10">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>morse.py</strong></pre>
 </div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>:<span class="st">'..-'</span>, <span class="st">'v'</span>:<span class="st">'...-'</span>, <span class="st">'w'</span>:<span class="st">'.--'</span>, <span class="st">'x'</span>:<span class="st">'-..-'</span>, <span class="st">'y'</span>:<span class="st">'-.--'</span>, <span class="st">'z'</span>:<span class="st">'--..'</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'0'</span>:<span class="st">'-----'</span>, <span class="st">'1'</span>:<span class="st">'.----'</span>, <span class="st">'2'</span>:<span class="st">'..---'</span>, <span class="st">'3'</span>:<span class="st">'...--'</span>, <span class="st">'4'</span>:<span class="st">'....-'</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'5'</span>:<span class="st">'.....'</span>, <span class="st">'6'</span>:<span class="st">'-....'</span>, <span class="st">'7'</span>:<span class="st">'--...'</span>, <span class="st">'8'</span>:<span class="st">'---..'</span>, <span class="st">'9'</span>:<span class="st">'----.'</span>, <span class="st">' '</span>:<span class="st">'/'</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode(message):</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"!"</span> <span class="kw">in</span> message:                                            <span class="co"># ← new code</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"'!' is not valid in English strings"</span>)  <span class="co"># ←</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> []</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> message:</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        letter <span class="op">=</span> letter.lower()</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        morse_letter <span class="op">=</span> letter_to_morse[letter]</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        morse.append(morse_letter)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    morse_message <span class="op">=</span> <span class="st">" "</span>.join(morse)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> morse_message</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to invert the dictionary. This will create a dictionary</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="co"># that can go from the morse back to the letter</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>morse_to_letter <span class="op">=</span> {}</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> letter_to_morse:</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> letter_to_morse[letter]</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    morse_to_letter[morse] <span class="op">=</span> letter</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decode(message):</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    english <span class="op">=</span> []</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    morse_letters <span class="op">=</span> message.split(<span class="st">" "</span>)</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> morse_letters:</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>        english_letter <span class="op">=</span> morse_to_letter[letter]</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>        english.append(english_letter)</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>    english_message <span class="op">=</span> <span class="st">""</span>.join(english)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> english_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>You will need to restart your Python kernel to ensure that this new version of <code>morse.py</code> is used, try rerunning it and seeing what happens!</p>
 </div>
 </div>
 </div>

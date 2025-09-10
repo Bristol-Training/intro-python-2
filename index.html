@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fbbf71ec37cb521decfeca5a0f68f7d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-01b434cf95e323acf67b4f22ec0acf16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -134,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="./assets/UoB_RGB_24.png" alt="University of Bristol logo" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intermediate Python</a> 
+      <a href="./">Intro to Python 2</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -275,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Welcome to this second course on Python programming! This course builds upon Beginning Python and delves deeper into working with advanced data structures, write functions, explore modules, and how to handle errors and exceptions. Get ready to take your Python skills to the next level!</p>
-<p>For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor and Python terminal in your web browser. Setting up instructions can be found <a href="&quot;pages/001-workspace-setup.qmd&quot;">here</a>.</p>
+<p>For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor and Python terminal in your web browser. Setting up instructions can be found <a href="./pages/001-workspace-setup.html">here</a>.</p>
 <section id="intended-learning-outcomes" class="level4">
 <h4 class="anchored" data-anchor-id="intended-learning-outcomes">Intended learning outcomes</h4>
 <p>By the end of this course, you will:</p>
@@ -291,7 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this documentation, any time that we are seeing a small snippet of Python code, we’ll see it written in a grey box like the following:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If the commands are executed by the machine we will see the output of them below enclosed on a vertical purple line:</p>
-<div id="62407623" class="cell" data-execution_count="1">
+<div id="67d4e31b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello, Python!</code></pre>
@@ -300,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- 
 By contrast, you will see larger peces of code as scripts with a given name, e.g. `script.py`, in a code block with darker header:
 
-::: {#efcf42a7 .cell execution_count=2}
+::: {#bef57b79 .cell execution_count=2}
 ``` {.python .cell-code}
 greeting = "Hello"
 name = input("What is your name? ")
@@ -318,7 +318,7 @@ print(greeting, name)
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> name = <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">input</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg">What is your name? </span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg">      3</span> <span style="color:rgb(0,135,0)">print</span>(greeting, name)
 
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/work/intro-python-2/intro-python-2/.pixi/envs/default/lib/python3.13/site-packages/ipykernel/kernelbase.py:1274</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/work/intro-python-2/intro-python-2/.venv/lib/python3.12/site-packages/ipykernel/kernelbase.py:1274</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
 <span class="ansi-green-fg">   1272</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="color:rgb(0,135,0)">self</span>._allow_stdin:
 <span class="ansi-green-fg">   1273</span>     msg = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">raw_input was called, but this frontend does not support input requests.</span><span class="ansi-yellow-fg">"</span>
 <span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1274</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> StdinNotImplementedError(msg)

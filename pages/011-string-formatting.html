@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbbf71ec37cb521decfeca5a0f68f7d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-01b434cf95e323acf67b4f22ec0acf16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="../assets/UoB_RGB_24.png" alt="University of Bristol logo" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Intermediate Python</a> 
+      <a href="../">Intro to Python 2</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -270,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Being able to print things (on the screen for example) is a fundamental part of interacting with a programming language. So far, we’ve kept it simple by passing the data we want to print directly to <code>print()</code> using the fact that if you pass multiple arguments then it will print each of them, separated by spaces, combining our data with a message:</p>
-<div id="e6837a0d" class="cell" data-execution_count="1">
+<div id="dffea00c" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -285,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>This works perfectly well but you are using the implicit space that’s added by <code>print</code> as part of your sentence. What we can do instead is create a string which contains the message we want to print and put special placeholders inside it where we want our data to appear. There’s a few different ways to do this in Python (an older but still valid method you may see uses <code>%</code> and another uses a <code>format()</code> function) but for this course we will use the method called <em>f-strings</em> which was introduced in Python 3.6 (released December 2016).</p>
 <p>If you put a single <code>f</code> directly in front of the string that you are creating, it will enable a special string mode which lets you place <code>{}</code> inside the string with a variable name between the curly brackets <code>{}</code>:</p>
-<div id="0a9487f6" class="cell" data-execution_count="2">
+<div id="dbf7c69d" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>format.py</strong></pre>
@@ -311,12 +311,8 @@ Exercise
 </div>
 <div class="callout-body-container callout-body">
 <p>For many of the exercises here, we are going to be working on some Python code which converts to and from <a href="https://simple.wikipedia.org/wiki/Morse_code">Morse Code</a>. In each section we will add or change the code so make sure that you don’t skip any exercises.</p>
-<p>Copy the following code in the text editor into a script called <code>encode.py</code> and run it in the terminal with <code>python encode.py</code> or <code>python3 encode.py</code> to check that it works.</p>
-<div id="69497a0e" class="cell" data-execution_count="3">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>encode.py</strong></pre>
-</div>
+<p>Copy the following code into a notebook code cell and run the cell</p>
+<div id="760ffbb0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
@@ -344,7 +340,6 @@ Exercise
 </div>
 </div>
 </div>
-</div>
 <div id="answer1" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -357,12 +352,8 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The following code should be put into a file called <code>encode.py</code> using the text editor in JupyterLab:</p>
-<div id="322c9463" class="cell" data-execution_count="4">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>encode.py</strong></pre>
-</div>
+<p>The following code should be put into a notebook code cell and run:</p>
+<div id="0cf1588c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
@@ -387,7 +378,6 @@ Answer
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>morse_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: please help
    Morse encoded: .--. .-.. . .- ... . / .... . .-.. .--.</code></pre>
