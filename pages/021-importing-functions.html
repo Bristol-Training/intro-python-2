@@ -275,11 +275,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="the-math-module">The <code>math</code> module</h4>
 <p>Let’s start by looking at one of the modules, the “<a href="https://docs.python.org/3/library/math.html"><code>math</code> — Mathematical functions</a>” module. This module provides a bunch of mathematical tools such as averages, trigonometry etc.</p>
 <p>You can get access to the module by <em>importing</em> it by name:</p>
-<div id="5bc7586b" class="cell" data-execution_count="1">
+<div id="66319042" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the <a href="https://docs.python.org/3/library/math.html#math.sqrt">square root function</a> you would do:</p>
-<div id="55509a0c" class="cell" data-execution_count="2">
+<div id="e4dc4751" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>You can think of this as saying “from the <code>math</code> module that I’ve just imported, get the <code>sqrt</code> function and call it”.</p>
 <p>Alternatively, if you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:</p>
-<div id="1c8c20ae" class="cell" data-execution_count="3">
+<div id="13b07b45" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -329,13 +329,13 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>One possible solution is to use the module <a href="https://docs.python.org/3/library/os.html"><code>os</code> - Miscellaneous operating system interfaces</a>.</p>
-<div id="24ed13d0" class="cell" data-execution_count="4">
+<div id="282d82aa" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>current_directory <span class="op">=</span> os.getcwd()</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CWD:"</span>, current_directory)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="00e197d6" class="cell" data-execution_count="5">
+<div id="e829f89b" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>CWD: /Users/JGI/Training/Python/intermediate-python/</code></pre>
 </div>
@@ -767,7 +767,7 @@ Answer
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-2/edit/main/pages/021-importing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/intro-python-2/edit/main/pages/021-importing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

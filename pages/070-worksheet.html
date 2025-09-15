@@ -304,7 +304,7 @@ Answer 1
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The function we can use is <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime.now"><code>datetime.datetime.now()</code></a>. There is an <a href="https://docs.python.org/3/library/datetime.html#examples-of-usage-datetime">example in that module as well</a>.</p>
-<div id="d071029f" class="cell" data-execution_count="1">
+<div id="beb78b73" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>time_now <span class="op">=</span> datetime.datetime.now()</span>
@@ -312,9 +312,9 @@ Answer 1
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_now.isoformat())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Run the code cell above to see the output.</p>
-<div id="b1722b98" class="cell" data-execution_count="2">
+<div id="4a9f3c6e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
-<pre><code>2025-09-10T08:40:10.619218</code></pre>
+<pre><code>2025-09-15T09:28:43.952895</code></pre>
 </div>
 </div>
 </div>
@@ -355,7 +355,7 @@ Answer 2
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You could create a file called <code>ex2.py</code> containing:</p>
-<div id="b30e45bc" class="cell" data-execution_count="3">
+<div id="2d93e6ff" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>ex2.py</strong></pre>
@@ -367,13 +367,13 @@ Answer 2
 </div>
 </div>
 <p>You can then use it in a notebook cell like:</p>
-<div id="f2989f47" class="cell" data-execution_count="4">
+<div id="55f6d48a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ex2</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>sentence <span class="op">=</span> <span class="st">"This is a collection of words"</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> ex2.first_word(sentence)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e33a6a68" class="cell" data-execution_count="5">
+<div id="c972a7fa" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>This</code></pre>
 </div>
@@ -424,7 +424,7 @@ Answer 3
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You could create a file called <code>ex3.py</code> containing:</p>
-<div id="2b085d2d" class="cell" data-execution_count="6">
+<div id="2956a1ab" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>ex3.py</strong></pre>
@@ -446,14 +446,14 @@ Answer 3
 </div>
 </div>
 <p>You can then use it in a notebook cell like:</p>
-<div id="02d3ac34" class="cell" data-execution_count="7">
+<div id="eaee37ae" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ex3</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>count1 <span class="op">=</span> ex3.count_word_match(<span class="st">"To be or not to be"</span>, <span class="st">"to"</span>, <span class="va">True</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(count1)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>count2 <span class="op">=</span> ex3.count_word_match(<span class="st">"To be or not to be"</span>, <span class="st">"to"</span>, <span class="va">False</span>)</span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(count2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4d36c01c" class="cell" data-execution_count="8">
+<div id="4077ef15" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 2</code></pre>
@@ -494,7 +494,7 @@ Answer 4
 <div class="callout-body-container callout-body">
 <p>This exercise it trickier, but if you make some assumptions about the format of the input, you can make your life easier. For example, you can assume for now that every reference like <code>[4]</code> is surrounded by spaces. This allows <code>str.split()</code> to pull each one out as a “word”. You can also assume that every reference is an integer number.</p>
 <p>You could create a file called <code>ex4.py</code> containing:</p>
-<div id="a71ed9ac" class="cell" data-execution_count="9">
+<div id="d26cabaa" class="cell" data-execution_count="9">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>ex4.py</strong></pre>
@@ -526,7 +526,7 @@ Answer 4
 </div>
 </div>
 <p>You can then use it in a notebook cell like:</p>
-<div id="a34169ff" class="cell" data-execution_count="10">
+<div id="6ff69d94" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ex4</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>example_text <span class="op">=</span> <span class="st">"I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."</span></span>
@@ -535,7 +535,7 @@ Answer 4
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(references)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="b7a0636d" class="cell" data-execution_count="11">
+<div id="110d3b60" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 3, 10, 7]</code></pre>
 </div>
@@ -580,7 +580,7 @@ Answer 5
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You’re refs module, <code>refs.py</code>, could look like this:</p>
-<div id="f6c07d71" class="cell" data-execution_count="12">
+<div id="1b853293" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>refs.py</strong></pre>
@@ -599,7 +599,7 @@ Answer 5
 </div>
 </div>
 <p>You can then test it in a notebook cell like this:</p>
-<div id="339c3313" class="cell" data-execution_count="13">
+<div id="d343e1cc" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> refs</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"I recommend this book [1] but the other book [3] is better. Some people think that this website [10] is the best but I prefer this [7] one."</span></span>
@@ -612,7 +612,7 @@ Answer 5
 <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Test failed:"</span>, numbers, <span class="st">"is not the same as"</span>, expected)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="7b21a012" class="cell" data-execution_count="14">
+<div id="2f7c6345" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
 <pre><code>Test passed</code></pre>
 </div>
@@ -1043,7 +1043,7 @@ Answer 5
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-2/edit/main/pages/070-worksheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/intro-python-2/edit/main/pages/070-worksheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

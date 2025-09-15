@@ -251,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#testing" id="toc-testing" class="nav-link active" data-scroll-target="#testing">Testing</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-2/edit/main/pages/030-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/intro-python-2/edit/main/pages/030-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -278,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the last chapter we saw how we can take sections of code and make them reusable in different contexts without having to copy and paste the code every time we want to use it in your script. By using functions we give the code block a name and define what it needs in order to do its job.</p>
 <p>Functions are a step in the right direction but they still have the problem that to use functions from one script in another you will have to copy and paste them over. The answer to this is to move the functions to a common location which both scripts can access. The Python solution for this is <em>modules</em>. Just like we used modules from The Python Standard Library earlier, we can create our own modules too.</p>
 <p>Continuing with the example of the <code>ounces_to_grams</code> function from the last section, let’s see how we can use the function in other code, outside of that one script.</p>
-<div id="3997908d" class="cell" data-execution_count="1">
+<div id="060fbb88" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -298,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The code below which <em>uses</em> the function. This is specific code which has been written to solve <em>today’s</em> problem of converting a specific value.</li>
 </ol>
 <p>We will need to create a new file to hold the function. Let’s call it <code>convert.py</code>. Make sure this is in the same directory as your notebook. A <code>.py</code> file is a file containing Python code. Let’s put the function we wrote in the last section into that file:</p>
-<div id="de94838d" class="cell" data-execution_count="2">
+<div id="6a2afe65" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>convert.py</strong></pre>
@@ -309,13 +309,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now, we want to try and run our function. Go back to your notebook and make a new code cell.</p>
-<div id="b2c89161" class="cell" data-execution_count="3">
+<div id="e4c29cee" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> ounces_to_grams(<span class="dv">12</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You will notice, that you get an error that it doesn’t know what <code>ounces_to_grams</code> is:</p>
-<div id="18ffa349" class="cell" data-filename="recipes.py" data-execution_count="5">
+<div id="20e8a730" class="cell" data-filename="recipes.py" data-execution_count="5">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -329,14 +329,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This is because that function is indeed not defined in this script. We need to tell it to load the file which contains the function we want to use, using the <code>import</code> statement:</p>
-<div id="1c2ed28f" class="cell" data-execution_count="6">
+<div id="94523809" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> convert</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> convert.ounces_to_grams(<span class="dv">12</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2b6536eb" class="cell" data-execution_count="7">
+<div id="569f70a8" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>340.19399999999996 g</code></pre>
 </div>
@@ -359,7 +359,7 @@ Importing your own modules in notebooks
 <li><p><strong>Restart the kernel:</strong> You can do this by clicking the <strong>Restart Kernel</strong> button in your notebook interface (it looks like a refresh button). This will clear everything from memory and reload your module the next time you import it. This will delete all your variables and imports though, so you will need to <strong>re-run any previous cells</strong> to get your environment back to the state it was in.</p></li>
 <li><p><strong>Use notebook magics:</strong> You can use the <code>%load</code> magic to load code from a file directly into a cell, or <code>%run</code> to run a Python file and update the environment:</p></li>
 </ul>
-<div id="f2a7593c" class="cell" data-execution_count="8">
+<div id="6098062c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -388,7 +388,7 @@ Exercise
 <li>Edit your notebook so that it imports the new module and calls the function from the new module.</li>
 </ul>
 <p>The code for encoding Morse code is:</p>
-<div id="892a7e53" class="cell" data-execution_count="9">
+<div id="180f1549" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {<span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
@@ -427,7 +427,7 @@ Answer
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Your <code>morse.py</code> file should look like this:</p>
-<div id="58514bf7" class="cell" data-execution_count="10">
+<div id="c88cb5a4" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>morse.py</strong></pre>
@@ -456,7 +456,7 @@ Answer
 </div>
 </div>
 <p>Your notebook code cell should look like this:</p>
-<div id="8dd2cb05" class="cell" data-execution_count="11">
+<div id="c020def8" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"SOS We have hit an iceberg and need help quickly"</span></span>
@@ -466,7 +466,7 @@ Answer
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Incoming message: </span><span class="sc">{</span>message<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   Morse encoded: </span><span class="sc">{</span>encoded_message<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="73558fe0" class="cell" data-execution_count="12">
+<div id="7af778de" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>Incoming message: SOS We have hit an iceberg and need help quickly
    Morse encoded: ... --- ... / .-- . / .... .- ...- . / .... .. - / .- -. / .. -.-. . -... . .-. --. / .- -. -.. / -. . . -.. / .... . .-.. .--. / --.- ..- .. -.-. -.- .-.. -.--</code></pre>
@@ -486,7 +486,7 @@ Exercise
 </div>
 <div class="callout-body-container callout-body">
 <p>Add into <code>morse.py</code> a function to convert Morse code to English. The code to do so is written below:</p>
-<div id="610521ad" class="cell" data-execution_count="13">
+<div id="80866e87" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to invert the dictionary. This will create a dictionary</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># that can go from the morse back to the letter</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>morse_to_letter <span class="op">=</span> {}</span>
@@ -527,7 +527,7 @@ Answer
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Your <code>morse.py</code> file should look like this:</p>
-<div id="0662514f" class="cell" data-execution_count="14">
+<div id="b02e4a14" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
@@ -575,7 +575,7 @@ Answer
 <span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> english_message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2724c4a5" class="cell" data-execution_count="15">
+<div id="dcac863c" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> morse</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"... . -.-. .-. . - / -- . ... ... .- --. ."</span></span>
@@ -584,7 +584,7 @@ Answer
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(decoded_message)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3d02066e" class="cell" data-execution_count="16">
+<div id="1d790283" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>secret message</code></pre>
 </div>
@@ -603,14 +603,14 @@ Defining aliases
 </div>
 <div class="callout-body-container callout-body">
 <p>You can assign an <em>alias</em> to a module, so you don’t need to type the full name every time. In the example above, we could do</p>
-<div id="3eecde94" class="cell" data-execution_count="17">
+<div id="c5dc661e" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> convert <span class="im">as</span> c</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> c.ounces_to_grams(<span class="dv">12</span>)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>weight_in_grams<span class="sc">}</span><span class="ss"> g"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f6dbdbd5" class="cell" data-execution_count="18">
+<div id="bfefdfcb" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-stdout">
 <pre><code>340.19399999999996 g</code></pre>
 </div>
@@ -622,7 +622,7 @@ Defining aliases
 <h3 class="anchored" data-anchor-id="testing">Testing</h3>
 <p>So far we’ve been writing code and running it, but have you actually checked that the code is doing the right thing? Testing code is a very important part of the software development process because if you want other people to trust your work, you need to show that you’ve checked that your code does what you claim.</p>
 <p>There are more formal methods for software testing but we’ll start with a common technique used with encoders/decoders and that is the <em>round-trip</em>. If we take a message, convert it to morse code and then convert it back, we should end up with the message we started with:</p>
-<div id="1ba50f2e" class="cell" data-execution_count="19">
+<div id="e82c92fd" class="cell" data-execution_count="19">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>test_morse.py</strong></pre>
@@ -638,7 +638,7 @@ Defining aliases
 </div>
 </div>
 <p>When you run it, you should see <code>True</code> printed to the console terminal tells us that the round-trip was successful.</p>
-<div id="4f8ebf66" class="cell" data-execution_count="20">
+<div id="6701cb1a" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
@@ -1068,7 +1068,7 @@ Defining aliases
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-2/edit/main/pages/030-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/intro-python-2/edit/main/pages/030-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

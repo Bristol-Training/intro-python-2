@@ -253,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#calling-functions" id="toc-calling-functions" class="nav-link" data-scroll-target="#calling-functions">Calling functions</a></li>
   <li><a href="#how-many-arguments" id="toc-how-many-arguments" class="nav-link" data-scroll-target="#how-many-arguments">How many arguments?</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-2/edit/main/pages/022-writing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/intro-python-2/edit/main/pages/022-writing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -280,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In previous sections you edited a script that encodes messages to Morse code. The script is good, but is not very easy to use or reusable. For someone to make use of the script, they will have to edit it and copy and paste your code every time they want to encode a different message.</p>
 <p>Functions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in the last chapter, e.g.&nbsp;<code>print()</code> wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest. Likewise with <code>math.sqrt()</code>, you don’t need to understand the algorithm it uses, simply what it needs you to pass it, and what it returns back to you.</p>
 <p>You can also bundle up your own logic into functions, allowing you to avoid repeating yourself and make your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. Copy the code below into a notebook cell and run it.</p>
-<div id="efee118d" class="cell" data-execution_count="1">
+<div id="c19e142b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>weight_in_ounces <span class="op">=</span> <span class="dv">6</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> weight_in_ounces <span class="op">*</span> <span class="fl">28.3495</span></span>
@@ -300,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="defining-functions" class="level3">
 <h3 class="anchored" data-anchor-id="defining-functions">Defining functions</h3>
 <p>We can turn this into a function that can convert ounces to grams by using <code>def</code>. To do this, type:</p>
-<div id="048bdc0a" class="cell" data-execution_count="2">
+<div id="0fbea0c4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -341,7 +341,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <section id="calling-functions" class="level3">
 <h3 class="anchored" data-anchor-id="calling-functions">Calling functions</h3>
 <p>You can now call the function using:</p>
-<div id="69ac86ff" class="cell" data-execution_count="3">
+<div id="4924878a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span>
@@ -357,7 +357,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <p>In this case you have called the function <code>ounces_to_grams</code> and passed in the argument <code>weight_in_ounces</code>. In the fuction, <code>weight_in_ounces</code> is copied to its internal variable, <code>weight</code>. The function <code>ounces_to_grams</code> then acts on <code>weight</code>, creating the new varaible <code>new_weight</code>. It then returns <code>new_weight</code>, which is assigned to <code>weight_in_grams</code>.</p>
 <p>You can use your new <code>ounces_to_grams</code> function to convert any numbers. Try typing:</p>
-<div id="c59c08ea" class="cell" data-execution_count="4">
+<div id="62bcd971" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span>
@@ -372,7 +372,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 </div>
 <p>Note that we can also pass the values to the function directly, e.g.&nbsp;type:</p>
-<div id="a467bfbf" class="cell" data-execution_count="5">
+<div id="5fc58bc0" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span>
@@ -416,7 +416,7 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="95626d26" class="cell" data-execution_count="6">
+<div id="79099f36" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double(num):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> num <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -475,7 +475,7 @@ Answer
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Starting from the initial code:</p>
-<div id="e3c1cb54" class="cell" data-execution_count="7">
+<div id="f7e171c8" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">34</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">545</span>]</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>big_numbers <span class="op">=</span> []</span>
@@ -489,7 +489,7 @@ Answer
 </div>
 </div>
 <p>We pull out the middle four lines, indent them, put <code>def big(numbers):</code> in front and add <code>return big_numbers</code> to the end, paying careful attention to the indentation of the <code>return</code> statement. Finally, we update the variable name used in the function to match the argument name <code>numbers</code>:</p>
-<div id="e60603be" class="cell" data-execution_count="8">
+<div id="b40153b1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> big(numbers):</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    big_numbers <span class="op">=</span> []</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> num <span class="kw">in</span> numbers:</span>
@@ -514,7 +514,7 @@ Answer
 <section id="how-many-arguments" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-arguments">How many arguments?</h3>
 <p>Note that you must pass in the right number of arguments to a function. <code>ounces_to_grams</code> expects one arguments, so if you pass more or less you will get an error. Try this now:</p>
-<div id="77dbef48" class="cell" data-execution_count="9">
+<div id="ad5b3f1e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span>
@@ -537,7 +537,7 @@ Answer
 </div>
 </div>
 <p>As you can see, Python tells you that you’ve given the function a wrong number of arguments. It expects 1 (<code>weight</code>). Likewise, if you give too many arguments you get a similar error:</p>
-<div id="1f283155" class="cell" data-execution_count="10">
+<div id="5a315279" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span>
@@ -560,7 +560,7 @@ Answer
 </div>
 </div>
 <p>It is possible to define functions that take no arguments:</p>
-<div id="26dd7e75" class="cell" data-execution_count="11">
+<div id="4d16c655" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pi():</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">3.14159</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -571,7 +571,7 @@ Answer
 </div>
 </div>
 <p>single arguments:</p>
-<div id="0184e2ae" class="cell" data-execution_count="12">
+<div id="174e77b3" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> double(x):</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -582,7 +582,7 @@ Answer
 </div>
 </div>
 <p>or lots of arguments:</p>
-<div id="09cba37f" class="cell" data-execution_count="13">
+<div id="2db47b91" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lots_of_args(a, b, c, d, e):</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"a"</span>: a, <span class="st">"b"</span>: b, <span class="st">"c"</span>: c, <span class="st">"d"</span>: d, <span class="st">"e"</span>: e}</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -641,7 +641,7 @@ Answer
 <li><code>return morse_message</code> added to the end</li>
 </ol>
 <p>We then call our function with <code>morse_message = encode(message)</code></p>
-<div id="a7e17a19" class="cell" data-execution_count="14">
+<div id="3b5ed972" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {<span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'n'</span>:<span class="st">'-.'</span>, <span class="st">'o'</span>:<span class="st">'---'</span>, <span class="st">'p'</span>:<span class="st">'.--.'</span>, <span class="st">'q'</span>:<span class="st">'--.-'</span>, <span class="st">'r'</span>:<span class="st">'.-.'</span>, <span class="st">'s'</span>:<span class="st">'...'</span>, <span class="st">'t'</span>:<span class="st">'-'</span>,</span>
@@ -744,7 +744,7 @@ Answer
 <li><code>return english_message</code> added to the end</li>
 <li>Call the function</li>
 </ol>
-<div id="6429c8cb" class="cell" data-execution_count="15">
+<div id="62eb8dc7" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>letter_to_morse <span class="op">=</span> {</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a'</span>:<span class="st">'.-'</span>, <span class="st">'b'</span>:<span class="st">'-...'</span>, <span class="st">'c'</span>:<span class="st">'-.-.'</span>, <span class="st">'d'</span>:<span class="st">'-..'</span>, <span class="st">'e'</span>:<span class="st">'.'</span>, <span class="st">'f'</span>:<span class="st">'..-.'</span>, </span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'g'</span>:<span class="st">'--.'</span>, <span class="st">'h'</span>:<span class="st">'....'</span>, <span class="st">'i'</span>:<span class="st">'..'</span>, <span class="st">'j'</span>:<span class="st">'.---'</span>, <span class="st">'k'</span>:<span class="st">'-.-'</span>, <span class="st">'l'</span>:<span class="st">'.-..'</span>, <span class="st">'m'</span>:<span class="st">'--'</span>, </span>
@@ -1212,7 +1212,7 @@ Answer
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-2/edit/main/pages/022-writing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/intro-python-2/edit/main/pages/022-writing-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
