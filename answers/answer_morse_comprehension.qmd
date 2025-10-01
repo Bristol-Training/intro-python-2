@@ -10,13 +10,6 @@ letter_to_morse = {
 }
 
 
-# We need to invert the dictionary. This will create a dictionary
-# that can go from the morse back to the letter
-morse_to_letter = {}
-for letter in letter_to_morse:
-    morse = letter_to_morse[letter]
-    morse_to_letter[morse] = letter
-
 def encode(message):
 
     morse = [letter_to_morse[letter] for letter in message.lower()]
