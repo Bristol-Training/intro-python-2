@@ -6,7 +6,7 @@ jupyter: python3
 
 In this section we will see something a little different to the other parts of this session. Rather than being a technique for making your code more easily sharable, reliable or user-friendly, it's instead a language feature which can make your life easier.
 
-There's a common pattern that you will see come up a lot in programming in general and and Python in particular and that is "loop-append". We've done it already in the morse code exercises. Let's look at a section of `encode` first:
+There's a common pattern that you will see come up a lot in programming in general and in Python in particular and that is "loop-append". We've done it already in the morse code exercises. Let's look at a section of `encode` first:
 
 ```{.python}
 morse = []
