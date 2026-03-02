@@ -40,7 +40,7 @@ We end up outputting $0^2$, $1^2$, $2^2$ and $3^2$. The equivalent with a list c
 [i*i for i in range(4)]
 ```
 
-You can see that it has output exactly the same answer but was one in one line instead of four. You might recognise some familiar features in there but they're not in the usual order. Let's break it apart, step-by-step:
+You can see that the output has exactly the same answer but was one in one line instead of four. You might recognise some familiar features in there but they're not in the usual order. Let's break it apart, step-by-step:
 
 We start with the outer square brackets. They're doing a similar things here to when you create a normal list like `[1, 2, 3]` but in this situation, due to what's inside they work a little differently but the result is still a normal Python list:
 
