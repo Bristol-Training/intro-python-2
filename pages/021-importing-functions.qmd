@@ -7,7 +7,7 @@ jupyter: python3
 
 While there are a good number of built-in functions and types, and you can go a long way without needing anything more, they are ultimately limited. Luckily, Python has a "batteries included" philosophy and provides a lot of additional functionality which can be explored in [The Python Standard Library](https://docs.python.org/3/library/).
 
-The functionality provided by the Standard Library is provided in a series of *modules*, each of which serves a particular purpose. The modules in the Standard Library are always installed in any version of Python you have. Note that even though they are always accessible, they do not count as "built-in" as in Python terms, that means something which you can use without having to access any extra modules.
+The functionality provided by the Standard Library is provided in a series of *modules*, each of which serves a particular purpose. The modules in the Standard Library are always installed in any version of Python you have. Note that even though they are always accessible, they do not count as "built-in" in Python terms, that means something which you can use without having to access any extra modules.
 
 ### The `math` module
 
