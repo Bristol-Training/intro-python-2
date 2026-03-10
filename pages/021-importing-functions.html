@@ -270,16 +270,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>While there are a good number of built-in functions and types, and you can go a long way without needing anything more, they are ultimately limited. Luckily, Python has a “batteries included” philosophy and provides a lot of additional functionality which can be explored in <a href="https://docs.python.org/3/library/">The Python Standard Library</a>.</p>
-<p>The functionality provided by the Standard Library is provided in a series of <em>modules</em>, each of which serves a particular purpose. The modules in the Standard Library are always installed in any version of Python you have. Note that even though they are always accessible, they do not count as “built-in” as in Python terms, that means something which you can use without having to access any extra modules.</p>
+<p>The functionality provided by the Standard Library is provided in a series of <em>modules</em>, each of which serves a particular purpose. The modules in the Standard Library are always installed in any version of Python you have. Note that even though they are always accessible, they do not count as “built-in” in Python terms, that means something which you can use without having to access any extra modules.</p>
 <section id="the-math-module" class="level4">
 <h4 class="anchored" data-anchor-id="the-math-module">The <code>math</code> module</h4>
 <p>Let’s start by looking at one of the modules, the “<a href="https://docs.python.org/3/library/math.html"><code>math</code> — Mathematical functions</a>” module. This module provides a bunch of mathematical tools such as averages, trigonometry etc.</p>
 <p>You can get access to the module by <em>importing</em> it by name:</p>
-<div id="dcda69b2" class="cell" data-execution_count="1">
+<div id="394cb764" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once it is imported, you can use any of the functions inside it by typing the name of the module, followed by a dot, followed by the name of the function. So to call the <a href="https://docs.python.org/3/library/math.html#math.sqrt">square root function</a> you would do:</p>
-<div id="88c8f915" class="cell" data-execution_count="2">
+<div id="2fb04505" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>You can think of this as saying “from the <code>math</code> module that I’ve just imported, get the <code>sqrt</code> function and call it”.</p>
 <p>Alternatively, if you want to grab a specific function out of a module so that you can call it without specifying the module name, you can do:</p>
-<div id="a3bf56dc" class="cell" data-execution_count="3">
+<div id="197f9bdd" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -329,13 +329,13 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>One possible solution is to use the module <a href="https://docs.python.org/3/library/os.html"><code>os</code> - Miscellaneous operating system interfaces</a>.</p>
-<div id="42fc6840" class="cell" data-execution_count="4">
+<div id="aaacf549" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>current_directory <span class="op">=</span> os.getcwd()</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CWD:"</span>, current_directory)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="55e3fd0a" class="cell" data-execution_count="5">
+<div id="fb6e0f18" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>CWD: /Users/JGI/Training/Python/intermediate-python/</code></pre>
 </div>
