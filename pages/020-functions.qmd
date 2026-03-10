@@ -15,7 +15,7 @@ In this section we're going to explore other functions and methods available as 
 
 Python comes with a bunch of functionality that you can use without having to explicitly enable anything. This includes things like integers, strings, lists, `print()`ing, file `open()`ing etc.
 
-First, lets have a peek at the *built-in functions*. There is a page describing these under the "Library Reference", in a page called [Built-in Functions](https://docs.python.org/3/library/functions.html). There we find the documentation for many of the functions we've already been using, for example [`print()`](https://docs.python.org/3/library/functions.html#print) and [`max()`](https://docs.python.org/3/library/functions.html#max).
+First, lets take a look at the *built-in functions*. There is a page describing these under the "Library Reference", in a page called [Built-in Functions](https://docs.python.org/3/library/functions.html). There we find the documentation for many of the functions we've already been using, for example [`print()`](https://docs.python.org/3/library/functions.html#print) and [`max()`](https://docs.python.org/3/library/functions.html#max).
 
 It is worth, over time, becoming familiar with the various functions that are available. Some are quite useful for everyday work and some are more niche.
 
@@ -50,7 +50,7 @@ If you need it, you can search through the [built-in functions page](https://doc
 
 ## Methods for built-in data types
 
-Python has a bunch of built-in *data types*, the details of them all are on the page called [Built-in Types](https://docs.python.org/3/library/stdtypes.html). That is the place to go to check what you can do with a `str`, an `int`, a `list` or a `dict`. There's also a few other built-in types you might want to look into in the future such as `complex`, `set` and `tuple`.
+Python has a bunch of built-in *data types*, the details of these can be found on a page called [Built-in Types](https://docs.python.org/3/library/stdtypes.html). Thhis is the place to check what you can do with a `str`, an `int`, a `list` or a `dict`. There's also a few other built-in types you might want to look into in the future such as `complex`, `set` and `tuple`.
 
 These types being built-in means that you don't need to explicitly enable their use and most have core-language syntax to create them.
 
