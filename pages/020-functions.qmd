@@ -52,7 +52,7 @@ If you need it, you can search through the [built-in functions page](https://doc
 
 Python has a bunch of built-in *data types*, the details of these can be found on a page called [Built-in Types](https://docs.python.org/3/library/stdtypes.html). Thhis is the place to check what you can do with a `str`, an `int`, a `list` or a `dict`. There's also a few other built-in types you might want to look into in the future such as `complex`, `set` and `tuple`.
 
-These types being built-in means that you don't need to explicitly enable their use and most have core-language syntax to create them.
+These types being built-in mean that you don't need to explicitly enable their use and most have core-language syntax to create them.
 
 For example, the code
 
