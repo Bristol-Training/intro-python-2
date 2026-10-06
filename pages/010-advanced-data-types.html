@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Using advanced data types and methods – Intro to Python 2</title>
+<title>Using advanced methods – Intro to Python 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/012-dictionaries.html" rel="next">
+<link href="../pages/011-string-formatting.html" rel="next">
 <link href="../pages/001-workspace-setup.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-9582434199d49cc9e91654cdeeb4866b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d729975fda9ef2ba9905196a0511de7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5cb470be617ac954e142613be13db03f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/010-advanced-data-types.html">Using advanced data types and methods</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/010-advanced-data-types.html">Using advanced methods</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,24 +119,21 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/001-workspace-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Workspace setup</span></a>
+ <span class="menu-text">Workspace Setup</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../pages/010-advanced-data-types.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Using advanced data types and methods</span></a>
+ <span class="menu-text">Using advanced methods</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/012-dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries</span></a>
-  </div>
-</li>
+ <span class="menu-text">pages/012-dictionaries.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/011-string-formatting.html" class="sidebar-item-text sidebar-link">
@@ -217,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Using advanced data types and methods</h1>
+<h1 class="title">Using advanced methods</h1>
 </div>
 
 
@@ -234,8 +231,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In <a href="https://bristol-training.github.io/intro-python-1/">Introduction to Python part 1</a> we saw different basic data types (integers, floats, booleans and strings) and a data structure called <code>list</code> (an ordered, mutable sequence that can contain heterogeneous elements) and how to perform basic operations with it (indexing, slicing and adding elements).</p>
-<p>Python provides several other powerful built-in data types and methods that allow you to work with more complex data structures. In this section, we will see how to perform more advanced operations with strings and lists, and we will introduce a new data structure called <code>dictionary</code>. Understanding how to effectively use these data structures is crucial for writing efficient code.</p>
+<p>In <a href="https://bristol-training.github.io/intro-python-1/">Introduction to Python part 1</a> we saw different basic data types (integers, floats, booleans and strings), data structures called <code>list</code> and <code>dictionary</code>, and how to perform basic operations with it (indexing, slicing and adding elements).</p>
+<p>Python provides several other powerful built-in data methods that allow you to work with complex data structures. In this section, we will see how to perform more advanced operations with strings and lists.</p>
 
 
 
@@ -641,13 +638,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/001-workspace-setup.html" class="pagination-link" aria-label="Workspace setup">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workspace setup</span>
+      <a href="../pages/001-workspace-setup.html" class="pagination-link" aria-label="Workspace Setup">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workspace Setup</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/012-dictionaries.html" class="pagination-link" aria-label="Dictionaries">
-        <span class="nav-page-text">Dictionaries</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/011-string-formatting.html" class="pagination-link" aria-label="String formatting">
+        <span class="nav-page-text">String formatting</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
